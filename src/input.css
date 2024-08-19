@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Couleurs pour le thème clair */
+  --foreground-rgb: 147, 141, 141;
+  --background-start-rgb: 227, 74, 26; /* orange */
+  --background-end-rgb: 147, 141, 141; /* Blanc */
+  --orange-rgb: 227, 74, 26;
+  --orange-rgb2: 98, 34, 14;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Couleurs pour le thème sombre */
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 227, 74, 26; /* orange */
+    --background-end-rgb: 52, 52, 52; /* Noir */
+    --orange-rgb: 227, 74, 26;
+    --orange-rgb2: 98, 34, 14;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --foreground-rgb: 147, 141, 141;
+    --background-start-rgb: 227, 74, 26; /* orange */
+    --background-end-rgb: 147, 141, 141; /* Blanc */
+    --orange-rgb: 227, 74, 26;
+    --orange-rgb2: 98, 34, 14;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--foreground-rgb));
+}
+.bg-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)) 10%,
+    rgb(var(--orange-rgb2)) 15%,
+    rgb(var(--background-end-rgb)) 30%
+  );
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .orange {
+    background-color: rgb(var(--orange-rgb));
+  }
+  .grey {
+    background-color: rgb(52, 52, 52);
+  }
+  .greylight {
+    color: rgb(38, 38, 38);
+  }
+  .fixed-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
