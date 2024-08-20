@@ -5,61 +5,51 @@
 :root {
   /* Couleurs pour le thème clair */
   --foreground-rgb: 147, 141, 141;
-  --background-start-rgb: 227, 74, 26; /* orange */
-  --background-end-rgb: 147, 141, 141; /* Blanc */
-  --orange-rgb: 227, 74, 26;
-  --orange-rgb2: 98, 34, 14;
+  --background-start-rgb: 208, 102, 45; /* orange */
+  --background-end-rgb: 247, 247, 247; /* Blanc */
+  --background-grey-rgb: 41, 41, 41; /* Gris foncé */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* Couleurs pour le thème sombre */
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 227, 74, 26; /* orange */
-    --background-end-rgb: 52, 52, 52; /* Noir */
-    --orange-rgb: 227, 74, 26;
-    --orange-rgb2: 98, 34, 14;
-  }
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 147, 141, 141;
-    --background-start-rgb: 227, 74, 26; /* orange */
-    --background-end-rgb: 147, 141, 141; /* Blanc */
-    --orange-rgb: 227, 74, 26;
-    --orange-rgb2: 98, 34, 14;
+    --background-start-rgb: 208, 102, 45; /* orange */
+    --background-end-rgb: 33, 33, 33; /* Noir */
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-end-rgb));
 }
-.bg-gradient {
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--background-start-rgb)) 10%,
-    rgb(var(--orange-rgb2)) 15%,
-    rgb(var(--background-end-rgb)) 30%
-  );
-}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
   .orange {
-    background-color: rgb(var(--orange-rgb));
-  }
-  .grey {
-    background-color: rgb(52, 52, 52);
+    background-color: rgb(var(--background-start-rgb));
   }
   .greylight {
-    color: rgb(38, 38, 38);
+    color: #d0662d;
   }
   .fixed-canvas {
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
+  }
+  .card-light {
+    background-color: rgb(var(--background-end-rgb));
+    color: rgb(var(--foreground-rgb));
+  }
+  .card-dark {
+    background-color: rgb(var(--background-grey-rgb));
+    color: rgb(var(--foreground-rgb));
+  }
+
+  .card-dark:hover {
+    box-shadow: 0 4px 10px rgb(var(--orange-rgb));
   }
 }

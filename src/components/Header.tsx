@@ -4,7 +4,7 @@ import Darkmode from "./Darkmode";
 export default function Header() {
   return (
     <header className="">
-      <div className="flex justify-items-center justify-between px-4 p- mx-80 orange absolute z-10">
+      <div className="flex justify-items-center px-4 w-screen  orange absolute z-10">
         <Darkmode />
         <button
           className="
@@ -23,7 +23,7 @@ export default function Header() {
           ENG
         </button>
       </div>
-      <div className="bg-gradient-to-b from-[rgb(var(--background-start-rgb))] to-[rgb(var(--background-end-rgb))]">
+      <div className="dark:bg-[--background-end-rgb]">
         <Gltf />
       </div>
     </header>

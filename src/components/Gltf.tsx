@@ -38,16 +38,12 @@ export default function Gltf() {
   const initialCameraPosition = new THREE.Vector3(0, 100, 250);
 
   return (
-    <div
-      className=" bg-[linear-gradient(180deg,rgb(227,74,26)_10%,rgb(98,34,14)_55%,rgb(167,167,167)_100%)] 
-             dark:bg-[linear-gradient(180deg,rgb(227,74,26)_10%,rgb(98,34,14)_55%,rgb(52,52,52)_100%)] 
-             text-black dark:text-white"
-    >
+    <div className=" ">
       <Canvas
         onWheel={(e) => e.preventDefault()}
         style={{
           height: "600px",
-          width: "auto",
+          width: "100vw",
           backgroundColor: "transparent",
           cursor: "grab",
         }}
