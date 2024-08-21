@@ -25,10 +25,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build:css": "npx tailwindcss -i ./src/output.css -o ./public/output.css",
+    "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./public/output.css",
     "start": "react-scripts start",
     "build": "npm run build:css && react-scripts build",
-    "test": "react-scripts test"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
