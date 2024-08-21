@@ -31,10 +31,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set working directory
-        run: |
-          echo "Working directory set to /home/runner/work/portfolio"
-          cd /home/runner/work/portfolio
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
         with:
