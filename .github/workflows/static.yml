@@ -51,6 +51,8 @@ jobs:
         with:
           path: './build'
           
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Upload to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PORTFOLIO_SECRET }}
+          publish_dir: ./build
