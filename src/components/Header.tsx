@@ -14,7 +14,7 @@ export default function Header() {
   // Appliquer la langue sélectionnée lors du premier rendu
   useEffect(() => {
     i18n.changeLanguage(language);
-  }, [language]);
+  }, [language, i18n]);
 
   // Initialiser le thème depuis le localStorage ou définir "dark" par défaut
   useEffect(() => {

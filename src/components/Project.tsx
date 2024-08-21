@@ -28,7 +28,7 @@ const Project: React.FC<ProjectProps> = ({
           <img
             key={index}
             src={image}
-            alt={`${title} image ${index + 1}`}
+            alt={`${title} - screenshot ${index + 1}`}
             className="w-full h-auto object-cover rounded-lg"
           />
         ))}

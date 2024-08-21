@@ -13,9 +13,10 @@ export default function Gltf() {
       30,
       window.innerWidth / window.innerHeight,
       100,
-      10000
+      1000
     )
   );
+  cameraRef.current.position.set(0, 100, 500);
   const rendererRef = useRef(
     new THREE.WebGLRenderer({ antialias: true, alpha: true })
   );
@@ -25,41 +26,40 @@ export default function Gltf() {
       const width = divRef.current.clientWidth;
       const height = divRef.current.clientHeight;
 
-      rendererRef.current.setSize(width, height);
-      rendererRef.current.setPixelRatio(window.devicePixelRatio);
-      rendererRef.current.setClearColor(0x000000, 0);
-      divRef.current.appendChild(rendererRef.current.domElement);
+      const renderer = rendererRef.current; // Copie la valeur de rendererRef.current
 
-      // Positionner la caméra
-      cameraRef.current.position.set(0, 100, 500);
+      // Configuration du renderer
+      renderer.setSize(width, height);
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setClearColor(0x000000, 0); // Rendre le fond transparent
+      divRef.current.appendChild(renderer.domElement);
 
-      // Ajouter les lumières
-      const ambientLight = new THREE.AmbientLight(0xe7d8ce, 1);
+      // Ajout des lumières
+      const ambientLight = new THREE.AmbientLight(0xe7d8ce, 1); // Lumière ambiante
       sceneRef.current.add(ambientLight);
 
-      const directionalLight = new THREE.DirectionalLight(0xe7d8ce, 1);
+      const directionalLight = new THREE.DirectionalLight(0xe7d8ce, 1); // Lumière directionnelle
       directionalLight.position.set(5, 5, 7).normalize();
       sceneRef.current.add(directionalLight);
 
-      // Configurer les contrôles
+      // Configuration des contrôles
       controlsRef.current = new OrbitControls(
         cameraRef.current,
-        rendererRef.current.domElement
+        renderer.domElement
       );
       controlsRef.current.enablePan = false;
       controlsRef.current.enableZoom = false;
       controlsRef.current.minDistance = 50;
-      controlsRef.current.maxDistance = 150;
+      controlsRef.current.maxDistance = 200;
       controlsRef.current.maxPolarAngle = Math.PI / 1;
       controlsRef.current.minPolarAngle = Math.PI / 4;
-      controlsRef.current.target.set(0, 0, 0); // Centrer la caméra sur la scène
+      controlsRef.current.target.set(0, -20, 10); // Centrer la caméra sur la scène
       controlsRef.current.update();
 
-      // Charger et ajouter le modèle GLTF à la scène
+      // Chargement et ajout du modèle GLTF à la scène
       const loader = new GLTFLoader();
       loader.load("/Desktop.gltf", (gltf) => {
         const scene = gltf.scene;
-        scene.rotation.set(Math.PI / 16, Math.PI, 0);
 
         // Centrer le modèle
         const box = new THREE.Box3().setFromObject(scene);
@@ -67,6 +67,7 @@ export default function Gltf() {
         box.getCenter(center);
         scene.position.sub(center);
         sceneRef.current.add(scene);
+        scene.rotation.set(Math.PI / 16, Math.PI, 0);
 
         // Jouer les animations
         const { animations } = gltf;
@@ -75,13 +76,14 @@ export default function Gltf() {
           mixer.clipAction(clip).play();
         });
 
+        // Démarrer le rendu de la scène
         const clock = new THREE.Clock();
         const animate = () => {
           requestAnimationFrame(animate);
           const delta = clock.getDelta();
           mixer.update(delta);
           controlsRef.current?.update();
-          rendererRef.current.render(sceneRef.current, cameraRef.current);
+          renderer.render(sceneRef.current, cameraRef.current);
         };
         animate();
       });
@@ -93,7 +95,7 @@ export default function Gltf() {
           const height = divRef.current.clientHeight;
           cameraRef.current.aspect = width / height;
           cameraRef.current.updateProjectionMatrix();
-          rendererRef.current.setSize(width, height);
+          renderer.setSize(width, height);
         }
       };
 
@@ -101,7 +103,7 @@ export default function Gltf() {
 
       return () => {
         window.removeEventListener("resize", handleResize);
-        rendererRef.current.dispose();
+        renderer.dispose(); // Utilise la variable locale ici
         controlsRef.current?.dispose();
       };
     }
