@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
   "version": "1.0.1",
-  "private": false,
-  "homepage": "",
+  "private": true,
+  "homepage": "https://tomlrd.github.io/portfolio/",
   "dependencies": {
     "@react-three/drei": "^9.111.1",
     "@react-three/fiber": "^8.17.5",
