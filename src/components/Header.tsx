@@ -39,7 +39,7 @@ export default function Header() {
 
   // Fonction pour naviguer vers la page d'accueil
   const handleNavigateHome = () => {
-    navigate("/");
+    navigate("/portfolio");
   };
 
   return (
