@@ -8,7 +8,7 @@
       "type": "image/x-icon"
     },
     {
-      "src": "albl.jpg",
+      "src": "alb1.jpg",
       "sizes": "1024x1024",
       "type": "image/jpeg"
     },
@@ -76,6 +76,11 @@
       "src": "tsb.png",
       "sizes": "1024x1024",
       "type": "image/png"
+    },
+    {
+      "src": "output.css",
+      "sizes": "1024x1024",
+      "type": "text/css"
     }
   ],
   "start_url": "./index.html",
