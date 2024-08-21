@@ -70,7 +70,7 @@ export default function Header() {
           </button>
 
           {/* Home Button (visible si l'utilisateur n'est pas sur /main) */}
-          {location.pathname !== "/" && (
+          {location.pathname !== "/portfolio" && (
             <button
               onClick={handleNavigateHome}
               className="
