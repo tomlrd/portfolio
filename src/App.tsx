@@ -16,7 +16,7 @@ function App() {
         <Header />
         <div className="flex-grow flex justify-center md:px-16 dark:bg-[--background-end-rgb]">
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route path="/portfolio" element={<Main />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/electron" element={<Electron />} />
