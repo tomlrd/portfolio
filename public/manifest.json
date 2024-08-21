@@ -65,7 +65,8 @@
     {
       "src": "scrpdl.png",
       "sizes": "1200x648",
-      "type": "image/png"
+      "type": "image/png",
+      "form_factor": "wide"
     },
     {
       "src": "tsb.png",
