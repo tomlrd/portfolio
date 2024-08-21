@@ -9,20 +9,18 @@ export default function Header() {
   const { t, i18n } = useTranslation();
 
   // Initialiser la langue depuis le localStorage ou se baser sur la langue du navigateur
-  const [language, setLanguage] = useState(() => {
-    const savedLanguage = localStorage.getItem("language");
-    if (savedLanguage) {
-      return savedLanguage;
-    } else {
-      const browserLanguage = navigator.language.split("-")[0];
-      const initialLanguage = browserLanguage === "fr" ? "fr" : "en";
-      i18n.changeLanguage(initialLanguage);
-      return initialLanguage;
-    }
-  });
+  const [language, setLanguage] = useState<"fr" | "en">();
+
+  // Appliquer la langue sélectionnée lors du premier rendu
+  useEffect(() => {
+    i18n.changeLanguage(language);
+  }, [language]);
 
   // Initialiser le thème depuis le localStorage ou définir "dark" par défaut
   useEffect(() => {
+    const browserLanguage = navigator.language.split("-")[0];
+    const initialLanguage = browserLanguage === "fr" ? "fr" : "en";
+    setLanguage(initialLanguage);
     const savedTheme = localStorage.getItem("theme");
     if (!savedTheme) {
       document.documentElement.classList.add("dark");
@@ -35,7 +33,6 @@ export default function Header() {
   // Fonction pour changer de langue et l'enregistrer dans le localStorage
   const toggleLanguage = () => {
     const newLanguage = language === "en" ? "fr" : "en";
-    i18n.changeLanguage(newLanguage);
     setLanguage(newLanguage);
     localStorage.setItem("language", newLanguage);
   };

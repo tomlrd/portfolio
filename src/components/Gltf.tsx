@@ -4,12 +4,11 @@ import { OrbitControls } from "three-stdlib";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
-// Fonction pour charger et afficher le modèle GLTF avec animations
 function Model({ scene }: { scene: THREE.Scene }) {
   const { animations } = useGLTF("/Desktop.gltf");
   const { actions } = useAnimations(animations, scene);
 
-  // Utiliser directement `scene` au lieu de créer un `Group`
+  // Centrer le modèle dans la scène
   const box = new THREE.Box3().setFromObject(scene);
   const center = new THREE.Vector3();
   box.getCenter(center);
@@ -25,12 +24,11 @@ function Model({ scene }: { scene: THREE.Scene }) {
     }
   }, [actions]);
 
-  return null; // Ne pas retourner de nouvel objet, les changements sont faits directement sur `scene`
+  return null;
 }
 
-// Page principale avec une `div` comme conteneur
 export default function Gltf() {
-  const divRef = useRef<HTMLDivElement>(null); // Typage explicite de la référence
+  const divRef = useRef<HTMLDivElement>(null);
   const controlsRef = useRef<OrbitControls | null>(null);
   const sceneRef = useRef(new THREE.Scene());
   const cameraRef = useRef(
@@ -43,49 +41,54 @@ export default function Gltf() {
   );
   const rendererRef = useRef(
     new THREE.WebGLRenderer({ antialias: true, alpha: true })
-  ); // `alpha: true` pour la transparence
+  );
 
   useEffect(() => {
     if (divRef.current) {
       const width = divRef.current.clientWidth;
       const height = divRef.current.clientHeight;
 
-      // Configuration du renderer
       rendererRef.current.setSize(width, height);
       rendererRef.current.setPixelRatio(window.devicePixelRatio);
-      rendererRef.current.setClearColor(0x000000, 0); // Rendre le fond transparent
+      rendererRef.current.setClearColor(0x000000, 0);
       divRef.current.appendChild(rendererRef.current.domElement);
 
-      // Configuration de la caméra
-      cameraRef.current.position.set(0, 100, 1200);
+      // Positionner la caméra
+      cameraRef.current.position.set(0, 100, 500);
 
-      // Ajout des lumières
-      const ambientLight = new THREE.AmbientLight(0xe7d8ce, 1); // Lumière ambiante
+      // Ajouter les lumières
+      const ambientLight = new THREE.AmbientLight(0xe7d8ce, 1);
       sceneRef.current.add(ambientLight);
 
-      const directionalLight = new THREE.DirectionalLight(0xe7d8ce, 1); // Lumière directionnelle
+      const directionalLight = new THREE.DirectionalLight(0xe7d8ce, 1);
       directionalLight.position.set(5, 5, 7).normalize();
       sceneRef.current.add(directionalLight);
 
-      // Configuration des contrôles
+      // Configurer les contrôles
       controlsRef.current = new OrbitControls(
         cameraRef.current,
         rendererRef.current.domElement
       );
       controlsRef.current.enablePan = false;
       controlsRef.current.enableZoom = false;
-      controlsRef.current.minDistance = 100;
-      controlsRef.current.maxDistance = 200;
+      controlsRef.current.minDistance = 50;
+      controlsRef.current.maxDistance = 150;
       controlsRef.current.maxPolarAngle = Math.PI / 1;
       controlsRef.current.minPolarAngle = Math.PI / 4;
+      controlsRef.current.target.set(0, 0, 0); // Centrer la caméra sur la scène
+      controlsRef.current.update();
 
-      // Chargement et ajout du modèle GLTF à la scène
+      // Charger et ajouter le modèle GLTF à la scène
       const loader = new GLTFLoader();
       loader.load("/Desktop.gltf", (gltf) => {
         const scene = gltf.scene;
+        scene.rotation.set(Math.PI / 16, Math.PI, 0);
 
-        // Appliquer une rotation initiale de 180 degrés sur l'axe x et une légère rotation sur l'axe y
-        scene.rotation.set(Math.PI / 16, Math.PI, 0); // Rotation initiale : 180° sur X, légère rotation sur Y
+        // Centrer le modèle
+        const box = new THREE.Box3().setFromObject(scene);
+        const center = new THREE.Vector3();
+        box.getCenter(center);
+        scene.position.sub(center);
         sceneRef.current.add(scene);
 
         // Jouer les animations
@@ -95,13 +98,11 @@ export default function Gltf() {
           mixer.clipAction(clip).play();
         });
 
-        // Démarrer le rendu de la scène
         const clock = new THREE.Clock();
-
         const animate = () => {
           requestAnimationFrame(animate);
           const delta = clock.getDelta();
-          mixer.update(delta); // Mettre à jour le mixeur d'animation
+          mixer.update(delta);
           controlsRef.current?.update();
           rendererRef.current.render(sceneRef.current, cameraRef.current);
         };
@@ -135,7 +136,7 @@ export default function Gltf() {
       style={{
         marginTop: "3rem",
         width: "100%",
-        height: "400px",
+        height: "500px",
         position: "relative",
         backgroundColor: "transparent",
         overflow: "hidden",
@@ -143,4 +144,4 @@ export default function Gltf() {
     ></div>
   );
 }
-useGLTF.preload("/Desktop.gltf");
+useGLTF.preload("/assets/Desktop.gltf");

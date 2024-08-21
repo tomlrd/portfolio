@@ -19,7 +19,6 @@ i18n
   .use(initReactI18next) // passe l'instance i18n à react-i18next.
   .init({
     resources,
-    lng: "en", // la langue par défaut
     fallbackLng: "en", // la langue à utiliser si la traduction de la langue courante est absente
 
     interpolation: {
