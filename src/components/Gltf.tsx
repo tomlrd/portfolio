@@ -2,30 +2,7 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three-stdlib";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { useGLTF, useAnimations } from "@react-three/drei";
-
-function Model({ scene }: { scene: THREE.Scene }) {
-  const { animations } = useGLTF("/Desktop.gltf");
-  const { actions } = useAnimations(animations, scene);
-
-  // Centrer le modèle dans la scène
-  const box = new THREE.Box3().setFromObject(scene);
-  const center = new THREE.Vector3();
-  box.getCenter(center);
-  scene.position.sub(center);
-  scene.rotation.set(Math.PI, Math.PI / 8, 0); // Rotation initiale : 180° sur X, légère rotation sur Y
-
-  useEffect(() => {
-    if (actions && Object.keys(actions).length > 0) {
-      const firstAction = actions[Object.keys(actions)[0]];
-      if (firstAction) {
-        firstAction.play();
-      }
-    }
-  }, [actions]);
-
-  return null;
-}
+import { useGLTF } from "@react-three/drei";
 
 export default function Gltf() {
   const divRef = useRef<HTMLDivElement>(null);
