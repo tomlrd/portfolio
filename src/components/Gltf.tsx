@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three-stdlib";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useGLTF } from "@react-three/drei";
-
+const gltfPath = process.env.PUBLIC_URL + "/Desktop.gltf";
 export default function Gltf() {
   const divRef = useRef<HTMLDivElement>(null);
   const controlsRef = useRef<OrbitControls | null>(null);
@@ -58,7 +58,7 @@ export default function Gltf() {
 
       // Chargement et ajout du modèle GLTF à la scène
       const loader = new GLTFLoader();
-      loader.load("/Desktop.gltf", (gltf) => {
+      loader.load(gltfPath, (gltf) => {
         const scene = gltf.scene;
 
         // Centrer le modèle
@@ -123,4 +123,4 @@ export default function Gltf() {
     ></div>
   );
 }
-useGLTF.preload("/assets/Desktop.gltf");
+useGLTF.preload(gltfPath);
