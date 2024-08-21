@@ -8,13 +8,30 @@
       "type": "image/x-icon"
     },
     {
-      "src": "alb1.jpg",
-      "sizes": "800x496",
+      "src": "photo.jpg",
+      "sizes": "500x615",
       "type": "image/jpeg"
     },
     {
+      "src": "tsb.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "screenshots": [
+    {
+      "src": "alb1.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    },
+    {
       "src": "alb2.jpg",
-      "sizes": "543x1017",
+      "sizes": "720x1280",
       "type": "image/jpeg"
     },
     {
@@ -48,11 +65,6 @@
       "type": "image/png"
     },
     {
-      "src": "photo.jpg",
-      "sizes": "500x615",
-      "type": "image/jpeg"
-    },
-    {
       "src": "ptl1.png",
       "sizes": "1024x1024",
       "type": "image/png"
@@ -67,15 +79,6 @@
       "sizes": "1200x648",
       "type": "image/png",
       "form_factor": "wide"
-    },
-    {
-      "src": "tsb.png",
-      "sizes": "96x96",
-      "type": "image/png"
     }
-  ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }
