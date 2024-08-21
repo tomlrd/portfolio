@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Darkmode from "./Darkmode";
 import { useTranslation } from "react-i18next";
@@ -8,14 +8,36 @@ export default function Header() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
-  // État pour gérer la langue actuelle
-  const [language, setLanguage] = useState(i18n.language);
+  // Initialiser la langue depuis le localStorage ou se baser sur la langue du navigateur
+  const [language, setLanguage] = useState(() => {
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage) {
+      return savedLanguage;
+    } else {
+      const browserLanguage = navigator.language.split("-")[0];
+      const initialLanguage = browserLanguage === "fr" ? "fr" : "en";
+      i18n.changeLanguage(initialLanguage);
+      return initialLanguage;
+    }
+  });
 
-  // Fonction pour changer de langue
+  // Initialiser le thème depuis le localStorage ou définir "dark" par défaut
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (!savedTheme) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.add(savedTheme);
+    }
+  }, []);
+
+  // Fonction pour changer de langue et l'enregistrer dans le localStorage
   const toggleLanguage = () => {
     const newLanguage = language === "en" ? "fr" : "en";
     i18n.changeLanguage(newLanguage);
     setLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage);
   };
 
   // Fonction pour naviguer vers la page d'accueil

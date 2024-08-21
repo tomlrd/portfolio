@@ -7,7 +7,7 @@ const Main: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="mx-4  lg:mx-32 xl:mx-80 md:mx-80 my-8 text-center">
+    <div className="lg:mx-32 xl:mx-80 md:mx-80  text-center">
       <div>
         <Gltf />
         <div className="text-lg text-gray-900 dark:text-[--foreground-rgb] text-center my-6">

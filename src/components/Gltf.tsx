@@ -6,7 +6,7 @@ import { useGLTF, useAnimations } from "@react-three/drei";
 
 // Fonction pour charger et afficher le modèle GLTF avec animations
 function Model({ scene }: { scene: THREE.Scene }) {
-  const { animations } = useGLTF("/Desktop.vox");
+  const { animations } = useGLTF("/Desktop.gltf");
   const { actions } = useAnimations(animations, scene);
 
   // Utiliser directement `scene` au lieu de créer un `Group`
@@ -37,7 +37,7 @@ export default function Gltf() {
     new THREE.PerspectiveCamera(
       30,
       window.innerWidth / window.innerHeight,
-      1,
+      100,
       10000
     )
   );
@@ -57,13 +57,13 @@ export default function Gltf() {
       divRef.current.appendChild(rendererRef.current.domElement);
 
       // Configuration de la caméra
-      cameraRef.current.position.set(0, 300, 1000);
+      cameraRef.current.position.set(0, 100, 1200);
 
       // Ajout des lumières
-      const ambientLight = new THREE.AmbientLight(0xffffff, 1); // Lumière ambiante
+      const ambientLight = new THREE.AmbientLight(0xe7d8ce, 1); // Lumière ambiante
       sceneRef.current.add(ambientLight);
 
-      const directionalLight = new THREE.DirectionalLight(0xffffff, 1); // Lumière directionnelle
+      const directionalLight = new THREE.DirectionalLight(0xe7d8ce, 1); // Lumière directionnelle
       directionalLight.position.set(5, 5, 7).normalize();
       sceneRef.current.add(directionalLight);
 
@@ -131,9 +131,9 @@ export default function Gltf() {
 
   return (
     <div
-      className="mt-2"
       ref={divRef}
       style={{
+        marginTop: "3rem",
         width: "100%",
         height: "400px",
         position: "relative",
@@ -143,3 +143,4 @@ export default function Gltf() {
     ></div>
   );
 }
+useGLTF.preload("/Desktop.gltf");
