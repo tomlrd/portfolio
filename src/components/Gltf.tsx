@@ -38,18 +38,18 @@ export default function Gltf() {
   const initialCameraPosition = new THREE.Vector3(0, 100, 250);
 
   return (
-    <div className=" ">
+    <div className="mt-1">
       <Canvas
         onWheel={(e) => e.preventDefault()}
         style={{
-          height: "600px",
-          width: "100vw",
+          height: "400px",
+          width: "auto",
           backgroundColor: "transparent",
           cursor: "grab",
         }}
         camera={{
-          position: [0, 100, 350],
-          fov: 50,
+          position: [0, 300, 1000],
+          fov: 30,
         }}
         onCreated={({ camera, gl }) => {
           const handleResize = () => {

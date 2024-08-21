@@ -1,0 +1,176 @@
+{
+  "welcome": "Bonjour ! Je suis <coloredText>Thomas Laroudie</coloredText>, développeur Fullstack Javascript-Typescript (stack MERN), et spécialiste en logiciels natifs <coloredText>Electron.js</coloredText> basé dans les Yvelines, France.",
+  "projectsDescription": "Découvrez certains projets que je peux vous montrer",
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Gardez à l'esprit que je ne peux présenter que les projets publics sur lesquels j'ai travaillé. J'ai également eu l'opportunité de travailler sur des projets pour des entreprises comme Cybernetics, Ercom, Geoflex...",
+    "projectsList": [
+      {
+        "title": "PlayAbility",
+        "description": "PlayAbility est un logiciel qui aide les personnes handicapées à rejouer aux jeux vidéo grâce à l'IA et à la reconnaissance faciale.\nJ'ai réalisé diverses interventions, notamment l'ajout de fonctionnalités à l'application existante et la réalisation d'audits/interventions de sécurité.",
+        "images": ["pa1.png", "pa2.png", "pa3.png"],
+        "client": "Valentin Squirelo",
+        "date": "2023-2024",
+        "link": "https://www.playability.gg/",
+        "tags": [
+          "Electron.js",
+          "Typescript",
+          "React",
+          "Node.js",
+          "Supabase",
+          "Tailwind",
+          "RESTful"
+        ]
+      },
+      {
+        "title": "OnlyOne",
+        "description": "J'ai pris la tête de la refonte et du développement de l'application propriétaire Electron.js OnlyOne, qui sert de plateforme unifiée consolidant plusieurs services de distribution de jeux tels que Steam, Blizzard et autres dans une interface unique et fluide.\nCette application simplifie non seulement l'accès aux différentes plateformes de jeux, mais améliore également l'expérience utilisateur en intégrant des fonctionnalités sociales telles que le chat en temps réel et la gestion de groupes.\nPour ce faire, j'ai conçu des intégrations API complexes pour connecter les services pertinents, garantissant une communication fluide et fiable entre OnlyOne et les plateformes externes.",
+        "images": ["./oo1.png", "./oo2.webp", "./oo3.webp"],
+        "client": "Vaniti",
+        "date": "2021-2023",
+        "link": "https://only-one.io/",
+        "tags": [
+          "Electron.js",
+          "Typescript",
+          "React",
+          "Node.js",
+          "MongoDB",
+          "MaterialUI",
+          "OAuth",
+          "RESTful"
+        ]
+      },
+      {
+        "title": "PadToLan",
+        "description": "Initialement conçu pour le jeu Star Citizen, vous pouvez personnaliser le TouchPad selon vos préférences, déployer des appareils de manière fluide au sein de votre réseau local pour un contrôle accru, et reproduire des raccourcis clavier configurables sur l'hôte avec des fonctionnalités telles que le double-tap, le maintien, et la boucle.",
+        "images": ["scrpdl.png", "ptl1.png", "ptl2.png"],
+        "client": "N'importe qui",
+        "date": "2023",
+        "link": "https://github.com/tomlrd/PadToLan",
+        "tags": [
+          "Electron.js",
+          "Typescript",
+          "Node.js",
+          "Express.js",
+          "Projet personnel",
+          "Lan",
+          "React-grid-layout"
+        ]
+      },
+      {
+        "title": "Albion OCR",
+        "description": "Outil POC pour analyser, enregistrer et exporter les données de vente des joueurs pour le jeu Albion Online grâce à la reconnaissance de texte.",
+        "images": ["alb1.jpg", "alb2.jpg"],
+        "client": "N'importe qui",
+        "date": "2020",
+        "tags": [
+          "Electron.js",
+          "Javascript",
+          "Node.js",
+          "Vanilla",
+          "Projet personnel",
+          "EJS",
+          "OCR"
+        ]
+      }
+    ]
+  },
+  "profile": "Profil",
+  "profilDescription": "Consultez mon profil personnel et mes compétences",
+  "profileContent": "Développeur d'applications avec une solide expérience en développement JavaScript fullstack avec le stack MERN et Typescript, spécialisé dans la création d'applications web utilisant Electron.js.\n J'ai une passion pour la création de mes propres outils, avec un vif intérêt pour la R&D et le développement de solutions logicielles adaptées à des problèmes spécifiques.\n Je suis autonome, passionné, et très curieux, avec un grand intérêt pour la cybersécurité, le matériel informatique, et l'impact positif de la technologie sur la société.\n En raison de ma curiosité, j'aime apprendre des choses nouvelles. Actuellement, j'apprends Tauri et Rust. J'ai également eu l'opportunité de collaborer directement avec The Sandbox et de créer des assets voxel, comme celui que vous pouvez voir sur la page d'accueil. Le scraping web m'est familier, tout comme le minage de crypto-monnaie et le développement sur ARM.",
+  "hardskills": {
+    "title": "Compétences Techniques",
+    "skills": [
+      {
+        "title": "Maîtrise de JavaScript/TypeScript",
+        "description": "Je maîtrise JavaScript, avec une compréhension approfondie des fonctionnalités ES6+, et j'ai une expérience étendue en TypeScript, ce qui me permet d'écrire du code fortement typé et maintenable."
+      },
+      {
+        "title": "Développement Backend avec Node.js",
+        "description": "Je suis spécialisé dans la création d'applications côté serveur avec Node.js, la création d'API RESTful, et le travail avec des frameworks comme Express.js. J'ai une solide maîtrise de la programmation asynchrone, de l'architecture événementielle et du modèle d'E/S non bloquant."
+      },
+      {
+        "title": "Gestion des Bases de Données",
+        "description": "J'ai de l'expérience dans le travail avec des bases de données relationnelles comme PostgreSQL et MySQL, ainsi qu'avec des bases de données NoSQL comme MongoDB. Je peux concevoir et optimiser des schémas de bases de données, écrire des requêtes complexes, et intégrer des bases de données dans des applications Node.js."
+      },
+      {
+        "title": "Développement et Intégration d'API",
+        "description": "J'ai une solide expérience dans le développement et la consommation d'API RESTful et GraphQL, garantissant une communication de données sécurisée, évolutive et efficace entre les services."
+      },
+      {
+        "title": "Intégration Front-end",
+        "description": "J'ai également de l'expérience avec les technologies front-end, en particulier dans l'intégration de backends Node.js avec des applications React, Angular, ou Vue.js, assurant une fluidité des données et des fonctionnalités de l'interface utilisateur."
+      },
+      {
+        "title": "Meilleures Pratiques de Sécurité",
+        "description": "J'adhère aux meilleures pratiques de sécurité dans le développement Node.js, y compris le chiffrement des données, les mécanismes d'authentification et d'autorisation (OAuth, JWT), et la protection contre les vulnérabilités courantes telles que l'injection SQL et les scripts intersites (XSS)."
+      },
+      {
+        "title": "DevOps et Déploiement",
+        "description": "Je suis compétent dans le déploiement d'applications Node.js sur des plateformes cloud telles qu'AWS, Azure, et Heroku. Je suis familier avec la containerisation via Docker, les pipelines CI/CD, et les tests automatisés pour assurer des processus de déploiement fluides et efficaces."
+      },
+      {
+        "title": "Test et Débogage",
+        "description": "Je maîtrise l'utilisation de frameworks de test comme Mocha, Chai, et Jest pour écrire des tests unitaires, d'intégration, et de bout en bout. J'ai de solides compétences en débogage avec des outils comme Node Inspector et Chrome DevTools."
+      },
+      {
+        "title": "Contrôle de Version et Collaboration",
+        "description": "J'ai de l'expérience dans l'utilisation de Git pour le contrôle de version et j'ai collaboré efficacement en équipe en utilisant des plateformes comme GitHub et GitLab, en suivant les meilleures pratiques pour la gestion des branches, des fusions, et des revues de code."
+      },
+      {
+        "title": "Apprentissage Continu et Adaptabilité",
+        "description": "Je suis engagé dans l'apprentissage continu, me tenant à jour avec les dernières avancées dans les écosystèmes Node.js, JavaScript, et TypeScript. Ma capacité à m'adapter rapidement aux nouveaux outils et technologies fait de moi un développeur polyvalent."
+      }
+    ]
+  },
+  "softskills": {
+    "title": "Compétences Interpersonnelles",
+    "skills": [
+      "Résolution de problèmes",
+      "Motivation intrinsèque",
+      "Résilience",
+      "Autonomie et Adaptabilité",
+      "Communication efficace",
+      "Apprentissage continu"
+    ]
+  },
+  "electronDescription": "Quels sont les avantages d'utiliser un logiciel Electron.js pour vous ?",
+  "electronAnswer": [
+    {
+      "title": "Compatibilité Multi-Plateforme",
+      "description": "Electron.js permet à l'application de fonctionner parfaitement sur Windows, macOS et Linux sans avoir besoin de versions distinctes pour chaque plateforme. Cela signifie que votre logiciel peut atteindre un public plus large sans coûts de développement supplémentaires."
+    },
+    {
+      "title": "Expérience de Bureau Riche",
+      "description": "Electron.js permet de créer des applications de bureau avec l'apparence moderne des applications web, y compris des animations fluides, des designs réactifs, et l'accès aux technologies web avancées telles que HTML5, CSS3, et JavaScript."
+    },
+    {
+      "title": "Développement Rapide",
+      "description": "Étant donné qu'Electron.js est basé sur des technologies web, il permet des cycles de développement plus rapides. Les applications web existantes peuvent être facilement converties en applications de bureau, ce qui réduit le temps de mise sur le marché."
+    },
+    {
+      "title": "Accès aux Fonctionnalités Natales",
+      "description": "Bien qu'il soit basé sur un cadre web, Electron.js offre un accès aux fonctionnalités natives du bureau telles que les systèmes de fichiers, les notifications, et les icônes de la barre des tâches. Cela permet à votre application de tirer parti de toute la puissance de l'environnement de bureau."
+    },
+    {
+      "title": "Rentabilité",
+      "description": "En utilisant un codebase unique sur plusieurs plateformes, les coûts de développement et de maintenance sont considérablement réduits. Vous n'aurez pas besoin d'équipes distinctes ou de ressources étendues pour maintenir différentes versions de l'application."
+    },
+    {
+      "title": "Grande Communauté et Écosystème",
+      "description": "Electron.js dispose d'une grande communauté active, ce qui signifie qu'il existe de nombreuses ressources, outils, et bibliothèques disponibles pour améliorer votre application. Cela peut également conduire à des solutions plus rapides aux défis qui peuvent survenir lors du développement."
+    },
+    {
+      "title": "Scalabilité",
+      "description": "Les applications Electron.js peuvent facilement s'intégrer avec des services cloud, des API, et des bases de données, permettant à votre application de s'adapter aux besoins de votre entreprise."
+    }
+  ],
+  "electronAnswer2": {
+    "title": "Ma touche personnelle",
+    "description": "J'ai une vaste expérience dans le développement d'applications Electron.js, ayant travaillé sur des projets allant des plateformes de distribution de jeux aux logiciels d'accessibilité. J'ai une compréhension approfondie de l'architecture, des API, et des meilleures pratiques d'Electron, ce qui me permet de créer des applications de bureau de haute qualité répondant à vos exigences spécifiques. Que vous ayez besoin d'une solution de bureau personnalisée, d'un lanceur de jeux, ou d'un outil de productivité.\n Je peux tirer parti d'Electron.js pour livrer une application robuste, multiplateforme, qui améliore l'expérience utilisateur et stimule la croissance de votre entreprise. Étant donné qu'Electron.js est développé en utilisant des technologies web, il permet des économies de temps significatives.\n Je suis fier de respecter les meilleures pratiques de sécurité les plus récentes et je maîtrise l'utilisation des outils internes d'Electron.js pour gérer l'intégration système et les sessions d'authentification."
+  },
+  "contactDescription": "Contactez-moi pour toute question ou projet",
+  "contactsubtitle": "Besoin d'un développeur Fullstack, d'une expertise en Electron.js, ou de création voxel ? Contactez-moi !",
+  "copy": "Copié !",
+  "back": "Retour"
+}
