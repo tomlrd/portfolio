@@ -172,5 +172,7 @@
   "contactDescription": "Contact me for any question or project",
   "contactsubtitle": "Need a Fullstack developer, expertise in Electron.js, or voxel creation? Contact me !",
   "copy": "Copy !",
-  "back": "Back"
+  "back": "Back",
+  "footer1": "© 2024 made by myself with ",
+  "footer2": " All rights reserved."
 }
