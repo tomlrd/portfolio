@@ -79,7 +79,6 @@
     },
     {
       "src": "output.css",
-      "sizes": "1024x1024",
       "type": "text/css"
     }
   ],
