@@ -76,10 +76,6 @@
       "src": "tsb.png",
       "sizes": "1024x1024",
       "type": "image/png"
-    },
-    {
-      "src": "output.css",
-      "type": "text/css"
     }
   ],
   "start_url": "./index.html",
