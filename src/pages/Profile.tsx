@@ -64,18 +64,18 @@ const Profile: React.FC = () => {
         <h2 className="text-xl font-semibold mb-4 text-[#d0662d]">
           {t("hardskills.title")}
         </h2>
-        <div className="flex justify-items-start justify-evenly my-5">
-          <img src={html} alt="Logo" className="w-10 h-10" />
-          <img src={css} alt="Logo" className="w-10 h-10" />
-          <img src={js} alt="Logo" className="w-10 h-10" />
-          <img src={ts} alt="Logo" className="w-10 h-10" />
-          <img src={tailwind} alt="Logo" className="w-10 h-10" />
-          <img src={react} alt="Logo" className="w-10 h-10" />
-          <img src={next} alt="Logo" className="w-10 h-10" />
-          <img src={nodejs} alt="Logo" className="w-10 h-10" />
-          <img src={electronjs} alt="Logo" className="w-10 h-10" />
-          <img src={webpack} alt="Logo" className="w-10 h-10" />
-          <img src={vitejs} alt="Logo" className="w-10 h-10" />
+        <div className="flex justify-items-start justify-start my-5 flex-wrap">
+          <img src={html} alt="Logo" className="w-10 h-10 mx-1" />
+          <img src={css} alt="Logo" className="w-10 h-10 mx-1" />
+          <img src={js} alt="Logo" className="w-10 h-10 mx-1" />
+          <img src={ts} alt="Logo" className="w-10 h-10 mx-1" />
+          <img src={tailwind} alt="Logo" className="w-10 h-10 mx-1" />
+          <img src={react} alt="Logo" className="w-10 h-10 mx-1" />
+          <img src={next} alt="Logo" className="w-10 h-10 mx-1" />
+          <img src={nodejs} alt="Logo" className="w-10 h-10 mx-1" />
+          <img src={electronjs} alt="Logo" className="w-10 h-10 mx-1" />
+          <img src={webpack} alt="Logo" className="w-10 h-10 mx-1" />
+          <img src={vitejs} alt="Logo" className="w-10 h-10 mx-1" />
         </div>
         <div className="space-y-4">
           {Hskills.map(

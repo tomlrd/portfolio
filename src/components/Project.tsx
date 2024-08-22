@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SquareArrowOutUpRight } from "lucide-react";
 
 type ProjectProps = {
@@ -20,6 +20,9 @@ const Project: React.FC<ProjectProps> = ({
   link,
   tags,
 }) => {
+  useEffect(() => {
+    console.log(images);
+  }, []);
   return (
     <div className="p-4 mt-4 bg-gray-100 dark:bg-[rgb(var(--background-grey-rgb))] rounded-lg grid grid-cols-1 md:grid-cols-2 gap-4 text-left ">
       {/* Column for Images */}

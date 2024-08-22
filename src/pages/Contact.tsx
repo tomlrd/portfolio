@@ -5,6 +5,7 @@ import DiscordIcon from "../assets/discord.svg";
 import LinkedInIcon from "../assets/linkedin-icon-2.svg";
 import UpworkIcon from "../assets/upwork-1.svg";
 import MaltIcon from "../assets/Malt_logo_pink-ai.svg";
+import tsb from "./images/tsb.png";
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
@@ -94,7 +95,7 @@ const Contact: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="./images/tsb.png" alt="Logo" className="w-10 h-10 " />
+          <img src={tsb} alt="Logo" className="w-10 h-10 " />
           <p className="pl-2 hover:underline hover:text-[#d0662d]">
             https://www.sandbox.game/en/users/stylow/
           </p>

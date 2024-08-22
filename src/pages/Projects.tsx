@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Project from "../components/Project";
+import images from "./images"; // Importer les images
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ const Projects: React.FC = () => {
   const projectsList = t("projects.projectsList", { returnObjects: true }) as {
     title: string;
     description: string;
-    images: string[];
+    images: string[]; // Ce sont les clés des images dans le fichier translation.json
     client: string;
     date: string;
     link: string;
@@ -36,7 +37,6 @@ const Projects: React.FC = () => {
   useEffect(() => {
     // Ajouter l'événement lors du montage
     document.addEventListener("click", handleClickOutside);
-    console.log(projectsList[0].images[0]);
 
     // Nettoyer l'événement lors du démontage
     return () => {
@@ -69,7 +69,7 @@ const Projects: React.FC = () => {
             onClick={() => handleImageClick(project.title)}
           >
             <img
-              src={project.images[0]} // Utiliser la première image pour la miniature
+              src={images[project.images[0]]} // Utiliser la première image pour la miniature
               className="w-full h-full object-cover rounded-lg border-2 border-transparent hover:border-[#d0662d] focus:border-[#d0662d]  active:border-[#b35421] transition duration-300 ease-in-out"
               alt={project.title}
             />
@@ -82,7 +82,9 @@ const Projects: React.FC = () => {
         <Project
           title={selectedProjectData.title}
           description={selectedProjectData.description}
-          images={selectedProjectData.images}
+          images={selectedProjectData.images.map(
+            (imageKey) => images[imageKey]
+          )} // Associez les clés aux chemins d'images
           client={selectedProjectData.client}
           date={selectedProjectData.date}
           link={selectedProjectData.link}
