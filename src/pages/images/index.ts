@@ -11,7 +11,6 @@ import ptl1 from "./ptl1.png";
 import ptl2 from "./ptl2.png";
 import scrpdl from "./scrpdl.png";
 import tsb from "./tsb.png";
-// Ajoutez ici toutes les autres images
 
 const images: { [key: string]: string } = {
   "alb1.jpg": alb1,
@@ -26,7 +25,6 @@ const images: { [key: string]: string } = {
   "ptl2.png": ptl2,
   "scrpdl.png": scrpdl,
   "tsb.png": tsb,
-  // Associez les autres images ici avec leurs clés
 };
 
 export default images;
