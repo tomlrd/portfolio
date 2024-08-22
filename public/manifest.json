@@ -6,79 +6,10 @@
       "src": "favicon.ico",
       "sizes": "64x64",
       "type": "image/x-icon"
-    },
-    {
-      "src": "photo.jpg",
-      "sizes": "500x615",
-      "type": "image/jpeg"
-    },
-    {
-      "src": "tsb.png",
-      "sizes": "96x96",
-      "type": "image/png"
     }
   ],
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "screenshots": [
-    {
-      "src": "alb1.jpg",
-      "sizes": "1280x720",
-      "type": "image/jpeg",
-      "form_factor": "wide"
-    },
-    {
-      "src": "alb2.jpg",
-      "sizes": "720x1280",
-      "type": "image/jpeg"
-    },
-    {
-      "src": "oo1.png",
-      "sizes": "1024x1024",
-      "type": "image/png"
-    },
-    {
-      "src": "oo2.webp",
-      "sizes": "1024x1024",
-      "type": "image/webp"
-    },
-    {
-      "src": "oo3.webp",
-      "sizes": "1024x1024",
-      "type": "image/webp"
-    },
-    {
-      "src": "pa1.png",
-      "sizes": "1024x1024",
-      "type": "image/png"
-    },
-    {
-      "src": "pa2.png",
-      "sizes": "1062x593",
-      "type": "image/png"
-    },
-    {
-      "src": "pa3.png",
-      "sizes": "1061x593",
-      "type": "image/png"
-    },
-    {
-      "src": "ptl1.png",
-      "sizes": "1024x1024",
-      "type": "image/png"
-    },
-    {
-      "src": "ptl2.png",
-      "sizes": "1024x1024",
-      "type": "image/png"
-    },
-    {
-      "src": "scrpdl.png",
-      "sizes": "1200x648",
-      "type": "image/png",
-      "form_factor": "wide"
-    }
-  ]
+  "background_color": "#ffffff"
 }

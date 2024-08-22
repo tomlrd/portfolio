@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="./tsb.png" alt="Logo" className="w-10 h-10 " />
+          <img src="./images/tsb.png" alt="Logo" className="w-10 h-10 " />
           <p className="pl-2 hover:underline hover:text-[#d0662d]">
             https://www.sandbox.game/en/users/stylow/
           </p>

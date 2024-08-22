@@ -36,6 +36,7 @@ const Projects: React.FC = () => {
   useEffect(() => {
     // Ajouter l'événement lors du montage
     document.addEventListener("click", handleClickOutside);
+    console.log("./images/" + projectsList[0].images[0]);
 
     // Nettoyer l'événement lors du démontage
     return () => {
@@ -68,7 +69,7 @@ const Projects: React.FC = () => {
             onClick={() => handleImageClick(project.title)}
           >
             <img
-              src={project.images[0]} // Utiliser la première image pour la miniature
+              src={"./images/" + project.images[0]} // Utiliser la première image pour la miniature
               className="w-full h-full object-cover rounded-lg border-2 border-transparent hover:border-[#d0662d] focus:border-[#d0662d]  active:border-[#b35421] transition duration-300 ease-in-out"
               alt={project.title}
             />

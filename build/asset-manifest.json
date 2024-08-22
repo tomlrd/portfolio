@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d3c82c4d.css",
-    "main.js": "/portfolio/static/js/main.0ee5d057.js",
+    "main.js": "/portfolio/static/js/main.8d507855.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/Malt_logo_pink-ai.svg": "/portfolio/static/media/Malt_logo_pink-ai.846d5ee283c3a0f1934925ca9604deb2.svg",
     "static/media/electron.svg": "/portfolio/static/media/electron.d3bd10a67505c9fb0051a61ee0bbaeea.svg",
@@ -21,11 +21,11 @@
     "static/media/html-1.svg": "/portfolio/static/media/html-1.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/logo-javascript.svg": "/portfolio/static/media/logo-javascript.b879f838faf1cb951d1c2230fd933a39.svg",
     "main.d3c82c4d.css.map": "/portfolio/static/css/main.d3c82c4d.css.map",
-    "main.0ee5d057.js.map": "/portfolio/static/js/main.0ee5d057.js.map",
+    "main.8d507855.js.map": "/portfolio/static/js/main.8d507855.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d3c82c4d.css",
-    "static/js/main.0ee5d057.js"
+    "static/js/main.8d507855.js"
   ]
 }
