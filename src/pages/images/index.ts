@@ -5,8 +5,8 @@ import pa1 from "./pa1.png";
 import pa2 from "./pa2.png";
 import pa3 from "./pa3.png";
 import oo1 from "./oo1.png";
-import oo2 from "./oo2.webp";
-import oo3 from "./oo3.webp";
+import oo2 from "./oo2.png";
+import oo3 from "./oo3.png";
 import ptl1 from "./ptl1.png";
 import ptl2 from "./ptl2.png";
 import scrpdl from "./scrpdl.png";
@@ -20,8 +20,8 @@ const images: { [key: string]: string } = {
   "pa1.png": pa1,
   "pa2.png": pa2,
   "oo1.png": oo1,
-  "oo2.webp": oo2,
-  "oo3.webp": oo3,
+  "oo2.png": oo2,
+  "oo3.png": oo3,
   "ptl1.png": ptl1,
   "ptl2.png": ptl2,
   "scrpdl.png": scrpdl,

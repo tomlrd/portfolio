@@ -25,7 +25,7 @@
       {
         "title": "OnlyOne",
         "description": "I took the lead in revamping and further developing the proprietary Electron.js application OnlyOne, which serves as a unified platform consolidating multiple game distribution services such as Steam, Blizzard, and others into a single, seamless interface.\nThis application not only streamlines access to various gaming platforms but also enhances the user experience by integrating social features like real-time chat and group management.\nTo achieve this, I engineered complex API integrations to connect with the relevant services, ensuring smooth and reliable communication between OnlyOne and the external platforms.",
-        "images": ["oo1.png", "oo2.webp", "oo3.webp"],
+        "images": ["oo1.png", "oo2.png", "oo3.png"],
         "client": "Vaniti",
         "date": "2021-2023",
         "link": "https://only-one.io/",
