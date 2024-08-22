@@ -11,6 +11,7 @@ import ts from "../assets/typescript.svg";
 import electronjs from "../assets/electron.svg";
 import webpack from "../assets/webpack-icon.svg";
 import vitejs from "../assets/vitejs.svg";
+import photo from "./images/photo.jpg";
 
 const Profile: React.FC = () => {
   const { t } = useTranslation();
@@ -33,7 +34,7 @@ const Profile: React.FC = () => {
         </p>
         <div className="mb-6">
           <img
-            src="./photo.jpg"
+            src={photo}
             alt="Profile"
             className="w-32 h-32 rounded-lg  object-cover float-left mr-4 mb-2"
           />
