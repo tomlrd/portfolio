@@ -70,7 +70,7 @@ const Profile: React.FC = () => {
             </li>
           ))}
         </ul>
-        <div className="col-span-1 md:col-span-2 flex justify-center">
+        {/*         <div className="col-span-1 md:col-span-2 flex justify-center">
           <a
             href={getFileToDownload()}
             target="_blank"
@@ -79,7 +79,7 @@ const Profile: React.FC = () => {
           >
             {t("download")}
           </a>
-        </div>
+        </div> */}
       </div>
 
       {/* Hard Skills Section */}
