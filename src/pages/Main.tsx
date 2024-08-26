@@ -20,7 +20,7 @@ const Main: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 md:grid-cols-2 gap-8">
           <Link
-            to="/profile"
+            to="/portfolio/profile"
             className="shadow-lg rounded-lg p-6 card-light dark:card-dark cursor-pointer"
           >
             <h2 className="text-xl font-semibold mb-4 text-[#d0662d]">
@@ -29,7 +29,7 @@ const Main: React.FC = () => {
             <p className="text-grey-100">{t("profilDescription")}</p>
           </Link>
           <Link
-            to="/projects"
+            to="/portfolio/projects"
             className="shadow-lg rounded-lg p-6 card-light dark:card-dark cursor-pointer"
           >
             <h2 className="text-xl font-semibold mb-4 text-[#d0662d]">
@@ -38,7 +38,7 @@ const Main: React.FC = () => {
             <p className="text-grey-100">{t("projectsDescription")}</p>
           </Link>
           <Link
-            to="/electron"
+            to="/portfolio/electron"
             className="shadow-lg rounded-lg p-6 card-light dark:card-dark cursor-pointer"
           >
             <h2 className="text-xl font-semibold mb-4 text-[#d0662d]">
@@ -47,7 +47,7 @@ const Main: React.FC = () => {
             <p className="text-grey-100">{t("electronDescription")}</p>
           </Link>
           <Link
-            to="/contact"
+            to="/portfolio/contact"
             className="shadow-lg rounded-lg p-6 card-light dark:card-dark cursor-pointer"
           >
             <h2 className="text-xl font-semibold mb-4 text-[#d0662d]">

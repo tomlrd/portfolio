@@ -16,6 +16,13 @@ import photo from "./images/photo.jpg";
 const Profile: React.FC = () => {
   const { t } = useTranslation();
 
+  const getFileToDownload = () => {
+    const language = localStorage.getItem("language");
+    return language === "en"
+      ? `${process.env.PUBLIC_URL}/Thomas.laroudie.Resume.pdf`
+      : `${process.env.PUBLIC_URL}/Thomas.laroudie.CV.pdf`;
+  };
+
   const Hskills: { title: string; description: string }[] = t(
     "hardskills.skills",
     { returnObjects: true }
@@ -63,6 +70,16 @@ const Profile: React.FC = () => {
             </li>
           ))}
         </ul>
+        <div className="col-span-1 md:col-span-2 flex justify-center">
+          <a
+            href={getFileToDownload()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl font-semibold my-6 text-white bg-[#d0662d] rounded-lg py-2 px-4 text-center inline-block"
+          >
+            {t("download")}
+          </a>
+        </div>
       </div>
 
       {/* Hard Skills Section */}

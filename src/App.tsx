@@ -17,10 +17,10 @@ function App() {
         <div className="flex-grow flex justify-center md:px-16 dark:bg-[--background-gray]">
           <Routes>
             <Route path="/portfolio" element={<Main />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/electron" element={<Electron />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/portfolio/projects" element={<Projects />} />
+            <Route path="/portfolio/profile" element={<Profile />} />
+            <Route path="/portfolio/electron" element={<Electron />} />
+            <Route path="/portfolio/contact" element={<Contact />} />
           </Routes>
         </div>
         <Footer />
