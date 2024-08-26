@@ -24,7 +24,7 @@ const Project: React.FC<ProjectProps> = ({
     console.log(images);
   }, []);
   return (
-    <div className="p-4 mt-4 bg-gray-100 dark:bg-[rgb(var(--background-grey-rgb))] rounded-lg grid grid-cols-1 md:grid-cols-2 gap-4 text-left ">
+    <div className="p-4 mt-4 text-gray-900 dark:text-gray-100 dark:div-dark grid grid-cols-1 md:grid-cols-2 gap-4 text-left ">
       {/* Column for Images */}
       <div className="space-y-4">
         {images.map((image, index) => (

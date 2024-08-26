@@ -10,13 +10,13 @@ export default function Gltf() {
   const sceneRef = useRef(new THREE.Scene());
   const cameraRef = useRef(
     new THREE.PerspectiveCamera(
-      30,
+      20,
       window.innerWidth / window.innerHeight,
-      100,
+      10,
       1000
     )
   );
-  cameraRef.current.position.set(0, 100, 500);
+  cameraRef.current.position.set(0, 0, 500);
   const rendererRef = useRef(
     new THREE.WebGLRenderer({ antialias: true, alpha: true })
   );
@@ -49,13 +49,23 @@ export default function Gltf() {
       );
       controlsRef.current.enablePan = false;
       controlsRef.current.enableZoom = false;
-      controlsRef.current.minDistance = 50;
+      controlsRef.current.minDistance = 100;
       controlsRef.current.maxDistance = 200;
-      controlsRef.current.maxPolarAngle = Math.PI / 1;
-      controlsRef.current.minPolarAngle = Math.PI / 4;
-      controlsRef.current.target.set(0, -20, 10); // Centrer la caméra sur la scène
+      controlsRef.current.maxPolarAngle = Math.PI / 2; // Bloque la caméra à ne pas dépasser l'horizon (90°)
+      controlsRef.current.minPolarAngle = Math.PI / 4; // Empêche la caméra de regarder trop vers le haut
+      controlsRef.current.target.set(0, -5, 50); // Centrer la caméra sur la scène
       controlsRef.current.update();
 
+      divRef.current.classList.add("grab-cursor");
+      controlsRef.current.addEventListener("start", () => {
+        divRef.current?.classList.remove("grab-cursor");
+        divRef.current?.classList.add("grabbing-cursor");
+      });
+
+      controlsRef.current.addEventListener("end", () => {
+        divRef.current?.classList.remove("grabbing-cursor");
+        divRef.current?.classList.add("grab-cursor");
+      });
       // Chargement et ajout du modèle GLTF à la scène
       const loader = new GLTFLoader();
       loader.load(gltfPath, (gltf) => {

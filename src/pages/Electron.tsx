@@ -17,10 +17,12 @@ const Electron: React.FC = () => {
   };
 
   return (
-    <div className="shadow-lg rounded-lg p-6 card-light dark:card-dark md:mx-80">
-      <h2 className="text-xl font-semibold mb-4 text-[#d0662d] text-center">
-        Electron.js
-      </h2>
+    <div className="text-gray-900 dark:text-gray-100 dark:div-dark p-6 md:mx-80">
+      <div className="flex">
+        <h2 className="text-xl font-semibold my-6 text-white bg-[#d0662d] rounded-lg py-2 px-4 text-center inline-block mx-auto">
+          Electron.js
+        </h2>
+      </div>
       <p className="text-grey-100 mb-6 text-center">
         {t("electronDescription")}
       </p>

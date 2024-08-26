@@ -4,24 +4,25 @@
 
 :root {
   /* Couleurs pour le thème clair */
-  --foreground-rgb: 54, 54, 54;
-  --background-start-rgb: 208, 102, 45; /* orange */
-  --background-end-rgb: 247, 247, 247; /* Blanc */
-  --background-grey-rgb: 41, 41, 41; /* Gris foncé */
+  --text-grey: 33, 33, 33; /* Gris foncé pour le texte */
+  --background-orange: 208, 102, 45; /* Orange */
+  --background-body: 247, 247, 247; /* Blanc */
+  --background-gray: 240, 240, 240; /* Gris clair pour les cartes */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* Couleurs pour le thème sombre */
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 208, 102, 45; /* orange */
-    --background-end-rgb: 33, 33, 33; /* Noir */
+    --text-grey: 245, 245, 245; /* Blanc cassé pour le texte */
+    --background-orange: 208, 102, 45; /* Orange */
+    --background-body: 33, 33, 33; /* Noir */
+    --background-gray: 54, 54, 54; /* Gris foncé pour les cartes */
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-end-rgb));
+  color: rgb(var(--text-grey));
+  background-color: rgb(var(--background-body));
 }
 
 @layer utilities {
@@ -29,7 +30,7 @@ body {
     text-wrap: balance;
   }
   .orange {
-    background-color: rgb(var(--background-start-rgb));
+    background-color: rgb(var(--background-orange));
   }
   .greylight {
     color: #d0662d;
@@ -41,17 +42,29 @@ body {
     z-index: -1;
   }
   .card-light {
-    background-color: rgb(var(--background-end-rgb));
-    color: rgb(var(--foreground-rgb));
+    background-color: rgb(
+      var(--background-gray)
+    ); /* Gris clair pour le thème clair */
+    color: rgb(var(--text-grey));
   }
   .card-dark {
-    background-color: rgb(var(--background-grey-rgb));
-    color: rgb(var(--foreground-rgb));
+    background-color: rgb(
+      var(--background-gray)
+    ); /* Gris foncé pour le thème sombre */
+    color: rgb(var(--text-grey));
+  }
+
+  .div-dark {
+    background-color: rgb(
+      var(--background-body)
+    ); /* Gris pour le contenu sombre */
+    color: rgb(var(--text-grey));
   }
 
   .card-dark:hover {
-    box-shadow: 0 4px 10px rgb(var(--orange-rgb));
+    box-shadow: 0 4px 10px rgb(var(--background-orange));
   }
+
   .scrollbar-custom::-webkit-scrollbar {
     height: 12px; /* Hauteur de la barre de défilement */
   }
@@ -59,11 +72,22 @@ body {
     overflow-x: scroll;
   }
   .scrollbar-custom::-webkit-scrollbar-track {
-    background: white; /* Couleur de l'arrière-plan de la barre de défilement */
+    background: rgb(
+      var(--background-orange)
+    ); /* Couleur de l'arrière-plan de la barre de défilement */
     border-radius: 10px;
   }
   .scrollbar-custom::-webkit-scrollbar-thumb:hover {
-    background-color: #d0662d; /* Couleur du curseur au survol */
+    background-color: rgb(
+      var(--background-orange)
+    ); /* Couleur du curseur au survol */
     border-radius: 10px;
+  }
+  .grab-cursor {
+    cursor: grab;
+  }
+
+  .grabbing-cursor {
+    cursor: grabbing;
   }
 }

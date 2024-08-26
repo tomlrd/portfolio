@@ -52,11 +52,13 @@ const Projects: React.FC = () => {
   return (
     <div
       ref={mainDivRef}
-      className="shadow-lg rounded-lg p-6 card-light dark:card-dark md:mx-80"
+      className="text-gray-900 dark:text-gray-100 dark:div-dark p-6 md:mx-80"
     >
-      <h2 className="text-xl font-semibold mb-4 text-[#d0662d] text-center">
-        {t("projects.title")}
-      </h2>
+      <div className="flex">
+        <h2 className="text-xl font-semibold my-6 text-white bg-[#d0662d] rounded-lg py-2 px-4 text-center inline-block mx-auto">
+          {t("projects.title")}
+        </h2>
+      </div>
       <h2 className="text-sm text-gray-600 dark:text-gray-400 mt-2 text-center">
         {t("projects.subtitle")}
       </h2>
@@ -69,7 +71,7 @@ const Projects: React.FC = () => {
             onClick={() => handleImageClick(project.title)}
           >
             <img
-              src={images[project.images[0]]} // Utiliser la première image pour la miniature
+              src={images[project.images[0]]}
               className="w-full h-full object-cover rounded-lg border-2 border-transparent hover:border-[#d0662d] focus:border-[#d0662d]  active:border-[#b35421] transition duration-300 ease-in-out"
               alt={project.title}
             />
@@ -84,7 +86,7 @@ const Projects: React.FC = () => {
           description={selectedProjectData.description}
           images={selectedProjectData.images.map(
             (imageKey) => images[imageKey]
-          )} // Associez les clés aux chemins d'images
+          )}
           client={selectedProjectData.client}
           date={selectedProjectData.date}
           link={selectedProjectData.link}

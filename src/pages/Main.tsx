@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import Gltf from "../components/Gltf";
 
 const Main: React.FC = () => {
@@ -10,7 +10,7 @@ const Main: React.FC = () => {
     <div className="lg:mx-32 xl:mx-80 md:mx-80  text-center">
       <div>
         <Gltf />
-        <div className="text-lg text-gray-900 dark:text-[--foreground-rgb] text-center my-6">
+        <div className="text-lg text-gray-900 dark:text-[--text-grey] text-center my-6">
           <Trans
             i18nKey="welcome"
             components={{

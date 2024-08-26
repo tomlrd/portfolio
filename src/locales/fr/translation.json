@@ -76,6 +76,7 @@
     ]
   },
   "profile": "Profil",
+  "me": "Moi",
   "profilDescription": "Consultez mon profil personnel et mes compétences",
   "profileContent": "Développeur d'applications avec une solide expérience en développement JavaScript fullstack avec le stack MERN et Typescript, spécialisé dans la création d'applications web utilisant Electron.js.\n J'ai une passion pour la création de mes propres outils, avec un vif intérêt pour la R&D et le développement de solutions logicielles adaptées à des problèmes spécifiques.\n Je suis autonome, passionné, et très curieux, avec un grand intérêt pour la cybersécurité, le matériel informatique, et l'impact positif de la technologie sur la société.\n En raison de ma curiosité, j'aime apprendre des choses nouvelles. Actuellement, j'apprends Tauri et Rust. J'ai également eu l'opportunité de collaborer directement avec The Sandbox et de créer des assets voxel, comme celui que vous pouvez voir sur la page d'accueil. Le scraping web m'est familier, tout comme le minage de crypto-monnaie et le développement sur ARM.",
   "hardskills": {
@@ -171,6 +172,7 @@
   },
   "contactDescription": "Contactez-moi pour toute question ou projet",
   "contactsubtitle": "Besoin d'un développeur Fullstack, d'une expertise en Electron.js, ou de création voxel ? Contactez-moi !",
+  "contactme": "Contactez moi !",
   "copy": "Copié !",
   "back": "Retour",
   "footer1": "© 2024 crée par moi-même avec ",

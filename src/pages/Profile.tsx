@@ -26,33 +26,39 @@ const Profile: React.FC = () => {
   }) as string[];
 
   return (
-    <div className=" md:mx-80 shadow-lg rounded-lg p-6 card-light dark:card-dark text-left grid grid-cols-1 md:grid-cols-2 gap-6">
-      {/* Profile Section with Image embedded in the text */}
-      <div>
-        <p className="text-xl font-semibold mb-4 text-[#d0662d]">
+    <div className="md:mx-80 p-6 text-gray-900 dark:text-gray-100 dark:div-dark grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Title placed at the top */}
+      <div className="col-span-1 md:col-span-2 flex justify-center">
+        <h2 className="text-xl font-semibold my-6 text-white bg-[#d0662d] rounded-lg py-2 px-4 text-center inline-block">
           {t("profile")}
-        </p>
+        </h2>
+      </div>
+
+      {/* Profile Section */}
+      <div>
+        <h2 className="text-xl font-semibold mb-4 text-[#d0662d]">{t("me")}</h2>
         <div className="mb-6">
           <img
             src={photo}
             alt="Profile"
-            className="w-32 h-32 rounded-lg  object-cover float-left mr-4 mb-2"
+            className="w-32 h-32 rounded-lg object-cover float-left mr-4 mb-2"
           />
           {t("profileContent")
             .split("\n")
             .map((paragraph, index) => (
-              <p key={index} className="text-grey-100 mb-2">
+              <p key={index} className="mb-2">
                 {paragraph}
               </p>
             ))}
         </div>
 
+        {/* Soft Skills Section */}
         <h2 className="text-xl font-semibold mb-4 text-[#d0662d]">
           {t("softskills.title")}
         </h2>
         <ul className="list-disc pl-5 space-y-2">
           {Sskills.map((skill: string, index: number) => (
-            <li key={index} className="text-grey-100">
+            <li key={index} className="text-gray-700 dark:text-gray-300">
               {skill}
             </li>
           ))}
@@ -81,10 +87,12 @@ const Profile: React.FC = () => {
           {Hskills.map(
             (skill: { title: string; description: string }, index: number) => (
               <div key={index}>
-                <h3 className="text-lg font-semibold text-gray-600 dark:text-gray-400">
+                <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
                   {skill.title}
                 </h3>
-                <p className="text-grey-100">{skill.description}</p>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {skill.description}
+                </p>
               </div>
             )
           )}

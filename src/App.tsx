@@ -12,9 +12,9 @@ import Footer from "./components/Footer"; // Assurez-vous d'avoir un composant F
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-[--background-end-rgb]">
+      <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-[--background-gray]">
         <Header />
-        <div className="flex-grow flex justify-center md:px-16 dark:bg-[--background-end-rgb]">
+        <div className="flex-grow flex justify-center md:px-16 dark:bg-[--background-gray]">
           <Routes>
             <Route path="/portfolio" element={<Main />} />
             <Route path="/projects" element={<Projects />} />

@@ -19,86 +19,84 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="shadow-lg rounded-lg p-6 card-light dark:card-dark md:-mx-80">
-      <h2 className="text-xl text-center font-semibold mb-4 text-[#d0662d]">
-        Contact
-      </h2>
+    <div className="text-gray-900 dark:text-gray-100 dark:div-dark p-6 md:-mx-80">
+      <div className="flex">
+        <h2 className="text-xl font-semibold my-6 text-white bg-[#d0662d] rounded-lg py-2 px-4 text-center inline-block mx-auto">
+          Contact
+        </h2>
+      </div>
       <p className="text-grey-100 text-center mb-12">{t("contactsubtitle")}</p>
-      <div className="flex flex-col mt-4">
+      <div className="flex justify-center space-x-6 mt-4">
         <a
-          className="flex items-center mb-4 "
           href="https://www.linkedin.com/in/thomas-laroudie"
           target="_blank"
           rel="noopener noreferrer"
+          className="flex flex-col items-center"
         >
-          <img src={LinkedInIcon} alt="Logo" className="w-10 h-10 " />
-          <p className="pl-2 hover:underline hover:text-[#d0662d]">
-            https://www.linkedin.com/in/thomas-laroudie
-          </p>
+          <img src={LinkedInIcon} alt="LinkedIn" className="w-20 h-20" />
         </a>
 
-        <div
-          className="flex items-center mb-4 cursor-pointer "
-          onClick={() => handleCopy("thomas.laroudie@gmail.com", "Email")}
-        >
-          <img src={EmailIcon} alt="Logo" className="w-10 h-10 " />
-          <p className="pl-2 hover:underline hover:text-[#d0662d]">
-            thomas.laroudie@gmail.com
-          </p>
+        <div className="relative flex flex-col items-center cursor-pointer">
           {copied === "Email" && (
-            <span className="pl-2 text-gray-600 no-underline">{t("copy")}</span>
-          )}
-        </div>
-
-        <div
-          className="flex items-center mb-4 cursor-pointer "
-          onClick={() => handleCopy("tomlrd_76839", "Discord")}
-        >
-          <img src={DiscordIcon} alt="Logo" className="w-10 h-10 " />
-          <p className="pl-2 hover:underline hover:text-[#d0662d]">
-            tomlrd_76839
-          </p>
-          {copied === "Discord" && (
-            <span className="pl-2 text-sm text-gray-600 no-underline">
+            <span className="absolute -top-6 text-sm text-green-400">
               {t("copy")}
             </span>
           )}
+          <img
+            src={EmailIcon}
+            alt="Gmail"
+            className="w-20 h-20"
+            onClick={() => handleCopy("thomas.laroudie@gmail.com", "Email")}
+          />
+        </div>
+
+        <div className="relative flex flex-col items-center cursor-pointer">
+          {copied === "Discord" && (
+            <span className="absolute -top-6 text-sm text-green-400">
+              {t("copy")}
+            </span>
+          )}
+          <img
+            src={DiscordIcon}
+            alt="Discord"
+            className="w-20 h-20"
+            onClick={() => handleCopy("tomlrd_76839", "Discord")}
+          />
         </div>
 
         <a
-          className="flex items-center mb-4 "
           href="https://www.upwork.com/freelancers/~015b4b14e826bef8c5"
           target="_blank"
           rel="noopener noreferrer"
+          className="flex flex-col items-center"
         >
-          <img src={UpworkIcon} alt="Logo" className="w-10 h-10 " />
-          <p className="pl-2 hover:underline hover:text-[#d0662d]">
-            https://www.upwork.com/freelancers/~015b4b14e826bef8c5
-          </p>
+          <img src={UpworkIcon} alt="Upwork" className="w-20 h-20" />
         </a>
 
         <a
-          className="flex items-center mb-4"
           href="https://www.malt.fr/profile/thomaslaroudie1"
           target="_blank"
           rel="noopener noreferrer"
+          className="flex flex-col items-center"
         >
-          <img src={MaltIcon} alt="Logo" className="w-10 h-10 " />
-          <p className="pl-2 hover:underline hover:text-[#d0662d]">
-            https://www.malt.fr/profile/thomaslaroudie1
-          </p>
+          <img src={MaltIcon} alt="Malt" className="w-20 h-20" />
         </a>
 
         <a
-          className="flex items-center mb-4"
           href="https://www.sandbox.game/en/users/stylow/"
           target="_blank"
           rel="noopener noreferrer"
+          className="flex flex-col items-center"
         >
-          <img src={tsb} alt="Logo" className="w-10 h-10 " />
-          <p className="pl-2 hover:underline hover:text-[#d0662d]">
-            https://www.sandbox.game/en/users/stylow/
-          </p>
+          <img src={tsb} alt="The Sandbox" className="w-20 h-20" />
+        </a>
+      </div>
+      <div className="flex">
+        <a
+          href="mailto:thomas.laroudie@gmail.com"
+          className="text-xl font-semibold my-20 text-white bg-[#d0662d] rounded-lg py-2 px-4 text-center inline-block mx-auto"
+        >
+          <h2>{t("contactme")}</h2>
         </a>
       </div>
     </div>
