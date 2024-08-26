@@ -1,13 +1,12 @@
-import React from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
-import "./output.css";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Footer from "./components/Footer"; // Assurez-vous d'avoir un composant Footer
 import Header from "./components/Header";
+import "./output.css";
+import Contact from "./pages/Contact";
+import Electron from "./pages/Electron";
 import Main from "./pages/Main";
 import Profile from "./pages/Profile";
 import Projects from "./pages/Projects";
-import Electron from "./pages/Electron";
-import Contact from "./pages/Contact";
-import Footer from "./components/Footer"; // Assurez-vous d'avoir un composant Footer
 
 function App() {
   return (
