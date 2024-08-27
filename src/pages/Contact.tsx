@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
             src={DiscordIcon}
             alt="Discord"
             className="w-20 h-20"
-            onClick={() => handleCopy("tomlrd_76839", "Discord")}
+            onClick={() => handleCopy("thomas_lrd", "Discord")}
           />
         </div>
 
