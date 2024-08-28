@@ -16,11 +16,12 @@ import photo from "./images/photo.jpg";
 const Profile: React.FC = () => {
   const { t } = useTranslation();
 
-  const language = localStorage.getItem("language");
-  const resumeLink =
-    language === "en"
+  const getResumeLink = () => {
+    const language = localStorage.getItem("language");
+    return language === "en"
       ? `https://drive.google.com/uc?export=download&id=1d2qqGBPEY0h6KRJT3pViUNBUjxUwfdLU`
       : `https://drive.google.com/uc?export=download&id=10PNh8x6McK4k9e6YI0u8kfSPPCalqZvl`;
+  };
 
   const Hskills: { title: string; description: string }[] = t(
     "hardskills.skills",
@@ -71,7 +72,7 @@ const Profile: React.FC = () => {
         </ul>
         <div className="col-span-1 md:col-span-2 flex justify-center">
           <a
-            href={resumeLink}
+            href={getResumeLink()}
             className="text-xl font-semibold my-6 text-white bg-[#d0662d] rounded-lg py-2 px-4 text-center inline-block"
           >
             {t("download")}
