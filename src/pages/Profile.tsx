@@ -16,23 +16,11 @@ import photo from "./images/photo.jpg";
 const Profile: React.FC = () => {
   const { t } = useTranslation();
 
-  const getFileToDownload = () => {
-    const language = localStorage.getItem("language");
-    return language === "en"
-      ? `${window.location.origin}/portfolio/Thomas_laroudie_Resume.pdf`
-      : `${window.location.origin}/portfolio/Thomas_laroudie_CV.pdf`;
-  };
-
-  const handleDownload = () => {
-    const url = getFileToDownload();
-    const link = document.createElement("a");
-    link.href = url;
-    link.setAttribute("download", "");
-    link.setAttribute("type", "application/pdf"); // Assure que le type est PDF
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const language = localStorage.getItem("language");
+  const resumeLink =
+    language === "en"
+      ? `${process.env.PUBLIC_URL}/Thomas.laroudie.Resume.pdf`
+      : `${process.env.PUBLIC_URL}/Thomas.laroudie.CV.pdf`;
 
   const Hskills: { title: string; description: string }[] = t(
     "hardskills.skills",
@@ -82,12 +70,13 @@ const Profile: React.FC = () => {
           ))}
         </ul>
         <div className="col-span-1 md:col-span-2 flex justify-center">
-          <button
-            onClick={handleDownload}
+          <a
+            href={resumeLink}
+            download
             className="text-xl font-semibold my-6 text-white bg-[#d0662d] rounded-lg py-2 px-4 text-center inline-block"
           >
             {t("download")}
-          </button>
+          </a>
         </div>
       </div>
 
