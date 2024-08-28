@@ -1,6 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 
-Sitemap: https://tomlrd.github.io/portfolio/sitemap.xml
+Sitemap: https://tomlrd.github.io/sitemap.xml
 
 User-agent: BadBot
 Disallow: /
