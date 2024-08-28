@@ -19,8 +19,8 @@ const Profile: React.FC = () => {
   const getFileToDownload = () => {
     const language = localStorage.getItem("language");
     return language === "en"
-      ? "/portfolio/Thomas.laroudie.Resume.pdf"
-      : "/portfolio/Thomas.laroudie.CV.pdf";
+      ? `${window.location.origin}/portfolio/Thomas.laroudie.Resume.pdf`
+      : `${window.location.origin}/portfolio/Thomas.laroudie.CV.pdf`;
   };
 
   const handleDownload = () => {
@@ -28,6 +28,7 @@ const Profile: React.FC = () => {
     const link = document.createElement("a");
     link.href = url;
     link.setAttribute("download", "");
+    link.setAttribute("type", "application/pdf"); // Assure que le type est PDF
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
