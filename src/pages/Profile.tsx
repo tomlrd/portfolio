@@ -18,9 +18,11 @@ const Profile: React.FC = () => {
 
   const getResumeLink = () => {
     const language = localStorage.getItem("language");
-    return language === "en"
-      ? `https://drive.google.com/uc?export=download&id=1d2qqGBPEY0h6KRJT3pViUNBUjxUwfdLU`
-      : `https://drive.google.com/uc?export=download&id=10PNh8x6McK4k9e6YI0u8kfSPPCalqZvl`;
+    if (language === "en") {
+      return `https://drive.google.com/uc?export=download&id=1d2qqGBPEY0h6KRJT3pViUNBUjxUwfdLU`;
+    } else {
+      return `https://drive.google.com/uc?export=download&id=10PNh8x6McK4k9e6YI0u8kfSPPCalqZvl`;
+    }
   };
 
   const Hskills: { title: string; description: string }[] = t(
