@@ -3,7 +3,7 @@
 
     <!-- Page d'accueil -->
     <url>
-        <loc>https://tomlrd.github.io/</loc>
+        <loc>https://tomlrd.github.io/portfolio/</loc>
         <lastmod>2024-08-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
     <!-- Page "Projets" -->
     <url>
-        <loc>https://tomlrd.github.io/projects</loc>
+        <loc>https://tomlrd.github.io/portfolio/projects</loc>
         <lastmod>2024-08-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -19,7 +19,7 @@
 
     <!-- Page "Contact" -->
     <url>
-        <loc>https://tomlrd.github.io/contact</loc>
+        <loc>https://tomlrd.github.io/portfolio/contact</loc>
         <lastmod>2024-08-26</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
@@ -27,7 +27,7 @@
 
     <!-- Electronjs -->
     <url>
-        <loc>https://tomlrd.github.io/electron</loc>
+        <loc>https://tomlrd.github.io/portfolio/electron</loc>
         <lastmod>2024-08-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1</priority>
