@@ -19,8 +19,18 @@ const Profile: React.FC = () => {
   const getFileToDownload = () => {
     const language = localStorage.getItem("language");
     return language === "en"
-      ? `${process.env.PUBLIC_URL}/Thomas.laroudie.Resume.pdf`
-      : `${process.env.PUBLIC_URL}/Thomas.laroudie.CV.pdf`;
+      ? "/portfolio/Thomas.laroudie.Resume.pdf"
+      : "/portfolio/Thomas.laroudie.CV.pdf";
+  };
+
+  const handleDownload = () => {
+    const url = getFileToDownload();
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", "");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const Hskills: { title: string; description: string }[] = t(
@@ -70,16 +80,14 @@ const Profile: React.FC = () => {
             </li>
           ))}
         </ul>
-        {/*         <div className="col-span-1 md:col-span-2 flex justify-center">
-          <a
-            href={getFileToDownload()}
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="col-span-1 md:col-span-2 flex justify-center">
+          <button
+            onClick={handleDownload}
             className="text-xl font-semibold my-6 text-white bg-[#d0662d] rounded-lg py-2 px-4 text-center inline-block"
           >
             {t("download")}
-          </a>
-        </div> */}
+          </button>
+        </div>
       </div>
 
       {/* Hard Skills Section */}
@@ -88,17 +96,25 @@ const Profile: React.FC = () => {
           {t("hardskills.title")}
         </h2>
         <div className="flex justify-items-start justify-start my-5 flex-wrap">
-          <img src={html} alt="Logo" className="w-10 h-10 mx-1" />
-          <img src={css} alt="Logo" className="w-10 h-10 mx-1" />
-          <img src={js} alt="Logo" className="w-10 h-10 mx-1" />
-          <img src={ts} alt="Logo" className="w-10 h-10 mx-1" />
-          <img src={tailwind} alt="Logo" className="w-10 h-10 mx-1" />
-          <img src={react} alt="Logo" className="w-10 h-10 mx-1" />
-          <img src={next} alt="Logo" className="w-10 h-10 mx-1" />
-          <img src={nodejs} alt="Logo" className="w-10 h-10 mx-1" />
-          <img src={electronjs} alt="Logo" className="w-10 h-10 mx-1" />
-          <img src={webpack} alt="Logo" className="w-10 h-10 mx-1" />
-          <img src={vitejs} alt="Logo" className="w-10 h-10 mx-1" />
+          <img src={html} alt="HTML Logo" className="w-10 h-10 mx-1" />
+          <img src={css} alt="CSS Logo" className="w-10 h-10 mx-1" />
+          <img src={js} alt="JavaScript Logo" className="w-10 h-10 mx-1" />
+          <img src={ts} alt="TypeScript Logo" className="w-10 h-10 mx-1" />
+          <img
+            src={tailwind}
+            alt="Tailwind CSS Logo"
+            className="w-10 h-10 mx-1"
+          />
+          <img src={react} alt="React Logo" className="w-10 h-10 mx-1" />
+          <img src={next} alt="Next.js Logo" className="w-10 h-10 mx-1" />
+          <img src={nodejs} alt="Node.js Logo" className="w-10 h-10 mx-1" />
+          <img
+            src={electronjs}
+            alt="Electron Logo"
+            className="w-10 h-10 mx-1"
+          />
+          <img src={webpack} alt="Webpack Logo" className="w-10 h-10 mx-1" />
+          <img src={vitejs} alt="Vite.js Logo" className="w-10 h-10 mx-1" />
         </div>
         <div className="space-y-4">
           {Hskills.map(
