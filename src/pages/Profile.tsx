@@ -19,8 +19,8 @@ const Profile: React.FC = () => {
   const getFileToDownload = () => {
     const language = localStorage.getItem("language");
     return language === "en"
-      ? `${window.location.origin}/portfolio/Thomas.laroudie.Resume.pdf`
-      : `${window.location.origin}/portfolio/Thomas.laroudie.CV.pdf`;
+      ? `${window.location.origin}/portfolio/Thomas_laroudie_Resume.pdf`
+      : `${window.location.origin}/portfolio/Thomas_laroudie_CV.pdf`;
   };
 
   const handleDownload = () => {
