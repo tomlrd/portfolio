@@ -39,7 +39,7 @@ export default function Header() {
 
   // Fonction pour naviguer vers la page d'accueil
   const handleNavigateHome = () => {
-    navigate("/portfolio");
+    navigate("/");
   };
 
   return (
@@ -70,7 +70,7 @@ export default function Header() {
           </button>
 
           {/* Home Button (visible si l'utilisateur n'est pas sur /main) */}
-          {location.pathname !== "/portfolio" && (
+          {location.pathname !== "/" && (
             <button
               onClick={handleNavigateHome}
               className="
