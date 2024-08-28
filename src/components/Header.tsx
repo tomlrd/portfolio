@@ -18,6 +18,8 @@ export default function Header() {
 
   // Initialiser le thème depuis le localStorage ou définir "dark" par défaut
   useEffect(() => {
+    console.log(location);
+
     const browserLanguage = navigator.language.split("-")[0];
     const initialLanguage = browserLanguage === "fr" ? "fr" : "en";
     setLanguage(initialLanguage);
