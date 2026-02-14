@@ -1,5 +1,5 @@
 import { Route, HashRouter as Router, Routes } from "react-router-dom";
-import Footer from "./components/Footer"; // Assurez-vous d'avoir un composant Footer
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./output.css";
 import Contact from "./pages/Contact";
@@ -11,9 +11,9 @@ import Projects from "./pages/Projects";
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-[--background-gray]">
+      <div className="flex flex-col min-h-screen bg-gray-950 text-white">
         <Header />
-        <div className="flex-grow flex justify-center md:px-16 dark:bg-[--background-gray]">
+        <div className="flex-grow flex justify-center items-start">
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/projects" element={<Projects />} />

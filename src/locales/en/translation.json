@@ -1,5 +1,23 @@
 {
   "welcome": "Hello ! I'm <coloredText>Thomas Laroudie</coloredText>, a Fullstack Javascript-Typescript developer (MERN stack), and native <coloredText>Electron.js</coloredText> software specialist based in Yvelines, France.",
+  "hero": {
+    "badge1": "⚡ Fullstack Developer",
+    "badge2": "🚀 MERN Stack",
+    "firstName": "Thomas",
+    "lastName": "Laroudie",
+    "availability": "Available for new projects",
+    "subtitle": "Fullstack Javascript-Typescript developer (MERN stack), and native Electron.js software specialist based in Yvelines, France.",
+    "cta1": "VIEW WORK",
+    "cta2": "CONTACT"
+  },
+  "stats": {
+    "experience": "10+",
+    "years": "Years of experience",
+    "projects": "20+",
+    "realized": "Projects realized",
+    "satisfaction": "100%",
+    "clients": "They trusted me"
+  },
   "projectsDescription": "Get a view of some projects I can show you",
   "projects": {
     "title": "Projects",
@@ -8,7 +26,11 @@
       {
         "title": "PlayAbility",
         "description": "PlayAbility is a software that helps people with disabilities to play video games again through AI and facial recognition.\nConducted various interventions including adding features to the existing application and performing security audits/interventions.",
-        "images": ["pa1.png", "pa2.png", "pa3.png"],
+        "images": [
+          "pa1.png",
+          "pa2.png",
+          "pa3.png"
+        ],
         "client": "Valentin Squirelo",
         "date": "2023-2024",
         "link": "https://www.playability.gg/",
@@ -25,7 +47,11 @@
       {
         "title": "OnlyOne",
         "description": "I took the lead in revamping and further developing the proprietary Electron.js application OnlyOne, which serves as a unified platform consolidating multiple game distribution services such as Steam, Blizzard, and others into a single, seamless interface.\nThis application not only streamlines access to various gaming platforms but also enhances the user experience by integrating social features like real-time chat and group management.\nTo achieve this, I engineered complex API integrations to connect with the relevant services, ensuring smooth and reliable communication between OnlyOne and the external platforms.",
-        "images": ["oo1.png", "oo2.png", "oo3.png"],
+        "images": [
+          "oo1.png",
+          "oo2.png",
+          "oo3.png"
+        ],
         "client": "Vaniti",
         "date": "2021-2023",
         "link": "https://only-one.io/",
@@ -43,7 +69,11 @@
       {
         "title": "PadToLan",
         "description": "Originally designed for the game Star Citizen, you can customize the TouchPad to your preferences, deploy devices seamlessly within your LAN for enhanced control, and replicate configurable keybinds on the host with features like double-tap, hold, and loop.",
-        "images": ["scrpdl.png", "ptl1.png", "ptl2.png"],
+        "images": [
+          "scrpdl.png",
+          "ptl1.png",
+          "ptl2.png"
+        ],
         "client": "Anyone",
         "date": "2023",
         "link": "https://github.com/tomlrd/PadToLan",
@@ -60,7 +90,10 @@
       {
         "title": "Albion OCR",
         "description": "POC tool for analyzing, saving, and exporting player sales data for the game Albion Online through text recognition.",
-        "images": ["alb1.jpg", "alb2.jpg"],
+        "images": [
+          "alb1.jpg",
+          "alb2.jpg"
+        ],
         "client": "Anyone",
         "date": "2020",
         "tags": [
