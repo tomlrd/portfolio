@@ -130,9 +130,6 @@ const Main: React.FC = () => {
                 <div className="text-6xl font-black text-green-600 dark:text-green-400">
                   {t("stats.satisfaction")}
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 uppercase tracking-wider font-bold">
-                  {t("stats.clients")}
-                </p>
 
                 {/* Clients section */}
                 <div className="pt-8 w-full">
