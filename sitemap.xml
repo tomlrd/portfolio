@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://tomlrd.github.io/portfolio/</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Page "Projets" -->
+    <url>
+        <loc>https://tomlrd.github.io/portfolio/projects</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Page "Contact" -->
+    <url>
+        <loc>https://tomlrd.github.io/portfolio/contact</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Electronjs -->
+    <url>
+        <loc>https://tomlrd.github.io/portfolio/electron</loc>
+        <lastmod>2024-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1</priority>
+    </url>
+
+</urlset>

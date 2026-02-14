@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+
+Sitemap: https://tomlrd.github.io/sitemap.xml
+
+User-agent: BadBot
+Disallow: /
+
+# Autorise Googlebot à tout indexer
+User-agent: Googlebot
+Allow: /
+
