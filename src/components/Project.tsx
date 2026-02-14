@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { SquareArrowOutUpRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 type ProjectProps = {
   title: string;
@@ -20,6 +21,8 @@ const Project: React.FC<ProjectProps> = ({
   link,
   tags,
 }) => {
+  const { t } = useTranslation();
+  
   useEffect(() => {
     console.log(images);
   }, []);
@@ -59,10 +62,10 @@ const Project: React.FC<ProjectProps> = ({
           )}
         </h3>
         <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-          <span className="font-semibold">Client:</span> {client}
+          <span className="font-semibold">{t("projects.client")}:</span> {client}
         </p>
         <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-          <span className="font-semibold">Date:</span> {date}
+          <span className="font-semibold">{t("projects.date")}:</span> {date}
         </p>
         <div className="mt-4 space-y-4">
           {description.split("\n").map((paragraph, index) => (

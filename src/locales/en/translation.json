@@ -21,7 +21,13 @@
   "projectsDescription": "Get a view of some projects I can show you",
   "projects": {
     "title": "Projects",
+    "myProjects": "My",
     "subtitle": "Keep in mind that I can only showcase the public projects I've worked on. I have also had the opportunity to work on projects at companies such as Cybernetics, Ercom, Geoflex...",
+    "viewProject": "View project",
+    "client": "Client",
+    "date": "Date",
+    "visitSite": "Visit website",
+    "technologies": "Technologies",
     "projectsList": [
       {
         "title": "PlayAbility",
@@ -108,7 +114,11 @@
       }
     ]
   },
-  "profile": "Profile",
+  "profile": {
+    "title": "Profile",
+    "subtitle": "Discover my journey and skills",
+    "available": "Available"
+  },
   "me": "Me",
   "profilDescription": "See my personal profile and skills",
   "download": "Download my Resume",
@@ -207,7 +217,19 @@
   "contactDescription": "Contact me for any question or project",
   "contactsubtitle": "Need a Fullstack developer, expertise in Electron.js, or voxel creation? Contact me !",
   "contactme": "Contact me !",
+  "contact": {
+    "ctaTitle": "Let's discuss your project",
+    "ctaSubtitle": "Ready to turn your ideas into reality? Contact me now."
+  },
   "copy": "Copy !",
+  "main": {
+    "discover": "Discover",
+    "explore": "Explore",
+    "projectsCount": "20+ projects",
+    "letsTalk": "Let's talk together",
+    "finalCtaTitle": "Ready to create something amazing?",
+    "finalCtaSubtitle": "Let's transform your ideas into reality with modern and powerful technologies."
+  },
   "back": "Back",
   "footer1": "© 2024 made by myself with ",
   "footer2": " All rights reserved."

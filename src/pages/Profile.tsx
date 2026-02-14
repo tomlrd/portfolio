@@ -42,11 +42,11 @@ const Profile: React.FC = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-400 dark:from-orange-500 dark:to-orange-300">
-              Profil
+              {t("profile.title")}
             </span>
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg md:text-xl">
-            Découvrez mon parcours et mes compétences
+            {t("profile.subtitle")}
           </p>
         </div>
 
@@ -69,7 +69,7 @@ const Profile: React.FC = () => {
                   </h2>
                   <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                     <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                    <span>Disponible</span>
+                    <span>{t("profile.available")}</span>
                   </div>
                 </div>
               </div>
