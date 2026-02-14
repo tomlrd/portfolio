@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
           
           <div className="flex items-center justify-center gap-2 text-base">
             <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></span>
-            <span className="text-green-600 dark:text-green-400 font-semibold">Disponible pour de nouveaux projets</span>
+            <span className="text-green-600 dark:text-green-400 font-semibold">{t("hero.availability")}</span>
           </div>
         </div>
 
@@ -93,10 +93,10 @@ const Contact: React.FC = () => {
             
             <div className="space-y-4">
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white">
-                Discutons de votre projet
+                {t("contact.ctaTitle")}
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                Prêt à transformer vos idées en réalité ? Contactez-moi dès maintenant.
+                {t("contact.ctaSubtitle")}
               </p>
             </div>
 

@@ -226,7 +226,7 @@ const Main: React.FC = () => {
 
             <div className="relative flex items-center gap-4 text-orange-600 dark:text-orange-400 font-bold text-lg group-hover:gap-6 transition-all duration-500">
               <span className="group-hover:translate-x-1 transition-transform duration-500">
-                Découvrir
+                {t("main.discover")}
               </span>
               <span className="text-3xl group-hover:translate-x-3 group-hover:scale-125 transition-all duration-500">
                 →
@@ -260,7 +260,7 @@ const Main: React.FC = () => {
                 </div>
                 <div className="px-6 py-3 rounded-full bg-orange-500/30 border-2 border-orange-500/50 group-hover:bg-orange-500/40 group-hover:border-orange-400 group-hover:scale-110 transition-all duration-500">
                   <span className="text-base font-black text-orange-600 dark:text-orange-300 group-hover:text-orange-700 dark:group-hover:text-orange-200">
-                    20+ projets
+                    {t("main.projectsCount")}
                   </span>
                 </div>
               </div>
@@ -276,7 +276,7 @@ const Main: React.FC = () => {
 
             <div className="relative flex items-center gap-4 text-orange-600 dark:text-orange-400 font-bold text-lg group-hover:gap-6 transition-all duration-500">
               <span className="group-hover:translate-x-1 transition-transform duration-500">
-                Explorer
+                {t("main.explore")}
               </span>
               <span className="text-3xl group-hover:translate-x-3 group-hover:scale-125 transition-all duration-500">
                 →
@@ -319,7 +319,7 @@ const Main: React.FC = () => {
 
             <div className="relative flex items-center gap-4 text-orange-600 dark:text-orange-400 font-bold text-lg group-hover:gap-6 transition-all duration-500">
               <span className="group-hover:translate-x-1 transition-transform duration-500">
-                Découvrir
+                {t("main.discover")}
               </span>
               <span className="text-3xl group-hover:translate-x-3 group-hover:scale-125 transition-all duration-500">
                 →
@@ -354,7 +354,7 @@ const Main: React.FC = () => {
                 <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-green-500/30 border-2 border-green-500/50 group-hover:bg-green-500/40 group-hover:border-green-400 group-hover:scale-110 transition-all duration-500">
                   <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
                   <span className="text-base font-black text-green-600 dark:text-green-400 group-hover:text-green-700 dark:group-hover:text-green-300">
-                    Disponible
+                    {t("profile.available")}
                   </span>
                 </div>
               </div>
@@ -370,7 +370,7 @@ const Main: React.FC = () => {
 
             <div className="relative flex items-center gap-4 text-orange-600 dark:text-orange-400 font-bold text-lg group-hover:gap-6 transition-all duration-500">
               <span className="group-hover:translate-x-1 transition-transform duration-500">
-                Discutons ensemble
+                {t("main.letsTalk")}
               </span>
               <span className="text-3xl group-hover:translate-x-3 group-hover:scale-125 transition-all duration-500">
                 →
@@ -384,15 +384,10 @@ const Main: React.FC = () => {
       <section className="max-w-7xl mx-auto px-6 py-16 md:py-24">
         <div className="text-center space-y-6 mb-12">
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-tight text-gray-900 dark:text-white">
-            Prêt à créer quelque chose d'
-            <span className="text-orange-600 dark:text-orange-500">
-              incroyable
-            </span>{" "}
-            ?
+            {t("main.finalCtaTitle")}
           </h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Transformons vos idées en réalité avec des technologies modernes et
-            performantes.
+            {t("main.finalCtaSubtitle")}
           </p>
         </div>
       </section>

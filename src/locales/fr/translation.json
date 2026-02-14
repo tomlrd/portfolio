@@ -21,7 +21,13 @@
   "projectsDescription": "Découvrez certains projets que je peux vous montrer",
   "projects": {
     "title": "Projets",
+    "myProjects": "Mes",
     "subtitle": "Gardez à l'esprit que je ne peux présenter que les projets publics sur lesquels j'ai travaillé. J'ai également eu l'opportunité de travailler sur des projets pour des entreprises comme Cybernetics, Ercom, Geoflex...",
+    "viewProject": "Voir le projet",
+    "client": "Client",
+    "date": "Date",
+    "visitSite": "Visiter le site",
+    "technologies": "Technologies",
     "projectsList": [
       {
         "title": "PlayAbility",
@@ -108,7 +114,11 @@
       }
     ]
   },
-  "profile": "Profil",
+  "profile": {
+    "title": "Profil",
+    "subtitle": "Découvrez mon parcours et mes compétences",
+    "available": "Disponible"
+  },
   "me": "Moi",
   "profilDescription": "Consultez mon profil personnel et mes compétences",
   "download": "Téléchargez mon CV",
@@ -207,7 +217,19 @@
   "contactDescription": "Contactez-moi pour toute question ou projet",
   "contactsubtitle": "Besoin d'un développeur Fullstack, d'une expertise en Electron.js, ou de création voxel ? Contactez-moi !",
   "contactme": "Contactez moi !",
+  "contact": {
+    "ctaTitle": "Discutons de votre projet",
+    "ctaSubtitle": "Prêt à transformer vos idées en réalité ? Contactez-moi dès maintenant."
+  },
   "copy": "Copié !",
+  "main": {
+    "discover": "Découvrir",
+    "explore": "Explorer",
+    "projectsCount": "20+ projets",
+    "letsTalk": "Discutons ensemble",
+    "finalCtaTitle": "Prêt à créer quelque chose d'incroyable ?",
+    "finalCtaSubtitle": "Transformons vos idées en réalité avec des technologies modernes et performantes."
+  },
   "back": "Retour",
   "footer1": "© 2024 crée par moi-même avec ",
   "footer2": " Tous droits réservés."

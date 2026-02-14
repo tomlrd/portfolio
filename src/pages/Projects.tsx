@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="text-center space-y-4 mb-16">
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-gray-900 dark:text-white">
-            Mes <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-400 dark:from-orange-500 dark:to-orange-300">Projets</span>
+            {t("projects.myProjects")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-400 dark:from-orange-500 dark:to-orange-300">{t("projects.title")}</span>
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             {t("projects.subtitle")}
@@ -99,7 +99,7 @@ const Projects: React.FC = () => {
                   {/* View button */}
                   <div className="pt-2">
                     <span className={`inline-flex items-center gap-2 ${colors.text} font-bold text-sm group-hover:gap-3 transition-all duration-300`}>
-                      Voir le projet
+                      {t("projects.viewProject")}
                       <ExternalLink size={16} />
                     </span>
                   </div>
@@ -153,7 +153,7 @@ const Projects: React.FC = () => {
                   <div className="flex items-center gap-6 text-sm text-gray-600 dark:text-gray-400">
                     <div className="flex items-center gap-2">
                       <User size={16} className="text-orange-600 dark:text-orange-500" />
-                      <span><span className="font-semibold">Client:</span> {projectsList[selectedProject].client}</span>
+                      <span><span className="font-semibold">{t("projects.client")}:</span> {projectsList[selectedProject].client}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Calendar size={16} className="text-orange-600 dark:text-orange-500" />
@@ -170,7 +170,7 @@ const Projects: React.FC = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-300"
                   >
-                    Visiter le site
+                    {t("projects.visitSite")}
                     <ExternalLink size={18} />
                   </a>
                 )}
@@ -185,7 +185,7 @@ const Projects: React.FC = () => {
                 {/* Tags */}
                 <div>
                   <h3 className="text-sm font-bold text-gray-600 dark:text-gray-400 uppercase tracking-wider mb-3">
-                    Technologies
+                    {t("projects.technologies")}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {projectsList[selectedProject].tags.map((tag, index) => (
