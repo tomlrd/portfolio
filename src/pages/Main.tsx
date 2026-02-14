@@ -309,7 +309,7 @@ const Main: React.FC = () => {
               </div>
               <div className="space-y-5">
                 <h3 className="text-4xl font-black text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 group-hover:tracking-wide transition-all duration-500">
-                  {t("electron.title")}
+                  Electron
                 </h3>
                 <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-500">
                   {t("electronDescription")}
