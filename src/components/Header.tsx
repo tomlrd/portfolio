@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Darkmode from "./Darkmode";
 import { useTranslation } from "react-i18next";
 
 export default function Header() {
-  const location = useLocation();
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [language, setLanguage] = useState<"fr" | "en">();
 
   useEffect(() => {
