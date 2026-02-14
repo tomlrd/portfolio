@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Mail, Copy, Check } from "lucide-react";
+import { Mail, Check } from "lucide-react";
 import EmailIcon from "../assets/gmail-icon.svg";
 import DiscordIcon from "../assets/discord.svg";
 import LinkedInIcon from "../assets/linkedin-icon-2.svg";
