@@ -2,6 +2,8 @@
 
 Personal portfolio of Thomas Laroudie — fullstack JavaScript/TypeScript developer and Electron.js specialist.
 
+Live at **https://tomlrd.github.io/portfolio/**
+
 ## Stack
 
 - React 19 + TypeScript
