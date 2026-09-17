@@ -71,6 +71,9 @@
     "gallery": "Screenshot {{index}} of {{total}}"
   },
   "projects": {
+    "albionEmpires": {
+      "description": "A web platform for Albion Online, fed by a small desktop agent that passively listens to the game's network traffic on each player's machine. It answers the question the game does not: where people have been, and what a group knows about a place over time.\nThe agent captures and forwards, never sending a packet to the game, reading its memory or touching its files. A Rust server decodes, stores and serves; the site draws the world map with a time slider, a kill feed with a per-fight damage meter replayed second by second, crafting costs from the game's own recipes, and an auction-house ledger.\nData is shared through pools: each account records what its agent sees, and a pool only grows by invitation. Reading several pools merges them, keeping the freshest record per entity, and nobody is ever told who observes them."
+    },
     "playability": {
       "description": "PlayAbility is a software that helps people with disabilities play video games again, using AI and facial recognition.\nI shipped new features on the existing application and ran security audits and remediation work."
     },
@@ -80,8 +83,8 @@
     "padtolan": {
       "description": "Originally built for Star Citizen, PadToLan turns any device on your LAN into a customisable touchpad.\nIt replicates configurable keybinds on the host, with double-tap, hold and loop behaviours."
     },
-    "albion": {
-      "description": "A proof-of-concept tool that reads, stores and exports player sales data for Albion Online through text recognition."
+    "albionAccountant": {
+      "description": "An auction-house ledger for Albion Online. It follows a selling session — sales, fees, sales tax, setup fees and repairs — and works out what each player is owed once the haul is split with a guild.\nCharts break the numbers down over time, by item, and by hour and weekday. A templated Discord message turns a session into a report the group can read at a glance.\nIt grew out of Albion OCR, a proof of concept that read sales data off the screen through text recognition."
     }
   },
   "about": {

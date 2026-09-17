@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import type { Project } from "../content/projects";
 import { ProjectGallery } from "./ProjectGallery";
+import { ProjectPlaceholder } from "./ProjectPlaceholder";
 import { AnchorButton } from "./ui/Button";
 import { Tag } from "./ui/Tag";
 
@@ -15,7 +16,14 @@ export function ProjectEntry({ project }: { project: Project }) {
       className="scroll-mt-28 border-t border-line pt-12 first:border-none first:pt-0"
     >
       <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
-        <ProjectGallery name={project.name} images={project.images} />
+        {project.images ? (
+          <ProjectGallery name={project.name} images={project.images} />
+        ) : (
+          <ProjectPlaceholder
+            name={project.name}
+            className="aspect-16/10 rounded-card border border-line"
+          />
+        )}
 
         <div className="flex flex-col gap-6">
           <div className="space-y-3">
@@ -28,7 +36,8 @@ export function ProjectEntry({ project }: { project: Project }) {
                   {t("work.client")}
                 </dt>
                 <dd className="text-muted">
-                  {project.client ?? t("work.clientAnyone")}
+                  {project.client ??
+                    t(project.personal ? "status.personal" : "work.clientAnyone")}
                 </dd>
               </div>
               <div className="flex gap-2">

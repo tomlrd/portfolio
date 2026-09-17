@@ -71,6 +71,9 @@
     "gallery": "Capture {{index}} sur {{total}}"
   },
   "projects": {
+    "albionEmpires": {
+      "description": "Une plateforme web pour Albion Online, alimentée par un petit agent de bureau qui écoute passivement le trafic réseau du jeu sur la machine de chaque joueur. Elle répond à la question que le jeu ne traite pas : où les gens sont passés, et ce qu'un groupe sait d'un lieu au fil du temps.\nL'agent capture et transmet, sans jamais envoyer un paquet au jeu, lire sa mémoire ou toucher ses fichiers. Un serveur Rust décode, stocke et sert ; le site dessine la carte du monde avec un curseur temporel, un fil des kills avec un compteur de dégâts rejoué seconde par seconde, le coût des crafts à partir des recettes du jeu, et un registre d'hôtel des ventes.\nLes données circulent par pools : chaque compte enregistre ce que son agent voit, et un pool ne s'agrandit que sur invitation. Lire plusieurs pools les fusionne en gardant l'enregistrement le plus frais par entité, et personne n'est jamais informé de qui l'observe."
+    },
     "playability": {
       "description": "PlayAbility est un logiciel qui aide les personnes en situation de handicap à rejouer aux jeux vidéo, grâce à l'IA et à la reconnaissance faciale.\nJ'ai développé de nouvelles fonctionnalités sur l'application existante et mené des audits de sécurité ainsi que leurs corrections."
     },
@@ -80,8 +83,8 @@
     "padtolan": {
       "description": "Pensé à l'origine pour Star Citizen, PadToLan transforme n'importe quel appareil du réseau local en pavé tactile personnalisable.\nIl reproduit des raccourcis configurables sur l'hôte, avec double-tap, maintien et boucle."
     },
-    "albion": {
-      "description": "Un outil de démonstration qui lit, enregistre et exporte les données de vente des joueurs d'Albion Online par reconnaissance de texte."
+    "albionAccountant": {
+      "description": "Un registre d'hôtel des ventes pour Albion Online. Il suit une session de vente — ventes, frais, taxe de vente, frais de mise en vente et réparations — et calcule ce que chaque joueur doit toucher une fois le butin partagé avec une guilde.\nDes graphiques décomposent les chiffres dans le temps, par objet, et par heure et jour de la semaine. Un message Discord à base de variables transforme une session en rapport lisible d'un coup d'œil.\nIl est né d'Albion OCR, une preuve de concept qui lisait les données de vente à l'écran par reconnaissance de texte."
     }
   },
   "about": {

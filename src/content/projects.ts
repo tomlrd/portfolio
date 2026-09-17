@@ -11,7 +11,12 @@ import ptl2 from "../assets/projects/ptl2.webp";
 import scrpdl from "../assets/projects/scrpdl.webp";
 
 export type Project = {
-  id: "playability" | "onlyone" | "padtolan" | "albion";
+  id:
+    | "albionEmpires"
+    | "playability"
+    | "onlyone"
+    | "padtolan"
+    | "albionAccountant";
   name: string;
   period: string;
   client?: string;
@@ -19,10 +24,27 @@ export type Project = {
   personal: boolean;
   featured: boolean;
   tags: string[];
-  images: string[];
+  images?: string[];
 };
 
 export const projects: Project[] = [
+  {
+    id: "albionEmpires",
+    name: "Albion Empires",
+    period: "2026",
+    personal: true,
+    featured: true,
+    tags: [
+      "Rust",
+      "axum",
+      "MongoDB",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "deck.gl",
+    ],
+  },
   {
     id: "playability",
     name: "PlayAbility",
@@ -68,7 +90,7 @@ export const projects: Project[] = [
     period: "2023",
     url: "https://github.com/tomlrd/PadToLan",
     personal: true,
-    featured: true,
+    featured: false,
     tags: [
       "Electron.js",
       "TypeScript",
@@ -80,12 +102,12 @@ export const projects: Project[] = [
     images: [scrpdl, ptl1, ptl2],
   },
   {
-    id: "albion",
-    name: "Albion OCR",
-    period: "2020",
+    id: "albionAccountant",
+    name: "Albion Accountant",
+    period: "2020 — 2026",
     personal: true,
     featured: false,
-    tags: ["Electron.js", "JavaScript", "Node.js", "EJS", "OCR"],
+    tags: ["TypeScript", "React", "Charts", "Discord"],
     images: [alb1, alb2],
   },
 ];
