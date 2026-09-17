@@ -1,5 +1,7 @@
-import alb1 from "../assets/projects/alb1.webp";
-import alb2 from "../assets/projects/alb2.webp";
+import aa1 from "../assets/projects/aa1.webp";
+import aa2 from "../assets/projects/aa2.webp";
+import aa3 from "../assets/projects/aa3.webp";
+import ae from "../assets/projects/ae.webp";
 import oo1 from "../assets/projects/oo1.webp";
 import oo2 from "../assets/projects/oo2.webp";
 import oo3 from "../assets/projects/oo3.webp";
@@ -45,6 +47,7 @@ export const projects: Project[] = [
       "Tailwind CSS",
       "deck.gl",
     ],
+    images: [ae],
   },
   {
     id: "playability",
@@ -106,10 +109,11 @@ export const projects: Project[] = [
     id: "albionAccountant",
     name: "Albion Accountant",
     period: "2020 — 2026",
+    url: "https://github.com/tomlrd/Albion-Accountant-Client",
     personal: true,
     featured: false,
     tags: ["Tauri", "Rust", "TypeScript", "React", "Charts", "Discord"],
-    images: [alb1, alb2],
+    images: [aa1, aa2, aa3],
   },
 ];
 

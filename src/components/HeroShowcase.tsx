@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import onlyone from "../assets/projects/oo1.webp";
+import albionEmpires from "../assets/projects/ae.webp";
 import playability from "../assets/projects/pa1.webp";
 import electron from "../assets/stack/electron.svg";
 import { useTilt } from "../hooks/useParallax";
@@ -16,13 +16,13 @@ export function HeroShowcase() {
       >
         <figure className="overflow-hidden rounded-card border border-line bg-surface shadow-2xl shadow-black/20">
           <img
-            src={onlyone}
+            src={albionEmpires}
             alt=""
             className="aspect-16/10 w-full object-cover object-top"
           />
           <figcaption className="flex items-center justify-end gap-3 border-t border-line px-5 py-3.5">
-            <span className="text-sm font-medium">OnlyOne</span>
-            <span className="font-mono text-xs text-faint">Electron.js</span>
+            <span className="text-sm font-medium">Albion Empires</span>
+            <span className="font-mono text-xs text-faint">Tauri · Rust</span>
           </figcaption>
         </figure>
 
