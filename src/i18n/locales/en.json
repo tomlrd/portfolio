@@ -87,7 +87,7 @@
   "about": {
     "title": "About",
     "lead": "Application developer, tool builder, and a long-time fan of things that run offline.",
-    "bio": "Application developer with a strong background in fullstack JavaScript and TypeScript, specialised in desktop applications built with Electron.js.\nI enjoy building my own tools, with a keen interest in R&D and software tailored to a specific problem.\nAutonomous, curious and driven by cybersecurity, hardware and the positive impact technology can have.\nI am currently learning Tauri and Rust. I also collaborated directly with The Sandbox on voxel assets, like the one on the home page. Web scraping, crypto mining and ARM development are familiar ground.",
+    "bio": "Application developer with a strong background in fullstack JavaScript and TypeScript, specialised in desktop applications built with Electron.js.\nI enjoy building my own tools, with a keen interest in R&D and software tailored to a specific problem.\nAutonomous, curious and driven by cybersecurity, hardware and the positive impact technology can have.\nAlongside Electron.js, I now build desktop applications with Tauri and Rust. I also collaborated directly with The Sandbox on voxel assets. Web scraping, crypto mining and ARM development are familiar ground.",
     "stackLabel": "Stack",
     "stackTitle": "Technologies I work with",
     "hardLabel": "Expertise",
@@ -106,6 +106,10 @@
       {
         "title": "Node.js backend development",
         "description": "Server-side applications, RESTful APIs and frameworks such as Express.js, with a solid grasp of asynchronous programming, event-driven architecture and non-blocking I/O."
+      },
+      {
+        "title": "Tauri and Rust desktop applications",
+        "description": "Cross-platform desktop applications built with Tauri, pairing a Rust core with a web front-end for smaller binaries and a tighter security model than a bundled runtime."
       },
       {
         "title": "Database management",

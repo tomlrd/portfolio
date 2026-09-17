@@ -13,6 +13,7 @@ import { stack } from "../content/stack";
 import { useContent } from "../hooks/useContent";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import type { Language } from "../i18n";
+import { cn } from "../lib/cn";
 
 export default function About() {
   const { t, i18n } = useTranslation();
@@ -81,7 +82,10 @@ export default function About() {
                     src={item.icon}
                     alt=""
                     loading="lazy"
-                    className="size-6 shrink-0 object-contain"
+                    className={cn(
+                      "size-6 shrink-0 object-contain",
+                      item.monochrome && "dark:invert",
+                    )}
                   />
                   <span className="text-sm font-medium">{item.name}</span>
                 </Reveal>

@@ -87,7 +87,7 @@
   "about": {
     "title": "Profil",
     "lead": "Développeur d'applications, créateur d'outils, et amateur de longue date de ce qui tourne hors ligne.",
-    "bio": "Développeur d'applications avec une solide expérience fullstack JavaScript et TypeScript, spécialisé dans les applications de bureau construites avec Electron.js.\nJ'aime créer mes propres outils, avec un vif intérêt pour la R&D et les logiciels taillés pour un problème précis.\nAutonome, curieux et motivé par la cybersécurité, le matériel et l'impact positif que la technologie peut avoir.\nJ'apprends actuellement Tauri et Rust. J'ai aussi collaboré directement avec The Sandbox sur des assets voxel, comme celui de la page d'accueil. Le scraping web, le minage de crypto-monnaie et le développement sur ARM me sont familiers.",
+    "bio": "Développeur d'applications avec une solide expérience fullstack JavaScript et TypeScript, spécialisé dans les applications de bureau construites avec Electron.js.\nJ'aime créer mes propres outils, avec un vif intérêt pour la R&D et les logiciels taillés pour un problème précis.\nAutonome, curieux et motivé par la cybersécurité, le matériel et l'impact positif que la technologie peut avoir.\nEn parallèle d'Electron.js, je développe désormais des applications de bureau avec Tauri et Rust. J'ai aussi collaboré directement avec The Sandbox sur des assets voxel. Le scraping web, le minage de crypto-monnaie et le développement sur ARM me sont familiers.",
     "stackLabel": "Stack",
     "stackTitle": "Les technologies que j'utilise",
     "hardLabel": "Expertise",
@@ -106,6 +106,10 @@
       {
         "title": "Développement backend Node.js",
         "description": "Applications côté serveur, API RESTful et frameworks comme Express.js, avec une bonne maîtrise de l'asynchrone, de l'architecture événementielle et des entrées/sorties non bloquantes."
+      },
+      {
+        "title": "Applications de bureau Tauri et Rust",
+        "description": "Applications de bureau multiplateformes construites avec Tauri, associant un cœur Rust à un front-end web pour des binaires plus légers et un modèle de sécurité plus strict qu'un runtime embarqué."
       },
       {
         "title": "Gestion des bases de données",

@@ -1,4 +1,5 @@
 import { stack } from "../content/stack";
+import { cn } from "../lib/cn";
 
 export function StackMarquee() {
   const items = [...stack, ...stack];
@@ -15,7 +16,10 @@ export function StackMarquee() {
               src={item.icon}
               alt=""
               loading="lazy"
-              className="size-8 object-contain"
+              className={cn(
+                "size-8 object-contain",
+                item.monochrome && "dark:invert",
+              )}
             />
             <span className="font-mono text-sm whitespace-nowrap text-muted">
               {item.name}
