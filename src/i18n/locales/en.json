@@ -39,9 +39,8 @@
     "firstName": "Thomas",
     "lastName": "Laroudie",
     "lead": "I build fullstack JavaScript and TypeScript products, and native desktop software with Electron.js — from game launchers to accessibility tools.",
-    "sceneTitle": "Voxel workstation",
-    "sceneHint": "Drag to orbit",
-    "sceneCaption": "Modelled for The Sandbox"
+    "showcaseBadge": "Cross-platform\ndesktop apps",
+    "showcaseCaption": "Interfaces I designed and shipped"
   },
   "stats": {
     "experience": "Years of experience",

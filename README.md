@@ -9,7 +9,6 @@ Personal portfolio of Thomas Laroudie — fullstack JavaScript/TypeScript develo
 - Tailwind CSS v4
 - React Router
 - i18next (English / French)
-- three.js for the voxel workstation scene
 
 ## Getting started
 
@@ -18,7 +17,7 @@ npm install
 npm run dev
 ```
 
-The dev server runs on http://localhost:5173.
+The dev server runs on http://localhost:5173/portfolio/.
 
 ## Scripts
 
@@ -43,6 +42,17 @@ src/
   pages/       routed pages
   styles/      design tokens and global styles
 ```
+
+## Deployment
+
+Pushing to `master` runs `.github/workflows/deploy.yml`, which lints, builds and
+publishes `dist/` to GitHub Pages. The repository must have Pages configured with
+**Source: GitHub Actions**.
+
+The site is served from `https://tomlrd.github.io/portfolio/`, so `vite.config.ts`
+sets `base: "/portfolio/"`. Change that value if the repository is renamed or moved
+to a custom domain. A `404.html` copy of `index.html` is emitted at build time so
+client-side routes survive a direct hit or a page refresh.
 
 ## Content
 

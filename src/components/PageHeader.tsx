@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Container } from "./ui/Container";
 import { Eyebrow } from "./ui/Eyebrow";
+import { Parallax } from "./ui/Parallax";
 
 type PageHeaderProps = {
   label: string;
@@ -12,7 +13,10 @@ type PageHeaderProps = {
 export function PageHeader({ label, title, lead, children }: PageHeaderProps) {
   return (
     <section className="relative overflow-hidden border-b border-line">
-      <div aria-hidden className="glow-backdrop pointer-events-none absolute inset-0" />
+      <Parallax
+        speed={0.16}
+        className="glow-backdrop pointer-events-none absolute inset-0"
+      />
       <Container className="relative py-16 md:py-24">
         <div className="max-w-3xl space-y-6">
           <Eyebrow>{label}</Eyebrow>

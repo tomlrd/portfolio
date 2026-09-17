@@ -39,9 +39,8 @@
     "firstName": "Thomas",
     "lastName": "Laroudie",
     "lead": "Je conçois des produits fullstack JavaScript et TypeScript, et des logiciels de bureau natifs avec Electron.js — du launcher de jeux aux outils d'accessibilité.",
-    "sceneTitle": "Station de travail voxel",
-    "sceneHint": "Cliquez-glissez pour pivoter",
-    "sceneCaption": "Modélisée pour The Sandbox"
+    "showcaseBadge": "Applications desktop\nmultiplateformes",
+    "showcaseCaption": "Des interfaces que j'ai conçues et livrées"
   },
   "stats": {
     "experience": "Années d'expérience",

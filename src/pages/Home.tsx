@@ -1,11 +1,12 @@
 import { ArrowRight, MapPin } from "lucide-react";
-import { lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
+import { HeroShowcase } from "../components/HeroShowcase";
 import { ProjectCard } from "../components/ProjectCard";
 import { StackMarquee } from "../components/StackMarquee";
 import { LinkButton } from "../components/ui/Button";
 import { Container } from "../components/ui/Container";
 import { Eyebrow } from "../components/ui/Eyebrow";
+import { Parallax } from "../components/ui/Parallax";
 import { Reveal } from "../components/ui/Reveal";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { StatusDot } from "../components/ui/StatusDot";
@@ -13,8 +14,6 @@ import { projects } from "../content/projects";
 import { stats } from "../content/site";
 import { useContent } from "../hooks/useContent";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
-
-const DesktopScene = lazy(() => import("../components/DesktopScene"));
 
 export default function Home() {
   const { t } = useTranslation();
@@ -27,12 +26,12 @@ export default function Home() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <div
-          aria-hidden
+        <Parallax
+          speed={0.14}
           className="glow-backdrop pointer-events-none absolute inset-0"
         />
-        <div
-          aria-hidden
+        <Parallax
+          speed={0.05}
           className="grid-backdrop pointer-events-none absolute inset-0"
         />
         <Container className="relative pt-14 pb-20 md:pt-20 md:pb-28">
@@ -71,24 +70,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-card border border-line bg-surface">
-              <div className="h-[320px] sm:h-[400px] lg:h-[440px]">
-                <Suspense fallback={null}>
-                  <DesktopScene />
-                </Suspense>
-              </div>
-              <div className="flex items-end justify-between gap-4 border-t border-line px-5 py-4">
-                <div>
-                  <p className="text-sm font-medium">{t("hero.sceneTitle")}</p>
-                  <p className="font-mono text-xs text-faint">
-                    {t("hero.sceneCaption")}
-                  </p>
-                </div>
-                <span className="font-mono text-xs text-faint">
-                  {t("hero.sceneHint")}
-                </span>
-              </div>
-            </div>
+            <Parallax speed={-0.07}>
+              <HeroShowcase />
+            </Parallax>
           </div>
         </Container>
       </section>
@@ -199,8 +183,8 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="relative overflow-hidden rounded-card border border-line bg-surface px-6 py-16 text-center md:px-16">
-            <div
-              aria-hidden
+            <Parallax
+              speed={0.12}
               className="glow-backdrop pointer-events-none absolute inset-0"
             />
             <div className="relative mx-auto max-w-2xl space-y-6">

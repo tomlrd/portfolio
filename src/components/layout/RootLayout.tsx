@@ -21,6 +21,10 @@ export function RootLayout() {
 
   return (
     <div className="flex min-h-dvh flex-col bg-canvas text-ink">
+      <div
+        aria-hidden
+        className="grain-overlay pointer-events-none fixed inset-0 z-[100] opacity-[0.035] mix-blend-overlay"
+      />
       <SiteHeader />
       <main className="flex-1">
         <Outlet />

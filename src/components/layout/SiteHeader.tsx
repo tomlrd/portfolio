@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { cn } from "../../lib/cn";
 import { LanguageToggle } from "../LanguageToggle";
+import { ScrollProgress } from "../ScrollProgress";
 import { ThemeToggle } from "../ThemeToggle";
 import { navItems } from "./navigation";
 
@@ -42,6 +43,8 @@ export function SiteHeader() {
           : "border-transparent bg-transparent",
       )}
     >
+      <ScrollProgress />
+
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-5 sm:px-8 md:h-20">
         <Link
           to="/"
