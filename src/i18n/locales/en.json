@@ -56,9 +56,11 @@
     "workLead": "A few public projects, from proprietary desktop platforms to open side projects.",
     "electronLabel": "Speciality",
     "electronTitle": "Desktop software that feels native",
-    "electronLead": "One codebase for Windows, macOS and Linux. Web velocity, native capabilities, and a security checklist I actually follow.",
-    "ctaTitle": "Let's build something solid",
-    "ctaLead": "Fullstack development, Electron.js expertise, or voxel creation — tell me what you have in mind."
+    "electronLead": "One codebase for Windows, macOS and Linux. Web velocity, native capabilities, and a security checklist I actually follow."
+  },
+  "cta": {
+    "title": "Let's build something solid",
+    "lead": "Fullstack development, Electron.js expertise, or voxel creation — tell me what you have in mind."
   },
   "work": {
     "title": "Work",
@@ -101,9 +103,7 @@
     "hardLabel": "Expertise",
     "hardTitle": "Hard skills",
     "softLabel": "Mindset",
-    "softTitle": "Soft skills",
-    "resumeTitle": "Want the short version?",
-    "resumeLead": "My resume covers the full career timeline, education and references."
+    "softTitle": "Soft skills"
   },
   "skills": {
     "hard": [

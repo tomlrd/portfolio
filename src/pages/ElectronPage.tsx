@@ -1,7 +1,7 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { CallToAction } from "../components/CallToAction";
 import { PageHeader } from "../components/PageHeader";
-import { LinkButton } from "../components/ui/Button";
 import { Container } from "../components/ui/Container";
 import { Reveal } from "../components/ui/Reveal";
 import { SectionHeading } from "../components/ui/SectionHeading";
@@ -97,33 +97,7 @@ export default function ElectronPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="relative overflow-hidden rounded-card border border-line bg-surface px-6 py-14 text-center md:px-16">
-            <div
-              aria-hidden
-              className="glow-backdrop pointer-events-none absolute inset-0"
-            />
-            <div className="relative mx-auto max-w-2xl space-y-6">
-              <h2 className="font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-                {t("home.ctaTitle")}
-              </h2>
-              <p className="text-base leading-relaxed text-muted text-pretty">
-                {t("home.ctaLead")}
-              </p>
-              <div className="flex justify-center pt-2">
-                <LinkButton to="/contact" size="lg">
-                  {t("actions.getInTouch")}
-                  <ArrowRight
-                    size={16}
-                    className="transition group-hover:translate-x-1"
-                  />
-                </LinkButton>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <CallToAction />
     </>
   );
 }

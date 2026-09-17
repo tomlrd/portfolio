@@ -15,13 +15,11 @@
   --color-muted: var(--muted);
   --color-faint: var(--faint);
   --color-accent: var(--accent);
-  --color-accent-soft: var(--accent-soft);
   --color-accent-ink: var(--accent-ink);
 
   --radius-card: 1.5rem;
 
   --animate-marquee: marquee 40s linear infinite;
-  --animate-float: float 7s ease-in-out infinite;
   --animate-pulse-ring: pulse-ring 2.4s ease-out infinite;
 
   @keyframes marquee {
@@ -30,16 +28,6 @@
     }
     to {
       transform: translateX(-50%);
-    }
-  }
-
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
     }
   }
 
@@ -64,7 +52,6 @@
   --muted: #5b5852;
   --faint: #8b867f;
   --accent: #cc4f0a;
-  --accent-soft: #fdf1e8;
   --accent-ink: #ffffff;
   color-scheme: light;
 }
@@ -78,7 +65,6 @@
   --muted: #a49f98;
   --faint: #6f6a64;
   --accent: #ff8a3c;
-  --accent-soft: #24170b;
   --accent-ink: #1b0d02;
   color-scheme: dark;
 }

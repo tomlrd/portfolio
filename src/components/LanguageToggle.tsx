@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { cn } from "../lib/cn";
-import { languages } from "../i18n";
+import { languages, resolveLanguage } from "../i18n";
 
 export function LanguageToggle() {
   const { i18n, t } = useTranslation();
-  const current = i18n.resolvedLanguage ?? "en";
+  const current = resolveLanguage(i18n.resolvedLanguage);
 
   return (
     <div

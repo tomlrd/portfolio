@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { onScrollFrame } from "../lib/scroll";
 
 export function ScrollProgress() {
   const ref = useRef<HTMLDivElement>(null);
@@ -9,33 +10,12 @@ export function ScrollProgress() {
       return;
     }
 
-    let frame = 0;
-
-    const apply = () => {
-      frame = 0;
+    return onScrollFrame(() => {
       const scrollable =
         document.documentElement.scrollHeight - window.innerHeight;
       const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
       node.style.transform = `scaleX(${Math.min(Math.max(ratio, 0), 1).toFixed(4)})`;
-    };
-
-    const schedule = () => {
-      if (frame === 0) {
-        frame = requestAnimationFrame(apply);
-      }
-    };
-
-    apply();
-    window.addEventListener("scroll", schedule, { passive: true });
-    window.addEventListener("resize", schedule, { passive: true });
-
-    return () => {
-      if (frame !== 0) {
-        cancelAnimationFrame(frame);
-      }
-      window.removeEventListener("scroll", schedule);
-      window.removeEventListener("resize", schedule);
-    };
+    });
   }, []);
 
   return (

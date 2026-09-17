@@ -1,5 +1,9 @@
+import anthropic from "../assets/stack/anthropic.svg";
+import claude from "../assets/stack/claude.svg";
 import css from "../assets/stack/css.svg";
 import electron from "../assets/stack/electron.svg";
+import gemini from "../assets/stack/gemini.svg";
+import hermes from "../assets/stack/hermes.webp";
 import html from "../assets/stack/html.svg";
 import javascript from "../assets/stack/javascript.svg";
 import nextjs from "../assets/stack/nextjs.svg";
@@ -12,7 +16,7 @@ import typescript from "../assets/stack/typescript.svg";
 import vite from "../assets/stack/vite.svg";
 import webpack from "../assets/stack/webpack.svg";
 
-export type StackItem = {
+type StackItem = {
   name: string;
   icon: string;
   monochrome?: boolean;
@@ -32,4 +36,11 @@ export const stack: StackItem[] = [
   { name: "Webpack", icon: webpack },
   { name: "HTML", icon: html },
   { name: "CSS", icon: css },
+];
+
+export const aiTools: StackItem[] = [
+  { name: "Claude", icon: claude },
+  { name: "Anthropic", icon: anthropic, monochrome: true },
+  { name: "Gemini", icon: gemini },
+  { name: "Hermes", icon: hermes, monochrome: true },
 ];

@@ -1,8 +1,6 @@
 import { useEffect, useRef } from "react";
-
-function prefersReducedMotion() {
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
+import { prefersReducedMotion } from "../lib/motion";
+import { onScrollFrame } from "../lib/scroll";
 
 export function useParallax<T extends HTMLElement>(speed: number) {
   const ref = useRef<T>(null);
@@ -13,32 +11,11 @@ export function useParallax<T extends HTMLElement>(speed: number) {
       return;
     }
 
-    let frame = 0;
-
-    const apply = () => {
-      frame = 0;
+    return onScrollFrame(() => {
       const rect = node.getBoundingClientRect();
       const distance = rect.top + rect.height / 2 - window.innerHeight / 2;
       node.style.setProperty("--parallax-y", `${(distance * speed).toFixed(2)}px`);
-    };
-
-    const schedule = () => {
-      if (frame === 0) {
-        frame = requestAnimationFrame(apply);
-      }
-    };
-
-    apply();
-    window.addEventListener("scroll", schedule, { passive: true });
-    window.addEventListener("resize", schedule, { passive: true });
-
-    return () => {
-      if (frame !== 0) {
-        cancelAnimationFrame(frame);
-      }
-      window.removeEventListener("scroll", schedule);
-      window.removeEventListener("resize", schedule);
-    };
+    });
   }, [speed]);
 
   return ref;

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "../../lib/cn";
+import { prefersReducedMotion } from "../../lib/motion";
 
 type RevealProps = {
   children: ReactNode;
@@ -9,9 +10,7 @@ type RevealProps = {
 
 export function Reveal({ children, className, delay = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(
-    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-  );
+  const [visible, setVisible] = useState(prefersReducedMotion);
 
   useEffect(() => {
     const node = ref.current;

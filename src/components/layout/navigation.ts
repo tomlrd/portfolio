@@ -1,4 +1,4 @@
-export type NavItem = {
+type NavItem = {
   to: string;
   labelKey: string;
   end?: boolean;

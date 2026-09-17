@@ -1,11 +1,14 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { useScrollLock } from "../../hooks/useScrollLock";
 import { cn } from "../../lib/cn";
 import { LanguageToggle } from "../LanguageToggle";
 import { ScrollProgress } from "../ScrollProgress";
 import { ThemeToggle } from "../ThemeToggle";
+import { Container } from "../ui/Container";
+import { Brand } from "./Brand";
 import { navItems } from "./navigation";
 
 export function SiteHeader() {
@@ -14,6 +17,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [lastPathname, setLastPathname] = useState(pathname);
+  useScrollLock(open);
 
   if (pathname !== lastPathname) {
     setLastPathname(pathname);
@@ -27,13 +31,6 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
-
   return (
     <header
       className={cn(
@@ -45,19 +42,8 @@ export function SiteHeader() {
     >
       <ScrollProgress />
 
-      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-5 sm:px-8 md:h-20">
-        <Link
-          to="/"
-          className="group flex items-center gap-3"
-          aria-label={t("nav.home")}
-        >
-          <span className="flex size-9 items-center justify-center rounded-xl border border-accent/40 bg-accent/10 font-display text-sm font-bold text-accent transition group-hover:bg-accent group-hover:text-accent-ink">
-            TL
-          </span>
-          <span className="hidden font-display text-sm font-semibold tracking-tight sm:block">
-            Thomas Laroudie
-          </span>
-        </Link>
+      <Container className="flex h-16 items-center justify-between gap-4 md:h-20">
+        <Brand nameClassName="hidden sm:block" />
 
         <nav className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => (
@@ -104,33 +90,35 @@ export function SiteHeader() {
             {open ? <X size={16} /> : <Menu size={16} />}
           </button>
         </div>
-      </div>
+      </Container>
 
       <div
         id="mobile-navigation"
         hidden={!open}
         className="border-t border-line bg-canvas lg:hidden"
       >
-        <nav className="mx-auto flex w-full max-w-6xl flex-col px-5 py-4 sm:px-8">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              end={item.end}
-              className={({ isActive }) =>
-                cn(
-                  "flex items-center justify-between border-b border-line/60 py-4 font-display text-lg transition last:border-none",
-                  isActive ? "text-accent" : "text-ink",
-                )
-              }
-            >
-              {t(item.labelKey)}
-              <span aria-hidden className="font-mono text-xs text-faint">
-                {item.to === "/" ? "/" : item.to}
-              </span>
-            </NavLink>
-          ))}
-        </nav>
+        <Container>
+          <nav className="flex flex-col py-4">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                end={item.end}
+                className={({ isActive }) =>
+                  cn(
+                    "flex items-center justify-between border-b border-line/60 py-4 font-display text-lg transition last:border-none",
+                    isActive ? "text-accent" : "text-ink",
+                  )
+                }
+              >
+                {t(item.labelKey)}
+                <span aria-hidden className="font-mono text-xs text-faint">
+                  {item.to}
+                </span>
+              </NavLink>
+            ))}
+          </nav>
+        </Container>
       </div>
     </header>
   );

@@ -10,6 +10,10 @@ export type Language = (typeof languages)[number];
 
 export const content = { en, fr } satisfies Record<Language, typeof en>;
 
+export function resolveLanguage(value: string | undefined): Language {
+  return languages.find((language) => language === value) ?? "en";
+}
+
 void i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -27,5 +31,3 @@ void i18n
     },
     interpolation: { escapeValue: false },
   });
-
-export default i18n;

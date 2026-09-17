@@ -56,9 +56,11 @@
     "workLead": "Quelques projets publics, de la plateforme desktop propriétaire au projet personnel ouvert.",
     "electronLabel": "Spécialité",
     "electronTitle": "Des logiciels de bureau qui semblent natifs",
-    "electronLead": "Une seule base de code pour Windows, macOS et Linux. La vélocité du web, les capacités natives, et une checklist de sécurité réellement appliquée.",
-    "ctaTitle": "Construisons quelque chose de solide",
-    "ctaLead": "Développement fullstack, expertise Electron.js ou création voxel — dites-moi ce que vous avez en tête."
+    "electronLead": "Une seule base de code pour Windows, macOS et Linux. La vélocité du web, les capacités natives, et une checklist de sécurité réellement appliquée."
+  },
+  "cta": {
+    "title": "Construisons quelque chose de solide",
+    "lead": "Développement fullstack, expertise Electron.js ou création voxel — dites-moi ce que vous avez en tête."
   },
   "work": {
     "title": "Projets",
@@ -101,9 +103,7 @@
     "hardLabel": "Expertise",
     "hardTitle": "Compétences techniques",
     "softLabel": "État d'esprit",
-    "softTitle": "Compétences humaines",
-    "resumeTitle": "Vous préférez la version courte ?",
-    "resumeLead": "Mon CV retrace le parcours complet, la formation et les références."
+    "softTitle": "Compétences humaines"
   },
   "skills": {
     "hard": [

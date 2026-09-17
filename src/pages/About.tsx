@@ -8,11 +8,11 @@ import { Reveal } from "../components/ui/Reveal";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { StatusDot } from "../components/ui/StatusDot";
 import { Tag } from "../components/ui/Tag";
-import { resumeUrl } from "../content/site";
+import { profile, resumeUrls } from "../content/site";
 import { stack } from "../content/stack";
 import { useContent } from "../hooks/useContent";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
-import type { Language } from "../i18n";
+import { resolveLanguage } from "../i18n";
 import { cn } from "../lib/cn";
 
 export default function About() {
@@ -20,7 +20,7 @@ export default function About() {
   const content = useContent();
   useDocumentTitle(t("meta.about"));
 
-  const language = (i18n.resolvedLanguage ?? "en") as Language;
+  const language = resolveLanguage(i18n.resolvedLanguage);
   const bio = content.about.bio.split("\n");
 
   return (
@@ -40,12 +40,12 @@ export default function About() {
               <div className="overflow-hidden rounded-card border border-line bg-elevated">
                 <img
                   src={photo}
-                  alt={t("hero.firstName")}
+                  alt={profile.name}
                   className="aspect-4/5 w-full object-cover"
                 />
               </div>
               <AnchorButton
-                href={resumeUrl(language)}
+                href={resumeUrls[language]}
                 variant="secondary"
                 className="w-full"
               >

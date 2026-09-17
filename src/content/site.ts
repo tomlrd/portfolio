@@ -10,19 +10,14 @@ export const profile = {
   name: "Thomas Laroudie",
   email: "thomas.laroudie@gmail.com",
   discord: "thomas_lrd",
-  githubUrl: "https://github.com/tomlrd",
 } as const;
 
-const resumeUrls: Record<Language, string> = {
+export const resumeUrls: Record<Language, string> = {
   en: "https://www.canva.com/design/DAGNYtwT2GQ/99Q-BJe9T7Q2iKaQLgb3Fw/view",
   fr: "https://www.canva.com/design/DAGhEfKexzY/m7iNSNnHzafWSTx9lGxbng/view",
 };
 
-export function resumeUrl(language: Language): string {
-  return resumeUrls[language] ?? resumeUrls.en;
-}
-
-export type SocialLink = {
+type SocialLink = {
   id: string;
   name: string;
   icon: string;

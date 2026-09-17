@@ -4,6 +4,29 @@ import playability from "../assets/projects/pa1.webp";
 import electron from "../assets/stack/electron.svg";
 import tauri from "../assets/stack/tauri.svg";
 import { useTilt } from "../hooks/useParallax";
+import { cn } from "../lib/cn";
+
+type BadgeProps = {
+  icon: string;
+  label: string;
+  className: string;
+};
+
+function Badge({ icon, label, className }: BadgeProps) {
+  return (
+    <div
+      className={cn(
+        "absolute hidden items-center gap-3 rounded-2xl border border-line bg-surface px-4 py-3 shadow-2xl shadow-black/30 sm:flex",
+        className,
+      )}
+    >
+      <img src={icon} alt="" className="size-7 shrink-0" />
+      <span className="text-xs leading-tight font-medium whitespace-pre-line">
+        {label}
+      </span>
+    </div>
+  );
+}
 
 export function HeroShowcase() {
   const { t } = useTranslation();
@@ -38,19 +61,16 @@ export function HeroShowcase() {
           </figcaption>
         </figure>
 
-        <div className="absolute -top-7 -right-4 hidden items-center gap-3 rounded-2xl border border-line bg-surface px-4 py-3 shadow-2xl shadow-black/30 [transform:translateZ(120px)] sm:flex">
-          <img src={electron} alt="" className="size-7 shrink-0" />
-          <span className="text-xs leading-tight font-medium whitespace-pre-line">
-            {t("hero.showcaseBadge")}
-          </span>
-        </div>
-
-        <div className="absolute -top-7 -left-4 hidden items-center gap-3 rounded-2xl border border-line bg-surface px-4 py-3 shadow-2xl shadow-black/30 [transform:translateZ(100px)] sm:flex">
-          <img src={tauri} alt="" className="size-7 shrink-0" />
-          <span className="text-xs leading-tight font-medium whitespace-pre-line">
-            {t("hero.showcaseBadgeTauri")}
-          </span>
-        </div>
+        <Badge
+          icon={electron}
+          label={t("hero.showcaseBadge")}
+          className="-top-7 -right-4 [transform:translateZ(120px)]"
+        />
+        <Badge
+          icon={tauri}
+          label={t("hero.showcaseBadgeTauri")}
+          className="-top-7 -left-4 [transform:translateZ(100px)]"
+        />
       </div>
 
       <p className="mt-5 font-mono text-xs text-faint sm:mt-24">

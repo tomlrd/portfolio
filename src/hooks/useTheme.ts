@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { readStorage, writeStorage } from "../lib/storage";
 
-export type Theme = "light" | "dark";
+type Theme = "light" | "dark";
 
 const STORAGE_KEY = "theme";
 

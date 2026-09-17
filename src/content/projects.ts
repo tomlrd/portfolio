@@ -26,7 +26,7 @@ export type Project = {
   personal: boolean;
   featured: boolean;
   tags: string[];
-  images?: string[];
+  images: string[];
 };
 
 export const projects: Project[] = [
@@ -118,6 +118,10 @@ export const projects: Project[] = [
   },
 ];
 
-export const projectTags = Array.from(
+export const sharedTags = Array.from(
   new Set(projects.flatMap((project) => project.tags)),
-).sort((a, b) => a.localeCompare(b));
+)
+  .filter(
+    (tag) => projects.filter((project) => project.tags.includes(tag)).length > 1,
+  )
+  .sort((a, b) => a.localeCompare(b));

@@ -2,6 +2,7 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useEffect, type MouseEvent } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
+import { useScrollLock } from "../hooks/useScrollLock";
 
 type LightboxProps = {
   name: string;
@@ -24,6 +25,7 @@ export function Lightbox({
   const { t } = useTranslation();
   const total = images.length;
   const label = `${name} — ${t("work.gallery", { index: index + 1, total })}`;
+  useScrollLock(true);
 
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
@@ -39,14 +41,6 @@ export function Lightbox({
     document.addEventListener("keydown", handleKey);
     return () => document.removeEventListener("keydown", handleKey);
   }, [index, total, onClose, onNavigate]);
-
-  useEffect(() => {
-    const { overflow } = document.body.style;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = overflow;
-    };
-  }, []);
 
   const closeOnBackdrop = (event: MouseEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) {

@@ -1,9 +1,9 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { PageHeader } from "../components/PageHeader";
 import { ProjectEntry } from "../components/ProjectEntry";
 import { Container } from "../components/ui/Container";
-import { projects, projectTags } from "../content/projects";
+import { projects, sharedTags } from "../content/projects";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import { cn } from "../lib/cn";
 
@@ -13,16 +13,6 @@ export default function Work() {
   const { t } = useTranslation();
   const [filter, setFilter] = useState(ALL);
   useDocumentTitle(t("meta.work"));
-
-  const filters = useMemo(() => {
-    const counts = new Map<string, number>();
-    for (const project of projects) {
-      for (const tag of project.tags) {
-        counts.set(tag, (counts.get(tag) ?? 0) + 1);
-      }
-    }
-    return projectTags.filter((tag) => (counts.get(tag) ?? 0) > 1);
-  }, []);
 
   const visible = projects.filter(
     (project) => filter === ALL || project.tags.includes(filter),
@@ -43,7 +33,7 @@ export default function Work() {
             aria-label={t("work.filterLabel")}
             className="flex flex-wrap gap-2"
           >
-            {[ALL, ...filters].map((tag) => (
+            {[ALL, ...sharedTags].map((tag) => (
               <button
                 key={tag}
                 type="button"

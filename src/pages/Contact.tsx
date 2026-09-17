@@ -10,6 +10,9 @@ import { profile, socials } from "../content/site";
 import { useCopy } from "../hooks/useCopy";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
+const cardStyles =
+  "group flex size-full items-center gap-4 rounded-card border border-line bg-canvas p-5 text-left transition hover:-translate-y-1 hover:border-accent/50";
+
 export default function Contact() {
   const { t } = useTranslation();
   const { copied, copy } = useCopy();
@@ -79,36 +82,40 @@ export default function Contact() {
 
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {socials.map((social, index) => {
-              const isCopy = Boolean(social.copyValue);
-              const label = isCopy ? social.copyValue : social.url;
+              const value = social.copyValue;
+              const body = (hint: string) => (
+                <>
+                  <img
+                    src={social.icon}
+                    alt=""
+                    loading="lazy"
+                    className="size-9 shrink-0 object-contain"
+                  />
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-sm font-medium">
+                      {social.name}
+                    </span>
+                    <span className="block truncate font-mono text-xs text-faint">
+                      {hint}
+                    </span>
+                  </span>
+                </>
+              );
 
               return (
                 <li key={social.id} className="h-full">
                   <Reveal delay={index * 60} className="h-full">
-                    {isCopy ? (
+                    {value ? (
                       <button
                         type="button"
-                        onClick={() =>
-                          void copy(social.copyValue ?? "", social.id)
-                        }
-                        className="group flex size-full items-center gap-4 rounded-card border border-line bg-canvas p-5 text-left transition hover:-translate-y-1 hover:border-accent/50"
+                        onClick={() => void copy(value, social.id)}
+                        className={cardStyles}
                       >
-                        <img
-                          src={social.icon}
-                          alt=""
-                          loading="lazy"
-                          className="size-9 shrink-0 object-contain"
-                        />
-                        <span className="min-w-0 flex-1">
-                          <span className="block text-sm font-medium">
-                            {social.name}
-                          </span>
-                          <span className="block truncate font-mono text-xs text-faint">
-                            {copied === social.id
-                              ? t("actions.copied")
-                              : t("contact.copyHint")}
-                          </span>
-                        </span>
+                        {body(
+                          copied === social.id
+                            ? t("actions.copied")
+                            : t("contact.copyHint"),
+                        )}
                         {copied === social.id ? (
                           <Check size={16} className="text-emerald-500" />
                         ) : (
@@ -123,22 +130,11 @@ export default function Contact() {
                         href={social.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="group flex size-full items-center gap-4 rounded-card border border-line bg-canvas p-5 transition hover:-translate-y-1 hover:border-accent/50"
+                        className={cardStyles}
                       >
-                        <img
-                          src={social.icon}
-                          alt=""
-                          loading="lazy"
-                          className="size-9 shrink-0 object-contain"
-                        />
-                        <span className="min-w-0 flex-1">
-                          <span className="block text-sm font-medium">
-                            {social.name}
-                          </span>
-                          <span className="block truncate font-mono text-xs text-faint">
-                            {label?.replace(/^https?:\/\/(www\.)?/, "")}
-                          </span>
-                        </span>
+                        {body(
+                          social.url?.replace(/^https?:\/\/(www\.)?/, "") ?? "",
+                        )}
                         <ArrowUpRight
                           size={16}
                           className="text-faint transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"

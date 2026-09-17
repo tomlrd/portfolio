@@ -2,7 +2,6 @@ import { ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import type { Project } from "../content/projects";
-import { ProjectPlaceholder } from "./ProjectPlaceholder";
 import { Tag } from "./ui/Tag";
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -11,16 +10,12 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-card border border-line bg-surface transition duration-300 hover:-translate-y-1 hover:border-accent/50">
       <div className="relative aspect-4/3 overflow-hidden bg-elevated">
-        {project.images ? (
-          <img
-            src={project.images[0]}
-            alt={project.name}
-            loading="lazy"
-            className="size-full object-cover object-top transition duration-700 group-hover:scale-105"
-          />
-        ) : (
-          <ProjectPlaceholder name={project.name} className="size-full" />
-        )}
+        <img
+          src={project.images[0]}
+          alt={project.name}
+          loading="lazy"
+          className="size-full object-cover object-top transition duration-700 group-hover:scale-105"
+        />
       </div>
 
       <div className="flex flex-1 flex-col gap-4 p-6">

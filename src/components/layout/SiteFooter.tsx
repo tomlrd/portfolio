@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { profile, socials } from "../../content/site";
+import { Container } from "../ui/Container";
+import { Brand } from "./Brand";
 import { navItems } from "./navigation";
 
 export function SiteFooter() {
@@ -10,17 +12,10 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-line bg-surface">
-      <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-8">
+      <Container className="py-14">
         <div className="grid gap-10 md:grid-cols-[1.6fr_1fr_1fr]">
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-3">
-              <span className="flex size-9 items-center justify-center rounded-xl border border-accent/40 bg-accent/10 font-display text-sm font-bold text-accent">
-                TL
-              </span>
-              <span className="font-display text-sm font-semibold tracking-tight">
-                {profile.name}
-              </span>
-            </Link>
+            <Brand />
             <p className="max-w-xs text-sm leading-relaxed text-muted">
               {t("footer.tagline")}
             </p>
@@ -78,7 +73,7 @@ export function SiteFooter() {
           </p>
           <p>{t("footer.builtWith")}</p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }
