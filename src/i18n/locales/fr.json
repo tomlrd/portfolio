@@ -1,0 +1,224 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "work": "Projets",
+    "about": "Profil",
+    "electron": "Electron.js",
+    "contact": "Contact"
+  },
+  "actions": {
+    "viewWork": "Voir les projets",
+    "getInTouch": "Me contacter",
+    "viewAll": "Tous les projets",
+    "visitSite": "Visiter le site",
+    "copy": "Copier",
+    "copied": "Copié",
+    "resume": "Télécharger mon CV",
+    "backHome": "Retour à l'accueil",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "toggleTheme": "Changer de thème",
+    "toggleLanguage": "Changer de langue",
+    "learnMore": "En savoir plus"
+  },
+  "status": {
+    "available": "Disponible pour de nouveaux projets",
+    "location": "Yvelines, France",
+    "personal": "Projet personnel"
+  },
+  "meta": {
+    "home": "Thomas Laroudie — Développeur fullstack & Electron.js",
+    "work": "Projets — Thomas Laroudie",
+    "about": "Profil — Thomas Laroudie",
+    "electron": "Electron.js — Thomas Laroudie",
+    "contact": "Contact — Thomas Laroudie",
+    "notFound": "Page introuvable — Thomas Laroudie"
+  },
+  "hero": {
+    "role": "Développeur fullstack · Spécialiste Electron.js",
+    "firstName": "Thomas",
+    "lastName": "Laroudie",
+    "lead": "Je conçois des produits fullstack JavaScript et TypeScript, et des logiciels de bureau natifs avec Electron.js — du launcher de jeux aux outils d'accessibilité.",
+    "sceneTitle": "Station de travail voxel",
+    "sceneHint": "Cliquez-glissez pour pivoter",
+    "sceneCaption": "Modélisée pour The Sandbox"
+  },
+  "stats": {
+    "experience": "Années d'expérience",
+    "projects": "Projets livrés",
+    "platforms": "Plateformes desktop couvertes"
+  },
+  "home": {
+    "stackLabel": "Outils du quotidien",
+    "workLabel": "Projets sélectionnés",
+    "workTitle": "Des produits que j'ai livrés",
+    "workLead": "Quelques projets publics, de la plateforme desktop propriétaire au projet personnel ouvert.",
+    "electronLabel": "Spécialité",
+    "electronTitle": "Des logiciels de bureau qui semblent natifs",
+    "electronLead": "Une seule base de code pour Windows, macOS et Linux. La vélocité du web, les capacités natives, et une checklist de sécurité réellement appliquée.",
+    "ctaTitle": "Construisons quelque chose de solide",
+    "ctaLead": "Développement fullstack, expertise Electron.js ou création voxel — dites-moi ce que vous avez en tête."
+  },
+  "work": {
+    "title": "Projets",
+    "lead": "Je ne peux présenter que des projets publics. J'ai également travaillé avec des entreprises comme Cybernetics, Ercom ou Geoflex.",
+    "filterAll": "Tout",
+    "filterLabel": "Filtrer par technologie",
+    "empty": "Aucun projet ne correspond à ce filtre.",
+    "client": "Client",
+    "period": "Période",
+    "stack": "Stack",
+    "clientAnyone": "Ouvert à tous",
+    "gallery": "Capture {{index}} sur {{total}}"
+  },
+  "projects": {
+    "playability": {
+      "description": "PlayAbility est un logiciel qui aide les personnes en situation de handicap à rejouer aux jeux vidéo, grâce à l'IA et à la reconnaissance faciale.\nJ'ai développé de nouvelles fonctionnalités sur l'application existante et mené des audits de sécurité ainsi que leurs corrections."
+    },
+    "onlyone": {
+      "description": "J'ai piloté la refonte et le développement d'OnlyOne, une application Electron.js propriétaire qui réunit les services de distribution de jeux comme Steam ou Blizzard dans une interface unique.\nAu-delà de l'accès unifié à ces plateformes, elle ajoute des fonctions sociales comme le chat temps réel et la gestion de groupes.\nJ'ai conçu les intégrations d'API sous-jacentes, en gardant les échanges avec les plateformes externes fiables et prévisibles."
+    },
+    "padtolan": {
+      "description": "Pensé à l'origine pour Star Citizen, PadToLan transforme n'importe quel appareil du réseau local en pavé tactile personnalisable.\nIl reproduit des raccourcis configurables sur l'hôte, avec double-tap, maintien et boucle."
+    },
+    "albion": {
+      "description": "Un outil de démonstration qui lit, enregistre et exporte les données de vente des joueurs d'Albion Online par reconnaissance de texte."
+    }
+  },
+  "about": {
+    "title": "Profil",
+    "lead": "Développeur d'applications, créateur d'outils, et amateur de longue date de ce qui tourne hors ligne.",
+    "bio": "Développeur d'applications avec une solide expérience fullstack JavaScript et TypeScript, spécialisé dans les applications de bureau construites avec Electron.js.\nJ'aime créer mes propres outils, avec un vif intérêt pour la R&D et les logiciels taillés pour un problème précis.\nAutonome, curieux et motivé par la cybersécurité, le matériel et l'impact positif que la technologie peut avoir.\nJ'apprends actuellement Tauri et Rust. J'ai aussi collaboré directement avec The Sandbox sur des assets voxel, comme celui de la page d'accueil. Le scraping web, le minage de crypto-monnaie et le développement sur ARM me sont familiers.",
+    "stackLabel": "Stack",
+    "stackTitle": "Les technologies que j'utilise",
+    "hardLabel": "Expertise",
+    "hardTitle": "Compétences techniques",
+    "softLabel": "État d'esprit",
+    "softTitle": "Compétences humaines",
+    "resumeTitle": "Vous préférez la version courte ?",
+    "resumeLead": "Mon CV retrace le parcours complet, la formation et les références."
+  },
+  "skills": {
+    "hard": [
+      {
+        "title": "JavaScript & TypeScript",
+        "description": "Connaissance approfondie du JavaScript moderne et large expérience de TypeScript, qui me permet d'écrire un code fortement typé et maintenable."
+      },
+      {
+        "title": "Développement backend Node.js",
+        "description": "Applications côté serveur, API RESTful et frameworks comme Express.js, avec une bonne maîtrise de l'asynchrone, de l'architecture événementielle et des entrées/sorties non bloquantes."
+      },
+      {
+        "title": "Gestion des bases de données",
+        "description": "Bases relationnelles comme PostgreSQL et MySQL, et bases NoSQL comme MongoDB. Conception de schémas, optimisation des requêtes et intégration aux services Node.js."
+      },
+      {
+        "title": "Conception et intégration d'API",
+        "description": "Création et consommation d'API RESTful et GraphQL, avec des échanges de données sûrs, évolutifs et efficaces entre services."
+      },
+      {
+        "title": "Intégration front-end",
+        "description": "Connexion de backends Node.js à des applications React, Angular ou Vue.js, en gardant le flux de données et le comportement de l'interface prévisibles."
+      },
+      {
+        "title": "Bonnes pratiques de sécurité",
+        "description": "Chiffrement des données, authentification et autorisation (OAuth, JWT), et protection contre les vulnérabilités courantes comme l'injection SQL ou le cross-site scripting."
+      },
+      {
+        "title": "DevOps et déploiement",
+        "description": "Déploiement d'applications Node.js sur des plateformes cloud, conteneurisation avec Docker, mise en place de pipelines CI/CD et de tests automatisés."
+      },
+      {
+        "title": "Tests et débogage",
+        "description": "Tests unitaires, d'intégration et de bout en bout avec Jest, Mocha et Chai, et de solides réflexes de débogage avec Node Inspector et Chrome DevTools."
+      },
+      {
+        "title": "Versioning et collaboration",
+        "description": "Workflows Git sur GitHub et GitLab, en suivant des pratiques de branches, de fusion et de revue de code qui gardent les équipes fluides."
+      },
+      {
+        "title": "Apprentissage continu",
+        "description": "Veille permanente sur les écosystèmes Node.js, JavaScript et TypeScript, et adaptation rapide aux nouveaux outils et contraintes."
+      }
+    ],
+    "soft": [
+      "Résolution de problèmes",
+      "Motivation intrinsèque",
+      "Résilience",
+      "Autonomie et adaptabilité",
+      "Communication efficace",
+      "Apprentissage continu"
+    ]
+  },
+  "electron": {
+    "title": "Electron.js",
+    "lead": "Pourquoi une application de bureau construite avec Electron.js est souvent le chemin le plus court vers un produit que vos utilisateurs peuvent installer.",
+    "benefitsLabel": "Bénéfices",
+    "benefitsTitle": "Ce que cela apporte à votre produit",
+    "benefits": [
+      {
+        "title": "Multiplateforme par défaut",
+        "description": "Une seule base de code tourne sur Windows, macOS et Linux : votre logiciel touche un public plus large sans coût de développement supplémentaire."
+      },
+      {
+        "title": "Expérience desktop riche",
+        "description": "Des interfaces modernes, avec des animations fluides et des mises en page adaptatives, portées par toute la puissance des technologies web actuelles."
+      },
+      {
+        "title": "Itération rapide",
+        "description": "Basé sur les technologies web, il raccourcit les cycles de développement et permet de transformer rapidement une application web existante en logiciel de bureau."
+      },
+      {
+        "title": "Capacités natives",
+        "description": "Accès direct au système de fichiers, aux notifications, à la barre des tâches, aux protocoles et à tout ce que l'environnement de bureau expose."
+      },
+      {
+        "title": "Rentabilité",
+        "description": "Une base de code unique maintient les coûts de développement et de maintenance bas, sans équipe dédiée par système d'exploitation."
+      },
+      {
+        "title": "Écosystème mature",
+        "description": "Une communauté large et active, donc beaucoup d'outils et de bibliothèques, et des réponses plus rapides quand une difficulté surgit."
+      },
+      {
+        "title": "Évolutivité",
+        "description": "Intégration simple avec les services cloud, les API et les bases de données : l'application grandit avec votre activité."
+      }
+    ],
+    "touchLabel": "Mon approche",
+    "touchTitle": "Ce que j'apporte en plus",
+    "touch": "J'ai livré des applications Electron.js allant de plateformes de distribution de jeux à des logiciels d'accessibilité, et j'en connais bien l'architecture, les API et les compromis.\nOutil interne sur mesure, launcher de jeux ou application de productivité : je peux livrer une application multiplateforme robuste, et comme elle repose sur les technologies web, le gain de temps est significatif.\nJe suis de près les recommandations de sécurité actuelles et j'utilise les outils internes d'Electron pour l'intégration système et les sessions d'authentification.",
+    "resourcesTitle": "Les références sur lesquelles je m'appuie",
+    "resources": [
+      {
+        "label": "Checklist de sécurité Electron",
+        "url": "https://www.electronjs.org/docs/latest/tutorial/security#checklist-security-recommendations"
+      },
+      {
+        "label": "Protection du code source",
+        "url": "https://electron-vite.org/guide/source-code-protection#solutions"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Besoin d'un développeur fullstack, d'une expertise Electron.js ou de création voxel ? Parlons-en.",
+    "directTitle": "Écrivez-moi directement",
+    "directLead": "Le moyen le plus rapide de me joindre. Je réponds généralement sous 24 heures.",
+    "elsewhereLabel": "Ailleurs",
+    "elsewhereTitle": "Retrouvez-moi sur",
+    "copyHint": "Cliquez pour copier"
+  },
+  "footer": {
+    "tagline": "Développeur fullstack JavaScript et TypeScript, spécialiste Electron.js.",
+    "navTitle": "Navigation",
+    "socialTitle": "Ailleurs",
+    "rights": "Tous droits réservés.",
+    "builtWith": "Construit avec React, TypeScript et Tailwind CSS."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Cette page n'existe pas",
+    "lead": "Le lien est peut-être obsolète, ou la page a été déplacée."
+  }
+}

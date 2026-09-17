@@ -1,31 +1,23 @@
-import { Route, HashRouter as Router, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import "./output.css";
+import { Route, Routes } from "react-router-dom";
+import { RootLayout } from "./components/layout/RootLayout";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Electron from "./pages/Electron";
-import Main from "./pages/Main";
-import Profile from "./pages/Profile";
-import Projects from "./pages/Projects";
+import ElectronPage from "./pages/ElectronPage";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import Work from "./pages/Work";
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen bg-gray-950 text-white">
-        <Header />
-        <div className="flex-grow flex justify-center items-start">
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/electron" element={<Electron />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
-        <Footer />
-      </div>
-    </Router>
+    <Routes>
+      <Route element={<RootLayout />}>
+        <Route index element={<Home />} />
+        <Route path="work" element={<Work />} />
+        <Route path="about" element={<About />} />
+        <Route path="electron" element={<ElectronPage />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }
-
-export default App;

@@ -1,0 +1,224 @@
+{
+  "nav": {
+    "home": "Home",
+    "work": "Work",
+    "about": "About",
+    "electron": "Electron.js",
+    "contact": "Contact"
+  },
+  "actions": {
+    "viewWork": "View work",
+    "getInTouch": "Get in touch",
+    "viewAll": "View all projects",
+    "visitSite": "Visit website",
+    "copy": "Copy",
+    "copied": "Copied",
+    "resume": "Download resume",
+    "backHome": "Back to home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleTheme": "Switch theme",
+    "toggleLanguage": "Switch language",
+    "learnMore": "Learn more"
+  },
+  "status": {
+    "available": "Available for new projects",
+    "location": "Yvelines, France",
+    "personal": "Side project"
+  },
+  "meta": {
+    "home": "Thomas Laroudie — Fullstack & Electron.js developer",
+    "work": "Work — Thomas Laroudie",
+    "about": "About — Thomas Laroudie",
+    "electron": "Electron.js — Thomas Laroudie",
+    "contact": "Contact — Thomas Laroudie",
+    "notFound": "Page not found — Thomas Laroudie"
+  },
+  "hero": {
+    "role": "Fullstack developer · Electron.js specialist",
+    "firstName": "Thomas",
+    "lastName": "Laroudie",
+    "lead": "I build fullstack JavaScript and TypeScript products, and native desktop software with Electron.js — from game launchers to accessibility tools.",
+    "sceneTitle": "Voxel workstation",
+    "sceneHint": "Drag to orbit",
+    "sceneCaption": "Modelled for The Sandbox"
+  },
+  "stats": {
+    "experience": "Years of experience",
+    "projects": "Projects delivered",
+    "platforms": "Desktop platforms shipped"
+  },
+  "home": {
+    "stackLabel": "Daily toolbox",
+    "workLabel": "Selected work",
+    "workTitle": "Products I helped ship",
+    "workLead": "A few public projects, from proprietary desktop platforms to open side projects.",
+    "electronLabel": "Speciality",
+    "electronTitle": "Desktop software that feels native",
+    "electronLead": "One codebase for Windows, macOS and Linux. Web velocity, native capabilities, and a security checklist I actually follow.",
+    "ctaTitle": "Let's build something solid",
+    "ctaLead": "Fullstack development, Electron.js expertise, or voxel creation — tell me what you have in mind."
+  },
+  "work": {
+    "title": "Work",
+    "lead": "I can only showcase public projects. I have also worked with companies such as Cybernetics, Ercom and Geoflex.",
+    "filterAll": "All",
+    "filterLabel": "Filter by technology",
+    "empty": "No project matches this filter.",
+    "client": "Client",
+    "period": "Period",
+    "stack": "Stack",
+    "clientAnyone": "Open to anyone",
+    "gallery": "Screenshot {{index}} of {{total}}"
+  },
+  "projects": {
+    "playability": {
+      "description": "PlayAbility is a software that helps people with disabilities play video games again, using AI and facial recognition.\nI shipped new features on the existing application and ran security audits and remediation work."
+    },
+    "onlyone": {
+      "description": "I led the redesign and development of OnlyOne, a proprietary Electron.js application consolidating game distribution services such as Steam and Blizzard into a single interface.\nBeyond unifying access to those platforms, it adds social features like real-time chat and group management.\nI engineered the API integrations behind it, keeping communication with external platforms reliable and predictable."
+    },
+    "padtolan": {
+      "description": "Originally built for Star Citizen, PadToLan turns any device on your LAN into a customisable touchpad.\nIt replicates configurable keybinds on the host, with double-tap, hold and loop behaviours."
+    },
+    "albion": {
+      "description": "A proof-of-concept tool that reads, stores and exports player sales data for Albion Online through text recognition."
+    }
+  },
+  "about": {
+    "title": "About",
+    "lead": "Application developer, tool builder, and a long-time fan of things that run offline.",
+    "bio": "Application developer with a strong background in fullstack JavaScript and TypeScript, specialised in desktop applications built with Electron.js.\nI enjoy building my own tools, with a keen interest in R&D and software tailored to a specific problem.\nAutonomous, curious and driven by cybersecurity, hardware and the positive impact technology can have.\nI am currently learning Tauri and Rust. I also collaborated directly with The Sandbox on voxel assets, like the one on the home page. Web scraping, crypto mining and ARM development are familiar ground.",
+    "stackLabel": "Stack",
+    "stackTitle": "Technologies I work with",
+    "hardLabel": "Expertise",
+    "hardTitle": "Hard skills",
+    "softLabel": "Mindset",
+    "softTitle": "Soft skills",
+    "resumeTitle": "Want the short version?",
+    "resumeLead": "My resume covers the full career timeline, education and references."
+  },
+  "skills": {
+    "hard": [
+      {
+        "title": "JavaScript & TypeScript",
+        "description": "Deep knowledge of modern JavaScript and extensive TypeScript experience, which lets me write strongly typed, maintainable code."
+      },
+      {
+        "title": "Node.js backend development",
+        "description": "Server-side applications, RESTful APIs and frameworks such as Express.js, with a solid grasp of asynchronous programming, event-driven architecture and non-blocking I/O."
+      },
+      {
+        "title": "Database management",
+        "description": "Relational databases such as PostgreSQL and MySQL, and NoSQL stores such as MongoDB. Schema design, query optimisation and integration into Node.js services."
+      },
+      {
+        "title": "API design and integration",
+        "description": "Building and consuming RESTful and GraphQL APIs, with secure, scalable and efficient data exchange between services."
+      },
+      {
+        "title": "Front-end integration",
+        "description": "Connecting Node.js backends to React, Angular or Vue.js applications, keeping data flow and interface behaviour predictable."
+      },
+      {
+        "title": "Security best practices",
+        "description": "Data encryption, authentication and authorisation (OAuth, JWT), and protection against common vulnerabilities such as SQL injection and cross-site scripting."
+      },
+      {
+        "title": "DevOps and deployment",
+        "description": "Deploying Node.js applications to cloud platforms, containerising with Docker, and setting up CI/CD pipelines and automated testing."
+      },
+      {
+        "title": "Testing and debugging",
+        "description": "Unit, integration and end-to-end tests with Jest, Mocha and Chai, plus strong debugging habits with Node Inspector and Chrome DevTools."
+      },
+      {
+        "title": "Version control and collaboration",
+        "description": "Git workflows on GitHub and GitLab, following branching, merging and code review practices that keep teams unblocked."
+      },
+      {
+        "title": "Continuous learning",
+        "description": "Staying current with the Node.js, JavaScript and TypeScript ecosystems, and adapting quickly to new tools and constraints."
+      }
+    ],
+    "soft": [
+      "Problem solving",
+      "Intrinsic motivation",
+      "Resilience",
+      "Autonomy and adaptability",
+      "Effective communication",
+      "Continuous learning"
+    ]
+  },
+  "electron": {
+    "title": "Electron.js",
+    "lead": "Why a desktop application built with Electron.js is often the fastest path to a product your users can install.",
+    "benefitsLabel": "Benefits",
+    "benefitsTitle": "What it brings to your product",
+    "benefits": [
+      {
+        "title": "Cross-platform by default",
+        "description": "One codebase runs on Windows, macOS and Linux, so your software reaches a wider audience without extra development cost."
+      },
+      {
+        "title": "Rich desktop experience",
+        "description": "Modern interfaces with smooth animations and responsive layouts, backed by the full power of current web technologies."
+      },
+      {
+        "title": "Fast iteration",
+        "description": "Built on web technologies, it shortens development cycles and lets an existing web application become a desktop app quickly."
+      },
+      {
+        "title": "Native capabilities",
+        "description": "Direct access to the file system, notifications, tray icons, protocols and everything the desktop environment exposes."
+      },
+      {
+        "title": "Cost effective",
+        "description": "A single codebase across platforms keeps development and maintenance costs low, with no separate team per operating system."
+      },
+      {
+        "title": "Mature ecosystem",
+        "description": "A large, active community means plenty of tooling and libraries, and faster answers when a challenge shows up."
+      },
+      {
+        "title": "Scalable",
+        "description": "Straightforward integration with cloud services, APIs and databases, so the application grows with your business."
+      }
+    ],
+    "touchLabel": "My approach",
+    "touchTitle": "What I bring on top",
+    "touch": "I have shipped Electron.js applications ranging from game distribution platforms to accessibility software, and I know its architecture, APIs and trade-offs well.\nCustom desktop tooling, a game launcher or a productivity app: I can deliver a robust cross-platform application, and because it is built on web technologies, the time savings are significant.\nI follow the current security recommendations closely and use Electron's internal tooling for system integration and authentication sessions.",
+    "resourcesTitle": "References I rely on",
+    "resources": [
+      {
+        "label": "Electron security checklist",
+        "url": "https://www.electronjs.org/docs/latest/tutorial/security#checklist-security-recommendations"
+      },
+      {
+        "label": "Source code protection",
+        "url": "https://electron-vite.org/guide/source-code-protection#solutions"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Need a fullstack developer, Electron.js expertise or voxel creation? Let's talk.",
+    "directTitle": "Write me directly",
+    "directLead": "The fastest way to reach me. I usually answer within a day.",
+    "elsewhereLabel": "Elsewhere",
+    "elsewhereTitle": "Find me on",
+    "copyHint": "Click to copy"
+  },
+  "footer": {
+    "tagline": "Fullstack JavaScript and TypeScript developer, Electron.js specialist.",
+    "navTitle": "Navigation",
+    "socialTitle": "Elsewhere",
+    "rights": "All rights reserved.",
+    "builtWith": "Built with React, TypeScript and Tailwind CSS."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "This page does not exist",
+    "lead": "The link may be outdated, or the page has moved."
+  }
+}
