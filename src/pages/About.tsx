@@ -41,7 +41,7 @@ export default function About() {
                 <img
                   src={photo}
                   alt={profile.name}
-                  className="aspect-4/5 w-full object-cover"
+                  className="aspect-5/4 w-full object-cover"
                 />
               </div>
               <AnchorButton
