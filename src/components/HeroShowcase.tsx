@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import albionEmpires from "../assets/projects/ae.webp";
 import playability from "../assets/projects/pa1.webp";
 import electron from "../assets/stack/electron.svg";
+import tauri from "../assets/stack/tauri.svg";
 import { useTilt } from "../hooks/useParallax";
 
 export function HeroShowcase() {
@@ -41,6 +42,13 @@ export function HeroShowcase() {
           <img src={electron} alt="" className="size-7 shrink-0" />
           <span className="text-xs leading-tight font-medium whitespace-pre-line">
             {t("hero.showcaseBadge")}
+          </span>
+        </div>
+
+        <div className="absolute -top-7 -left-4 hidden items-center gap-3 rounded-2xl border border-line bg-surface px-4 py-3 shadow-2xl shadow-black/30 [transform:translateZ(100px)] sm:flex">
+          <img src={tauri} alt="" className="size-7 shrink-0" />
+          <span className="text-xs leading-tight font-medium whitespace-pre-line">
+            {t("hero.showcaseBadgeTauri")}
           </span>
         </div>
       </div>

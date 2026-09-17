@@ -34,6 +34,7 @@ export const projects: Project[] = [
     id: "albionEmpires",
     name: "Albion Empires",
     period: "2026",
+    url: "https://albionempires.com/",
     personal: true,
     featured: true,
     tags: [

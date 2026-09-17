@@ -19,7 +19,8 @@
     "closeMenu": "Fermer le menu",
     "toggleTheme": "Changer de thème",
     "toggleLanguage": "Changer de langue",
-    "learnMore": "En savoir plus"
+    "learnMore": "En savoir plus",
+    "close": "Fermer"
   },
   "status": {
     "available": "Disponible pour de nouveaux projets",
@@ -40,7 +41,8 @@
     "lastName": "Laroudie",
     "lead": "Je conçois des produits fullstack JavaScript et TypeScript, et des logiciels de bureau natifs avec Electron.js — du launcher de jeux aux outils d'accessibilité.",
     "showcaseBadge": "Applications desktop\nmultiplateformes",
-    "showcaseCaption": "Des interfaces que j'ai conçues et livrées"
+    "showcaseCaption": "Des interfaces que j'ai conçues et livrées",
+    "showcaseBadgeTauri": "Applications natives\nTauri · Rust"
   },
   "stats": {
     "experience": "Années d'expérience",
@@ -68,7 +70,10 @@
     "period": "Période",
     "stack": "Stack",
     "clientAnyone": "Ouvert à tous",
-    "gallery": "Capture {{index}} sur {{total}}"
+    "gallery": "Capture {{index}} sur {{total}}",
+    "enlarge": "Agrandir la capture",
+    "previous": "Capture précédente",
+    "next": "Capture suivante"
   },
   "projects": {
     "albionEmpires": {
