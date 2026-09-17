@@ -35,6 +35,7 @@ export const projects: Project[] = [
     personal: true,
     featured: true,
     tags: [
+      "Tauri",
       "Rust",
       "axum",
       "MongoDB",
@@ -107,7 +108,7 @@ export const projects: Project[] = [
     period: "2020 — 2026",
     personal: true,
     featured: false,
-    tags: ["TypeScript", "React", "Charts", "Discord"],
+    tags: ["Tauri", "Rust", "TypeScript", "React", "Charts", "Discord"],
     images: [alb1, alb2],
   },
 ];
