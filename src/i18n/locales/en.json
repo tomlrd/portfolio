@@ -3,6 +3,7 @@
     "home": "Home",
     "work": "Work",
     "about": "About",
+    "automation": "AI automation",
     "electron": "Electron.js",
     "contact": "Contact"
   },
@@ -31,6 +32,7 @@
     "home": "Thomas Laroudie — Fullstack & Electron.js developer",
     "work": "Work — Thomas Laroudie",
     "about": "About — Thomas Laroudie",
+    "automation": "AI automation — Thomas Laroudie",
     "electron": "Electron.js — Thomas Laroudie",
     "contact": "Contact — Thomas Laroudie",
     "notFound": "Page not found — Thomas Laroudie"
@@ -60,7 +62,7 @@
   },
   "cta": {
     "title": "Let's build something solid",
-    "lead": "Fullstack development, Electron.js expertise, or voxel creation — tell me what you have in mind."
+    "lead": "Fullstack development, Electron.js expertise, AI automation or voxel creation — tell me what you have in mind."
   },
   "work": {
     "title": "Work",
@@ -78,6 +80,9 @@
     "next": "Next screenshot"
   },
   "projects": {
+    "ragAssistant": {
+      "description": "An internal assistant that answers team questions from the company's own documents, citing the source of each answer. Live demo on a fictional accounting firm.\nSearch blends meaning (Mistral embeddings) and keywords (BM25), filters documents by user role and only sends the few relevant excerpts to the AI. Personal data is masked before sending, then restored in the answer.\nPDF and Word files can be imported, a dashboard lists unanswered questions and the real cost of each question is tracked. No framework and no vector database: a few hundred lines of TypeScript on Node.js, hosted on Render."
+    },
     "albionEmpires": {
       "description": "A web platform for Albion Online, fed by a small desktop agent that passively listens to the game's network traffic on each player's machine. It answers the question the game does not: where people have been, and what a group knows about a place over time.\nThe agent captures and forwards, never sending a packet to the game, reading its memory or touching its files. A Rust server decodes, stores and serves; the site draws the world map with a time slider, a kill feed with a per-fight damage meter replayed second by second, crafting costs from the game's own recipes, and an auction-house ledger.\nData is shared through pools: each account records what its agent sees, and a pool only grows by invitation. Reading several pools merges them, keeping the freshest record per entity, and nobody is ever told who observes them."
     },
@@ -160,6 +165,215 @@
       "Effective communication",
       "Continuous learning"
     ]
+  },
+  "automation": {
+    "title": "AI automation for small businesses",
+    "lead": "I automate the repetitive tasks of your business with artificial intelligence: invoices, emails, quotes, documents. A quote tailored to your needs and budget, a quick setup, and your data handled with care.",
+    "facts": [
+      "Tailored quote",
+      "Quick setup",
+      "Data hosted in Europe",
+      "South of Paris · on-site visits possible"
+    ],
+    "bookDiagnostic": "Book a free assessment",
+    "seePricing": "See pricing",
+    "downloadBrochure": "Download the brochure (PDF, French)",
+    "casesLabel": "What I set up",
+    "casesTitle": "Practical automations, plugged into your tools",
+    "casesLead": "I start from what you already use: your mailbox, your accounting software, your spreadsheets, your CRM. AI takes care of the tedious part, you keep control of the decisions.",
+    "cases": [
+      {
+        "title": "Invoices and receipts",
+        "flow": [
+          "PDF received by email",
+          "AI reading",
+          "accounting software"
+        ],
+        "description": "Amounts, dates, suppliers and VAT extracted automatically, then filed and ready to approve."
+      },
+      {
+        "title": "Customer emails",
+        "flow": [
+          "inbox",
+          "triage + draft",
+          "you review"
+        ],
+        "description": "Requests are sorted by urgency and a reply draft is waiting for you. One click to approve."
+      },
+      {
+        "title": "Quotes from a request",
+        "flow": [
+          "customer request",
+          "assisted pricing",
+          "PDF quote"
+        ],
+        "description": "The quote is pre-filled with your rates and templates. You only adjust and send."
+      },
+      {
+        "title": "Assistant on your documents",
+        "flow": [
+          "procedures, contracts",
+          "AI search",
+          "sourced answer"
+        ],
+        "description": "Your team asks a question and gets the answer from your own documents, with the source."
+      },
+      {
+        "title": "Meeting notes and follow-ups",
+        "flow": [
+          "notes, meeting",
+          "summary",
+          "minutes + actions"
+        ],
+        "description": "Clear minutes with the list of actions, sent to the right people."
+      },
+      {
+        "title": "Files and CRM kept up to date",
+        "flow": [
+          "forms, emails",
+          "extraction",
+          "CRM / spreadsheet"
+        ],
+        "description": "Contacts and requests land in your tools already organised, no copy and paste."
+      }
+    ],
+    "tradesLabel": "By industry",
+    "tradesTitle": "A few examples by sector",
+    "trades": [
+      {
+        "title": "Accounting firms",
+        "description": "Client documents sorted and pre-entered, reminders for missing paperwork."
+      },
+      {
+        "title": "Real estate",
+        "description": "Tenant files checked, replies to viewing requests, reminders."
+      },
+      {
+        "title": "Trades and construction",
+        "description": "Quotes prepared from a request, supplier invoices matched."
+      },
+      {
+        "title": "Training providers",
+        "description": "Agreements, certificates and attendance sheets generated automatically."
+      },
+      {
+        "title": "E-commerce",
+        "description": "Customer service replies, product sheets, order tracking."
+      },
+      {
+        "title": "And your business",
+        "description": "If a task comes back every week, it can probably be lightened."
+      }
+    ],
+    "pricingLabel": "Pricing",
+    "pricingTitle": "An offer that adapts to you",
+    "pricingLead": "Every business is different. After the assessment, I send you a quote tailored to your needs and budget, and we adjust it together.",
+    "plans": [
+      {
+        "name": "Assessment",
+        "price": "Free",
+        "unit": "1 hour",
+        "items": [
+          "Video call or on-site visit",
+          "3 tasks worth automating identified",
+          "Estimate of time saved and cost"
+        ]
+      },
+      {
+        "name": "Custom automation",
+        "price": "On quote",
+        "unit": "based on your needs",
+        "items": [
+          "From a single workflow to a full project",
+          "Plugged into the tools you already use",
+          "Timeline stated in the quote",
+          "Demo, onboarding and documentation",
+          "You own the code and the accounts"
+        ]
+      },
+      {
+        "name": "Maintenance",
+        "price": "Flexible",
+        "unit": "if needed",
+        "items": [
+          "Monitoring and fixes",
+          "Small adjustments along the way",
+          "AI costs tracked and kept under control"
+        ]
+      }
+    ],
+    "biggerProjects": "Bigger needs or a tight budget? We split the project into steps and move at your pace, starting with what saves you the most time.",
+    "runningCosts": "Running costs (AI service subscriptions, hosting) are paid by the client at cost, or included in the monthly maintenance.",
+    "vatNote": "VAT not applicable, art. 293 B of the French tax code.",
+    "stepsLabel": "How it works",
+    "stepsTitle": "From the first conversation to going live",
+    "steps": [
+      {
+        "title": "We talk",
+        "description": "You show me your repetitive tasks. I spot what is worth automating."
+      },
+      {
+        "title": "I quote",
+        "description": "A written proposal: what will be done, the budget, the timeline. We adjust it together if needed."
+      },
+      {
+        "title": "I deliver",
+        "description": "Set up on your tools, tested with your real documents, handed over."
+      },
+      {
+        "title": "We fine-tune",
+        "description": "During the first weeks we fix and refine. Monthly maintenance is optional."
+      }
+    ],
+    "stepLabel": "Step",
+    "trustLabel": "Your data",
+    "trustTitle": "Serious about security, no black box",
+    "trust": [
+      {
+        "title": "Only what is needed",
+        "description": "I limit what is sent to the AI to the data that matters and favour hosting in Europe."
+      },
+      {
+        "title": "A model on your premises if needed",
+        "description": "For sensitive data, an AI model running on your own machine is an option."
+      },
+      {
+        "title": "Documented and yours",
+        "description": "Every automation is documented and you keep ownership, code and accounts included."
+      }
+    ],
+    "demo": {
+      "label": "Live demo",
+      "title": "Try an AI assistant connected to a company's documents",
+      "lead": "This is the internal assistant of Valmont & Associés, a fictional French accounting firm. It answers only from the firm's procedures, cites its sources and masks personal data before anything is sent to the AI. The demo is in French: ask away.",
+      "tipLabel": "Try",
+      "tips": [
+        {
+          "title": "Switch roles",
+          "description": "As « Collaborateur » (staff), documents reserved for partners are excluded from the search. Ask the same question as « Associé » (partner) to see the difference."
+        },
+        {
+          "title": "Slip in personal data",
+          "description": "Add a phone number or an email to your question, then open the details of what was actually sent to the AI."
+        },
+        {
+          "title": "Ask something off-topic",
+          "description": "When the answer is not in the documents, the assistant says so instead of making something up."
+        }
+      ],
+      "frameTitle": "AI assistant demo",
+      "waking": "Starting the assistant…",
+      "wakingHint": "The server sleeps when nobody uses it. Waking it up can take up to a minute.",
+      "error": "The assistant is not responding right now.",
+      "retry": "Try again",
+      "openFull": "Open full screen",
+      "guide": "How it works (FR)",
+      "code": "View the code",
+      "note": "Fictional company and data. Hosted in Europe with a Mistral model, 20 questions per hour per visitor.",
+      "ready": "The assistant is ready",
+      "mobileHint": "On mobile, the demo opens in a new tab for a better experience.",
+      "openDemo": "Open the demo"
+    }
   },
   "electron": {
     "title": "Electron.js",

@@ -3,6 +3,7 @@
     "home": "Accueil",
     "work": "Projets",
     "about": "Profil",
+    "automation": "Automatisation IA",
     "electron": "Electron.js",
     "contact": "Contact"
   },
@@ -31,6 +32,7 @@
     "home": "Thomas Laroudie — Développeur fullstack & Electron.js",
     "work": "Projets — Thomas Laroudie",
     "about": "Profil — Thomas Laroudie",
+    "automation": "Automatisation IA — Thomas Laroudie",
     "electron": "Electron.js — Thomas Laroudie",
     "contact": "Contact — Thomas Laroudie",
     "notFound": "Page introuvable — Thomas Laroudie"
@@ -60,7 +62,7 @@
   },
   "cta": {
     "title": "Construisons quelque chose de solide",
-    "lead": "Développement fullstack, expertise Electron.js ou création voxel — dites-moi ce que vous avez en tête."
+    "lead": "Développement fullstack, expertise Electron.js, automatisation IA ou création voxel — dites-moi ce que vous avez en tête."
   },
   "work": {
     "title": "Projets",
@@ -78,6 +80,9 @@
     "next": "Capture suivante"
   },
   "projects": {
+    "ragAssistant": {
+      "description": "Un assistant interne qui répond aux questions des équipes à partir des documents de l'entreprise, avec la source de chaque réponse. Démo en ligne sur un cabinet comptable fictif.\nLa recherche combine le sens (embeddings Mistral) et les mots-clés (BM25), filtre les documents selon le rôle de l'utilisateur et n'envoie à l'IA que les quelques extraits utiles. Les données personnelles sont masquées avant l'envoi, puis restituées dans la réponse.\nOn peut y importer des PDF et des fichiers Word, consulter un tableau de bord des questions sans réponse et suivre le coût réel de chaque question. Sans framework ni base vectorielle : quelques centaines de lignes de TypeScript sur Node.js, hébergées sur Render."
+    },
     "albionEmpires": {
       "description": "Une plateforme web pour Albion Online, alimentée par un petit agent de bureau qui écoute passivement le trafic réseau du jeu sur la machine de chaque joueur. Elle répond à la question que le jeu ne traite pas : où les gens sont passés, et ce qu'un groupe sait d'un lieu au fil du temps.\nL'agent capture et transmet, sans jamais envoyer un paquet au jeu, lire sa mémoire ou toucher ses fichiers. Un serveur Rust décode, stocke et sert ; le site dessine la carte du monde avec un curseur temporel, un fil des kills avec un compteur de dégâts rejoué seconde par seconde, le coût des crafts à partir des recettes du jeu, et un registre d'hôtel des ventes.\nLes données circulent par pools : chaque compte enregistre ce que son agent voit, et un pool ne s'agrandit que sur invitation. Lire plusieurs pools les fusionne en gardant l'enregistrement le plus frais par entité, et personne n'est jamais informé de qui l'observe."
     },
@@ -160,6 +165,215 @@
       "Communication efficace",
       "Apprentissage continu"
     ]
+  },
+  "automation": {
+    "title": "Automatisation IA pour TPE et PME",
+    "lead": "J'automatise les tâches répétitives de votre entreprise avec l'intelligence artificielle : factures, mails, devis, documents. Un devis adapté à votre besoin et à votre budget, une mise en place rapide, et vos données traitées avec soin.",
+    "facts": [
+      "Devis sur mesure",
+      "Mise en place rapide",
+      "Données hébergées en Europe",
+      "Sud Yvelines · déplacement possible"
+    ],
+    "bookDiagnostic": "Réserver un diagnostic offert",
+    "seePricing": "Voir les tarifs",
+    "downloadBrochure": "Télécharger la plaquette (PDF)",
+    "casesLabel": "Ce que je mets en place",
+    "casesTitle": "Des automatisations concrètes, branchées sur vos outils",
+    "casesLead": "Je pars de ce que vous utilisez déjà : votre messagerie, votre logiciel de compta, vos tableurs, votre CRM. L'IA s'occupe de la partie fastidieuse, vous gardez la main sur les décisions.",
+    "cases": [
+      {
+        "title": "Factures et pièces comptables",
+        "flow": [
+          "PDF reçu par mail",
+          "lecture IA",
+          "logiciel de compta"
+        ],
+        "description": "Montants, dates, fournisseurs et TVA extraits automatiquement, puis classés et prêts à valider."
+      },
+      {
+        "title": "Mails clients",
+        "flow": [
+          "boîte de réception",
+          "tri + brouillon",
+          "vous relisez"
+        ],
+        "description": "Les demandes sont triées par urgence et un brouillon de réponse vous attend. Vous validez en un clic."
+      },
+      {
+        "title": "Devis à partir d'une demande",
+        "flow": [
+          "demande client",
+          "chiffrage assisté",
+          "devis PDF"
+        ],
+        "description": "Le devis est prérempli avec vos tarifs et vos modèles. Il ne reste qu'à ajuster et envoyer."
+      },
+      {
+        "title": "Assistant sur vos documents",
+        "flow": [
+          "procédures, contrats",
+          "recherche IA",
+          "réponse sourcée"
+        ],
+        "description": "Votre équipe pose une question et obtient la réponse tirée de vos propres documents, avec la source."
+      },
+      {
+        "title": "Comptes rendus et suivis",
+        "flow": [
+          "notes, réunion",
+          "synthèse",
+          "CR + actions"
+        ],
+        "description": "Un compte rendu clair avec la liste des actions, envoyé aux bonnes personnes."
+      },
+      {
+        "title": "Fichiers et CRM à jour",
+        "flow": [
+          "formulaires, mails",
+          "extraction",
+          "CRM / tableur"
+        ],
+        "description": "Les contacts et les demandes arrivent rangés dans vos outils, sans copier-coller."
+      }
+    ],
+    "tradesLabel": "Selon votre métier",
+    "tradesTitle": "Quelques exemples par secteur",
+    "trades": [
+      {
+        "title": "Cabinets comptables",
+        "description": "Pièces clients triées et présaisies, relances de documents manquants."
+      },
+      {
+        "title": "Immobilier",
+        "description": "Dossiers locataires vérifiés, réponses aux demandes de visite, relances."
+      },
+      {
+        "title": "Artisans et BTP",
+        "description": "Devis préparés à partir d'une demande, factures fournisseurs rapprochées."
+      },
+      {
+        "title": "Organismes de formation",
+        "description": "Conventions, attestations et émargements générés automatiquement."
+      },
+      {
+        "title": "Commerce en ligne",
+        "description": "Réponses au service client, fiches produits, suivi des commandes."
+      },
+      {
+        "title": "Et votre activité",
+        "description": "Si une tâche se répète chaque semaine, elle peut sans doute être allégée."
+      }
+    ],
+    "pricingLabel": "Tarifs",
+    "pricingTitle": "Une offre qui s'adapte à vous",
+    "pricingLead": "Chaque entreprise est différente. Après le diagnostic, je vous propose un devis adapté à votre besoin et à votre budget, que l'on ajuste ensemble.",
+    "plans": [
+      {
+        "name": "Diagnostic",
+        "price": "Offert",
+        "unit": "1 heure",
+        "items": [
+          "Échange en visio ou dans vos locaux",
+          "Repérage de 3 tâches à automatiser",
+          "Estimation du temps gagné et du coût"
+        ]
+      },
+      {
+        "name": "Automatisation sur mesure",
+        "price": "Sur devis",
+        "unit": "selon votre besoin",
+        "items": [
+          "Du simple flux au projet complet",
+          "Branchée sur les outils que vous utilisez déjà",
+          "Délai annoncé avec le devis",
+          "Démonstration, prise en main et documentation",
+          "Le code et les accès vous appartiennent"
+        ]
+      },
+      {
+        "name": "Suivi",
+        "price": "À la carte",
+        "unit": "si besoin",
+        "items": [
+          "Surveillance et corrections",
+          "Petits ajustements au fil de l'eau",
+          "Coûts d'IA suivis et maîtrisés"
+        ]
+      }
+    ],
+    "biggerProjects": "Un besoin plus large ou un budget serré ? On découpe le projet en étapes et on avance à votre rythme, en commençant par ce qui vous fait gagner le plus de temps.",
+    "runningCosts": "Les frais de fonctionnement (abonnement aux services d'IA, hébergement) sont à la charge du client, au coût réel, ou inclus dans le suivi mensuel.",
+    "vatNote": "TVA non applicable, art. 293 B du CGI.",
+    "stepsLabel": "Comment ça se passe",
+    "stepsTitle": "De la première discussion à la mise en service",
+    "steps": [
+      {
+        "title": "On échange",
+        "description": "Vous me montrez vos tâches répétitives. Je repère ce qui vaut le coup d'être automatisé."
+      },
+      {
+        "title": "Je chiffre",
+        "description": "Une proposition écrite : ce qui sera fait, le budget, le délai. On l'ajuste ensemble si besoin."
+      },
+      {
+        "title": "Je livre",
+        "description": "Mise en place sur vos outils, tests avec vos vrais documents, prise en main."
+      },
+      {
+        "title": "On ajuste",
+        "description": "Les premières semaines, on corrige et on affine. Le suivi mensuel est optionnel."
+      }
+    ],
+    "stepLabel": "Étape",
+    "trustLabel": "Vos données",
+    "trustTitle": "Sérieux sur la sécurité, sans boîte noire",
+    "trust": [
+      {
+        "title": "Le strict nécessaire",
+        "description": "Je limite ce qui est envoyé à l'IA aux seules données utiles et privilégie un hébergement en Europe."
+      },
+      {
+        "title": "Un modèle chez vous si besoin",
+        "description": "Pour les données sensibles, un modèle d'IA installé sur votre propre machine est possible."
+      },
+      {
+        "title": "Documenté et à vous",
+        "description": "Chaque automatisation est documentée et vous en gardez la propriété, code et accès compris."
+      }
+    ],
+    "demo": {
+      "label": "Démo en direct",
+      "title": "Essayez un assistant IA branché sur les documents d'une entreprise",
+      "lead": "Voici l'assistant interne de Valmont & Associés, un cabinet comptable fictif. Il répond uniquement à partir des procédures du cabinet, cite ses sources et masque les données personnelles avant tout envoi à l'IA. Posez-lui vos questions.",
+      "tipLabel": "À tester",
+      "tips": [
+        {
+          "title": "Changez de rôle",
+          "description": "En « Collaborateur », les documents réservés aux associés sont exclus de la recherche. Posez la même question en « Associé » pour voir la différence."
+        },
+        {
+          "title": "Glissez une donnée personnelle",
+          "description": "Ajoutez un numéro de téléphone ou un e-mail à votre question, puis ouvrez le détail de ce qui a été envoyé à l'IA."
+        },
+        {
+          "title": "Posez une question hors sujet",
+          "description": "Quand la réponse n'est pas dans les documents, l'assistant le dit au lieu d'inventer."
+        }
+      ],
+      "frameTitle": "Démo de l'assistant IA",
+      "waking": "Démarrage de l'assistant…",
+      "wakingHint": "Le serveur se met en veille quand personne ne l'utilise. Le réveil peut prendre jusqu'à une minute.",
+      "error": "L'assistant ne répond pas pour le moment.",
+      "retry": "Réessayer",
+      "openFull": "Ouvrir en plein écran",
+      "guide": "Comment ça marche",
+      "code": "Voir le code",
+      "note": "Entreprise et données fictives. Hébergé en Europe avec un modèle Mistral, 20 questions par heure et par visiteur.",
+      "ready": "L'assistant est prêt",
+      "mobileHint": "Sur mobile, la démo s'ouvre dans un nouvel onglet pour plus de confort.",
+      "openDemo": "Ouvrir la démo"
+    }
   },
   "electron": {
     "title": "Electron.js",

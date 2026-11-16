@@ -10,11 +10,16 @@ import pa2 from "../assets/projects/pa2.webp";
 import pa3 from "../assets/projects/pa3.webp";
 import ptl1 from "../assets/projects/ptl1.webp";
 import ptl2 from "../assets/projects/ptl2.webp";
+import rag1 from "../assets/projects/rag1.webp";
+import rag2 from "../assets/projects/rag2.webp";
+import rag3 from "../assets/projects/rag3.webp";
 import scrpdl from "../assets/projects/scrpdl.webp";
+import { assistantDemo } from "./site";
 
 export type Project = {
   id:
     | "albionEmpires"
+    | "ragAssistant"
     | "playability"
     | "onlyone"
     | "padtolan"
@@ -49,6 +54,24 @@ export const projects: Project[] = [
       "deck.gl",
     ],
     images: [ae],
+  },
+  {
+    id: "ragAssistant",
+    name: "RAG Assistant",
+    period: "2026",
+    url: assistantDemo.url,
+    personal: true,
+    featured: false,
+    tags: [
+      "TypeScript",
+      "Node.js",
+      "RAG",
+      "Mistral AI",
+      "Embeddings",
+      "BM25",
+      "Render",
+    ],
+    images: [rag1, rag2, rag3],
   },
   {
     id: "playability",

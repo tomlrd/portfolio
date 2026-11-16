@@ -12,6 +12,16 @@ export const profile = {
   discord: "thomas_lrd",
 } as const;
 
+const assistantDemoUrl: string =
+  import.meta.env.VITE_ASSISTANT_DEMO_URL ??
+  "https://rag-assistant-demo.onrender.com";
+
+export const assistantDemo = {
+  url: assistantDemoUrl,
+  guideUrl: `${assistantDemoUrl}/guide`,
+  codeUrl: "https://github.com/tomlrd/rag-assistant-demo",
+} as const;
+
 export const resumeUrls: Record<Language, string> = {
   en: "https://www.canva.com/design/DAGNYtwT2GQ/99Q-BJe9T7Q2iKaQLgb3Fw/view",
   fr: "https://www.canva.com/design/DAGhEfKexzY/m7iNSNnHzafWSTx9lGxbng/view",
