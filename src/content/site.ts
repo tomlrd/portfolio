@@ -2,7 +2,6 @@ import discord from "../assets/social/discord.svg";
 import gmail from "../assets/social/gmail.svg";
 import linkedin from "../assets/social/linkedin.svg";
 import malt from "../assets/social/malt.svg";
-import sandbox from "../assets/social/sandbox.png";
 import upwork from "../assets/social/upwork.svg";
 import type { Language } from "../i18n";
 
@@ -53,12 +52,6 @@ export const socials: SocialLink[] = [
     name: "Upwork",
     icon: upwork,
     url: "https://www.upwork.com/freelancers/~015b4b14e826bef8c5",
-  },
-  {
-    id: "sandbox",
-    name: "The Sandbox",
-    icon: sandbox,
-    url: "https://www.sandbox.game/en/users/stylow/",
   },
   {
     id: "email",

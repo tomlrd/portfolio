@@ -9,6 +9,6 @@ export const navItems: NavItem[] = [
   { to: "/work", labelKey: "nav.work" },
   { to: "/about", labelKey: "nav.about" },
   { to: "/automation", labelKey: "nav.automation" },
-  { to: "/electron", labelKey: "nav.electron" },
+  { to: "/desktop", labelKey: "nav.desktop" },
   { to: "/contact", labelKey: "nav.contact" },
 ];

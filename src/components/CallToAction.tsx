@@ -2,7 +2,6 @@ import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { LinkButton } from "./ui/Button";
 import { Container } from "./ui/Container";
-import { Parallax } from "./ui/Parallax";
 
 export function CallToAction() {
   const { t } = useTranslation();
@@ -11,10 +10,7 @@ export function CallToAction() {
     <section className="py-16 md:py-24">
       <Container>
         <div className="relative overflow-hidden rounded-card border border-line bg-surface px-6 py-16 text-center md:px-16">
-          <Parallax
-            speed={0.12}
-            className="glow-backdrop pointer-events-none absolute inset-0"
-          />
+          <div className="glow-backdrop pointer-events-none absolute inset-0" />
           <div className="relative mx-auto max-w-2xl space-y-6">
             <h2 className="font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
               {t("cta.title")}

@@ -4,7 +4,7 @@
     "work": "Work",
     "about": "About",
     "automation": "AI automation",
-    "electron": "Electron.js",
+    "desktop": "Electron.js & Tauri",
     "contact": "Contact"
   },
   "actions": {
@@ -29,19 +29,19 @@
     "personal": "Side project"
   },
   "meta": {
-    "home": "Thomas Laroudie — Fullstack & Electron.js developer",
+    "home": "Thomas Laroudie — Fullstack, Electron.js & Tauri developer",
     "work": "Work — Thomas Laroudie",
     "about": "About — Thomas Laroudie",
     "automation": "AI automation — Thomas Laroudie",
-    "electron": "Electron.js — Thomas Laroudie",
+    "desktop": "Electron.js & Tauri — Thomas Laroudie",
     "contact": "Contact — Thomas Laroudie",
     "notFound": "Page not found — Thomas Laroudie"
   },
   "hero": {
-    "role": "Fullstack developer · Electron.js specialist",
+    "role": "Fullstack developer · Electron.js & Tauri",
     "firstName": "Thomas",
     "lastName": "Laroudie",
-    "lead": "I build fullstack JavaScript and TypeScript products, and native desktop software with Electron.js — from game launchers to accessibility tools.",
+    "lead": "I build fullstack JavaScript and TypeScript products, and native desktop software with Electron.js and Tauri — from game launchers to accessibility tools.",
     "showcaseBadge": "Cross-platform\ndesktop apps",
     "showcaseCaption": "Interfaces I designed and shipped",
     "showcaseBadgeTauri": "Native desktop apps\nTauri · Rust"
@@ -56,13 +56,13 @@
     "workLabel": "Selected work",
     "workTitle": "Products I helped ship",
     "workLead": "A few public projects, from proprietary desktop platforms to open side projects.",
-    "electronLabel": "Speciality",
-    "electronTitle": "Desktop software that feels native",
-    "electronLead": "One codebase for Windows, macOS and Linux. Web velocity, native capabilities, and a security checklist I actually follow."
+    "desktopLabel": "Speciality",
+    "desktopTitle": "Desktop software that feels native",
+    "desktopLead": "One codebase for Windows, macOS and Linux, with Electron.js or Tauri. Web velocity, native capabilities, and security recommendations I actually follow."
   },
   "cta": {
     "title": "Let's build something solid",
-    "lead": "Fullstack development, Electron.js expertise, AI automation or voxel creation — tell me what you have in mind."
+    "lead": "Fullstack development, Electron.js and Tauri desktop apps, AI automation — tell me what you have in mind."
   },
   "work": {
     "title": "Work",
@@ -102,7 +102,7 @@
   "about": {
     "title": "About",
     "lead": "Application developer, tool builder, and a long-time fan of things that run offline.",
-    "bio": "Application developer with a strong background in fullstack JavaScript and TypeScript, specialised in desktop applications built with Electron.js.\nI enjoy building my own tools, with a keen interest in R&D and software tailored to a specific problem.\nAutonomous, curious and driven by cybersecurity, hardware and the positive impact technology can have.\nAlongside Electron.js, I now build desktop applications with Tauri and Rust. I also collaborated directly with The Sandbox on voxel assets. Web scraping, crypto mining and ARM development are familiar ground.",
+    "bio": "Application developer with a strong background in fullstack JavaScript and TypeScript, specialised in desktop applications built with Electron.js and Tauri.\nI enjoy building my own tools, with a keen interest in R&D and software tailored to a specific problem.\nAutonomous, curious and driven by cybersecurity, hardware and the positive impact technology can have.\nAlongside Electron.js, I now build desktop applications with Tauri and Rust. Web scraping, crypto mining and ARM development are familiar ground.",
     "stackLabel": "Stack",
     "stackTitle": "Technologies I work with",
     "hardLabel": "Expertise",
@@ -375,9 +375,9 @@
       "openDemo": "Open the demo"
     }
   },
-  "electron": {
-    "title": "Electron.js",
-    "lead": "Why a desktop application built with Electron.js is often the fastest path to a product your users can install.",
+  "desktop": {
+    "title": "Electron.js & Tauri",
+    "lead": "Desktop applications for Windows, macOS and Linux, built with web technologies. Electron.js for its proven ecosystem, Tauri for the lightness and safety of Rust: I help you pick the right tool for your product.",
     "benefitsLabel": "Benefits",
     "benefitsTitle": "What it brings to your product",
     "benefits": [
@@ -391,43 +391,71 @@
       },
       {
         "title": "Fast iteration",
-        "description": "Built on web technologies, it shortens development cycles and lets an existing web application become a desktop app quickly."
+        "description": "Built on web technologies, these apps shorten development cycles and let an existing web application become desktop software quickly."
       },
       {
         "title": "Native capabilities",
-        "description": "Direct access to the file system, notifications, tray icons, protocols and everything the desktop environment exposes."
+        "description": "Access to the file system, notifications, tray icons, protocols and everything the desktop environment exposes. With Tauri, heavy processing can run in native Rust."
       },
       {
         "title": "Cost effective",
         "description": "A single codebase across platforms keeps development and maintenance costs low, with no separate team per operating system."
       },
       {
-        "title": "Mature ecosystem",
-        "description": "A large, active community means plenty of tooling and libraries, and faster answers when a challenge shows up."
+        "title": "Solid ecosystem",
+        "description": "Electron.js relies on a large, active community. Tauri is younger, moves fast and benefits from the whole Rust ecosystem."
+      }
+    ],
+    "choiceLabel": "Electron.js or Tauri?",
+    "choiceTitle": "Two approaches, chosen to fit your product",
+    "choices": [
+      {
+        "name": "Electron.js",
+        "tagline": "The proven choice",
+        "description": "Chromium and Node.js ship inside the application: rendering is identical everywhere and the whole npm ecosystem is available. Ideal for a rich application or to bring an existing web app to the desktop quickly.",
+        "points": [
+          "Identical rendering on every system",
+          "The whole Node.js and npm ecosystem",
+          "Used by VS Code, Slack and Discord"
+        ]
       },
       {
-        "title": "Scalable",
-        "description": "Straightforward integration with cloud services, APIs and databases, so the application grows with your business."
+        "name": "Tauri",
+        "tagline": "The lightweight choice",
+        "description": "The application uses the system's web engine and a core written in Rust: installers of a few megabytes, low memory use and a strict permission model. Ideal for a fast, lean tool.",
+        "points": [
+          "Smaller installers and lower memory use",
+          "Rust core for heavy processing",
+          "Permissions granted feature by feature"
+        ]
       }
     ],
     "touchLabel": "My approach",
     "touchTitle": "What I bring on top",
-    "touch": "I have shipped Electron.js applications ranging from game distribution platforms to accessibility software, and I know its architecture, APIs and trade-offs well.\nCustom desktop tooling, a game launcher or a productivity app: I can deliver a robust cross-platform application, and because it is built on web technologies, the time savings are significant.\nI follow the current security recommendations closely and use Electron's internal tooling for system integration and authentication sessions.",
+    "touch": "I have shipped Electron.js applications, from a game distribution platform to accessibility software, and I now build with Tauri and Rust, like the desktop agent behind Albion Empires.\nCustom desktop tooling, a launcher or a productivity app: I help you choose between Electron.js and Tauri based on your constraints, then deliver a robust cross-platform application. Because it is built on web technologies, the time savings are significant.\nI closely follow each framework's security recommendations: context isolation and the security checklist on the Electron.js side, permissions and capabilities on the Tauri side.",
     "resourcesTitle": "References I rely on",
     "resources": [
       {
-        "label": "Electron security checklist",
+        "label": "Electron.js security checklist",
         "url": "https://www.electronjs.org/docs/latest/tutorial/security#checklist-security-recommendations"
       },
       {
-        "label": "Source code protection",
+        "label": "Electron.js source code protection",
         "url": "https://electron-vite.org/guide/source-code-protection#solutions"
+      },
+      {
+        "label": "Tauri security model",
+        "url": "https://v2.tauri.app/security/"
+      },
+      {
+        "label": "Tauri permissions and capabilities",
+        "url": "https://v2.tauri.app/security/capabilities/"
       }
     ]
   },
   "contact": {
     "title": "Contact",
-    "lead": "Need a fullstack developer, Electron.js expertise or voxel creation? Let's talk.",
+    "lead": "Need a fullstack developer, an Electron.js or Tauri desktop app, or an AI automation? Let's talk.",
     "directTitle": "Write me directly",
     "directLead": "The fastest way to reach me. I usually answer within a day.",
     "elsewhereLabel": "Elsewhere",
@@ -435,7 +463,7 @@
     "copyHint": "Click to copy"
   },
   "footer": {
-    "tagline": "Fullstack JavaScript and TypeScript developer, Electron.js specialist.",
+    "tagline": "Fullstack JavaScript and TypeScript developer, Electron.js and Tauri desktop specialist.",
     "navTitle": "Navigation",
     "socialTitle": "Elsewhere",
     "rights": "All rights reserved.",

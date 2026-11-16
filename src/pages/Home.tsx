@@ -22,7 +22,7 @@ export default function Home() {
   useDocumentTitle(t("meta.home"));
 
   const featured = projects.filter((project) => project.featured);
-  const highlights = content.electron.benefits.slice(0, 3);
+  const highlights = content.desktop.benefits.slice(0, 3);
 
   return (
     <>
@@ -139,14 +139,14 @@ export default function Home() {
         <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="space-y-6">
-              <Eyebrow>{t("home.electronLabel")}</Eyebrow>
+              <Eyebrow>{t("home.desktopLabel")}</Eyebrow>
               <h2 className="font-display text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-                {t("home.electronTitle")}
+                {t("home.desktopTitle")}
               </h2>
               <p className="text-base leading-relaxed text-muted text-pretty">
-                {t("home.electronLead")}
+                {t("home.desktopLead")}
               </p>
-              <LinkButton to="/electron" variant="secondary">
+              <LinkButton to="/desktop" variant="secondary">
                 {t("actions.learnMore")}
                 <ArrowRight
                   size={16}

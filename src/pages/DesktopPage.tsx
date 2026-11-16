@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { CallToAction } from "../components/CallToAction";
 import { PageHeader } from "../components/PageHeader";
@@ -8,30 +8,30 @@ import { SectionHeading } from "../components/ui/SectionHeading";
 import { useContent } from "../hooks/useContent";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
-export default function ElectronPage() {
+export default function DesktopPage() {
   const { t } = useTranslation();
   const content = useContent();
-  useDocumentTitle(t("meta.electron"));
+  useDocumentTitle(t("meta.desktop"));
 
-  const touch = content.electron.touch.split("\n");
+  const touch = content.desktop.touch.split("\n");
 
   return (
     <>
       <PageHeader
-        label={t("nav.electron")}
-        title={t("electron.title")}
-        lead={t("electron.lead")}
+        label={t("nav.desktop")}
+        title={t("desktop.title")}
+        lead={t("desktop.lead")}
       />
 
       <section className="py-16 md:py-24">
         <Container className="space-y-12">
           <SectionHeading
-            label={t("electron.benefitsLabel")}
-            title={t("electron.benefitsTitle")}
+            label={t("desktop.benefitsLabel")}
+            title={t("desktop.benefitsTitle")}
           />
 
           <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {content.electron.benefits.map((benefit, index) => (
+            {content.desktop.benefits.map((benefit, index) => (
               <li key={benefit.title} className="h-full">
                 <Reveal
                   delay={index * 60}
@@ -53,13 +53,59 @@ export default function ElectronPage() {
         </Container>
       </section>
 
+      <section className="border-t border-line py-16 md:py-24">
+        <Container className="space-y-12">
+          <SectionHeading
+            label={t("desktop.choiceLabel")}
+            title={t("desktop.choiceTitle")}
+          />
+
+          <ul className="grid gap-6 md:grid-cols-2">
+            {content.desktop.choices.map((choice, index) => (
+              <li key={choice.name} className="h-full">
+                <Reveal
+                  delay={index * 60}
+                  className="flex h-full flex-col gap-5 rounded-card border border-line bg-surface p-7"
+                >
+                  <div className="space-y-1">
+                    <span className="font-mono text-xs uppercase tracking-[0.18em] text-accent">
+                      {choice.tagline}
+                    </span>
+                    <h3 className="font-display text-2xl font-semibold tracking-tight">
+                      {choice.name}
+                    </h3>
+                  </div>
+                  <p className="text-sm leading-relaxed text-muted">
+                    {choice.description}
+                  </p>
+                  <ul className="space-y-2.5">
+                    {choice.points.map((point) => (
+                      <li
+                        key={point}
+                        className="flex gap-2.5 text-sm leading-relaxed text-muted"
+                      >
+                        <Check
+                          size={16}
+                          className="mt-0.5 shrink-0 text-accent"
+                        />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </Reveal>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
       <section className="border-t border-line bg-surface py-16 md:py-24">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[1fr_320px] lg:gap-16">
             <div className="space-y-8">
               <SectionHeading
-                label={t("electron.touchLabel")}
-                title={t("electron.touchTitle")}
+                label={t("desktop.touchLabel")}
+                title={t("desktop.touchTitle")}
               />
               <div className="space-y-5 text-base leading-relaxed text-muted">
                 {touch.map((paragraph) => (
@@ -72,10 +118,10 @@ export default function ElectronPage() {
 
             <aside className="space-y-4 rounded-card border border-line bg-canvas p-7">
               <h3 className="font-mono text-xs uppercase tracking-[0.18em] text-faint">
-                {t("electron.resourcesTitle")}
+                {t("desktop.resourcesTitle")}
               </h3>
               <ul className="space-y-3">
-                {content.electron.resources.map((resource) => (
+                {content.desktop.resources.map((resource) => (
                   <li key={resource.url}>
                     <a
                       href={resource.url}
