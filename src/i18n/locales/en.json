@@ -272,10 +272,10 @@
       {
         "name": "Assessment",
         "price": "Free",
-        "unit": "1 hour",
+        "unit": "as long as it takes",
         "items": [
           "Video call or on-site visit",
-          "3 tasks worth automating identified",
+          "Tasks worth automating identified",
           "Estimate of time saved and cost"
         ]
       },

@@ -272,10 +272,10 @@
       {
         "name": "Diagnostic",
         "price": "Offert",
-        "unit": "1 heure",
+        "unit": "le temps qu'il faut",
         "items": [
           "Échange en visio ou dans vos locaux",
-          "Repérage de 3 tâches à automatiser",
+          "Repérage des tâches à automatiser",
           "Estimation du temps gagné et du coût"
         ]
       },
